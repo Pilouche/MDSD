@@ -117,4 +117,57 @@
     </ownedEnd>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Q1-BsMI0EeenJY8sKbqJvg" name="environment" type="_Vs8fEMIxEeenJY8sKbqJvg" association="_Q18zkMI0EeenJY8sKbqJvg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_rBlqIMJtEeedeenu39lz6w" name="Operator"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_0U62sMJtEeedeenu39lz6w" name="ROVU">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_5-mcAMJtEeedeenu39lz6w" name="Check position"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_-KhC0MJtEeedeenu39lz6w" name="Change mission"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Gb-isMJuEeedeenu39lz6w" name="Get GPS location"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_MLaKsMJuEeedeenu39lz6w" client="_5-mcAMJtEeedeenu39lz6w" supplier="_Gb-isMJuEeedeenu39lz6w"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_PYRvUMJuEeedeenu39lz6w" name="Check collision"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Wdtg8MJuEeedeenu39lz6w" name="Move from one point to another"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_atsIYMJuEeedeenu39lz6w" name="Check mission"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8fY9wMJtEeedeenu39lz6w" memberEnd="_8fdPMMJtEeedeenu39lz6w _8fd2QMJtEeedeenu39lz6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8fcBEMJtEeedeenu39lz6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8fcBEcJtEeedeenu39lz6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8fdPMMJtEeedeenu39lz6w" name="check position" type="_5-mcAMJtEeedeenu39lz6w" association="_8fY9wMJtEeedeenu39lz6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8fd2QMJtEeedeenu39lz6w" name="operator" type="_rBlqIMJtEeedeenu39lz6w" association="_8fY9wMJtEeedeenu39lz6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__0OLkMJtEeedeenu39lz6w" memberEnd="__0PZsMJtEeedeenu39lz6w __0PZscJtEeedeenu39lz6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__0OyoMJtEeedeenu39lz6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__0OyocJtEeedeenu39lz6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__0PZsMJtEeedeenu39lz6w" name="change mission" type="_-KhC0MJtEeedeenu39lz6w" association="__0OLkMJtEeedeenu39lz6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="__0PZscJtEeedeenu39lz6w" name="operator" type="_rBlqIMJtEeedeenu39lz6w" association="__0OLkMJtEeedeenu39lz6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_BtNtgMJuEeedeenu39lz6w" name="Rover"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Jn2o0MJuEeedeenu39lz6w" memberEnd="_Jn3P4sJuEeedeenu39lz6w _Jn328MJuEeedeenu39lz6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jn3P4MJuEeedeenu39lz6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jn3P4cJuEeedeenu39lz6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Jn3P4sJuEeedeenu39lz6w" name="get gps location" type="_Gb-isMJuEeedeenu39lz6w" association="_Jn2o0MJuEeedeenu39lz6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Jn328MJuEeedeenu39lz6w" name="rover" type="_BtNtgMJuEeedeenu39lz6w" association="_Jn2o0MJuEeedeenu39lz6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RzLrgMJuEeedeenu39lz6w" memberEnd="_RzMSksJuEeedeenu39lz6w _RzMSk8JuEeedeenu39lz6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RzMSkMJuEeedeenu39lz6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RzMSkcJuEeedeenu39lz6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RzMSksJuEeedeenu39lz6w" name="check collision" type="_PYRvUMJuEeedeenu39lz6w" association="_RzLrgMJuEeedeenu39lz6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RzMSk8JuEeedeenu39lz6w" type="_BtNtgMJuEeedeenu39lz6w" association="_RzLrgMJuEeedeenu39lz6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZMFywMJuEeedeenu39lz6w" memberEnd="_ZMHA4sJuEeedeenu39lz6w _ZMHA48JuEeedeenu39lz6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZMHA4MJuEeedeenu39lz6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZMHA4cJuEeedeenu39lz6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZMHA4sJuEeedeenu39lz6w" name="move from one point to another" type="_Wdtg8MJuEeedeenu39lz6w" association="_ZMFywMJuEeedeenu39lz6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ZMHA48JuEeedeenu39lz6w" type="_RzLrgMJuEeedeenu39lz6w" association="_ZMFywMJuEeedeenu39lz6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cmljsMJuEeedeenu39lz6w" memberEnd="_cmmKwsJuEeedeenu39lz6w _cmmx0MJuEeedeenu39lz6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cmmKwMJuEeedeenu39lz6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cmmKwcJuEeedeenu39lz6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cmmKwsJuEeedeenu39lz6w" name="check mission" type="_atsIYMJuEeedeenu39lz6w" association="_cmljsMJuEeedeenu39lz6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cmmx0MJuEeedeenu39lz6w" name="rover" type="_BtNtgMJuEeedeenu39lz6w" association="_cmljsMJuEeedeenu39lz6w"/>
+  </packagedElement>
 </uml:Model>
