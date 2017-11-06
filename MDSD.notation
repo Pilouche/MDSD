@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
-  <notation:Diagram xmi:id="_tzpWIMItEeenJY8sKbqJvg" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+  <notation:Diagram xmi:id="_tzpWIMItEeenJY8sKbqJvg" type="PapyrusUMLClassDiagram" name="Domain Model" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_76gjIMItEeenJY8sKbqJvg" type="Class_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_76hKMMItEeenJY8sKbqJvg" type="Class_NameLabel"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_76hKMcItEeenJY8sKbqJvg" type="Class_FloatingNameLabel">
