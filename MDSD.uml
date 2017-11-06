@@ -170,4 +170,26 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_cmmKwsJuEeedeenu39lz6w" name="check mission" type="_atsIYMJuEeedeenu39lz6w" association="_cmljsMJuEeedeenu39lz6w"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_cmmx0MJuEeedeenu39lz6w" name="rover" type="_BtNtgMJuEeedeenu39lz6w" association="_cmljsMJuEeedeenu39lz6w"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_m1-xcMLSEeedLb_g75mFtA" name="Interface"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vIsOgMLSEeedLb_g75mFtA" name="CentralStation"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zGQ3UMLSEeedLb_g75mFtA" name="A_interface_centralstation" memberEnd="_zGVv0MLSEeedLb_g75mFtA _zGYzIMLSEeedLb_g75mFtA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zGUhsMLSEeedLb_g75mFtA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zGUhscLSEeedLb_g75mFtA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zGYzIMLSEeedLb_g75mFtA" name="central station" type="_vIsOgMLSEeedLb_g75mFtA" association="_zGQ3UMLSEeedLb_g75mFtA"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zGVv0MLSEeedLb_g75mFtA" name="interface" type="_m1-xcMLSEeedLb_g75mFtA" association="_zGQ3UMLSEeedLb_g75mFtA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zGYMEMLSEeedLb_g75mFtA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zGYMEcLSEeedLb_g75mFtA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_L4y80MLTEeedLb_g75mFtA" name="A_networkdevice_centralstation" memberEnd="_L41ZEcLTEeedLb_g75mFtA _L42nMMLTEeedLb_g75mFtA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_L40yAMLTEeedLb_g75mFtA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L41ZEMLTEeedLb_g75mFtA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_L41ZEcLTEeedLb_g75mFtA" name="networkdevice" type="_i4bB4MIxEeenJY8sKbqJvg" association="_L4y80MLTEeedLb_g75mFtA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_T-mmUMLTEeedLb_g75mFtA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_T-t7EMLTEeedLb_g75mFtA" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_L42nMMLTEeedLb_g75mFtA" name="central station" type="_vIsOgMLSEeedLb_g75mFtA" association="_L4y80MLTEeedLb_g75mFtA"/>
+  </packagedElement>
 </uml:Model>
