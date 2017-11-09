@@ -192,4 +192,35 @@
     </ownedEnd>
     <ownedEnd xmi:type="uml:Property" xmi:id="_L42nMMLTEeedLb_g75mFtA" name="central station" type="_vIsOgMLSEeedLb_g75mFtA" association="_L4y80MLTEeedLb_g75mFtA"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_RyaakMVPEeehTrEdjWwgmQ" name="Strategy"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hAg8cMVPEeehTrEdjWwgmQ" memberEnd="_hAnqIMVPEeehTrEdjWwgmQ _hAqGYMVPEeehTrEdjWwgmQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hAlN4MVPEeehTrEdjWwgmQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hAl08MVPEeehTrEdjWwgmQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hAnqIMVPEeehTrEdjWwgmQ" name="strategy" type="_RyaakMVPEeehTrEdjWwgmQ" association="_hAg8cMVPEeehTrEdjWwgmQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_hAqGYMVPEeehTrEdjWwgmQ" name="mission" type="_76et8MItEeenJY8sKbqJvg" association="_hAg8cMVPEeehTrEdjWwgmQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iByzQMVPEeehTrEdjWwgmQ" memberEnd="_iB0ocMVPEeehTrEdjWwgmQ _iB1PgMVPEeehTrEdjWwgmQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iB0BYMVPEeehTrEdjWwgmQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iB0BYcVPEeehTrEdjWwgmQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iB0ocMVPEeehTrEdjWwgmQ" name="rover" type="_9CKHsMItEeenJY8sKbqJvg" association="_iByzQMVPEeehTrEdjWwgmQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_iB1PgMVPEeehTrEdjWwgmQ" name="strategy" type="_RyaakMVPEeehTrEdjWwgmQ" association="_iByzQMVPEeehTrEdjWwgmQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qsmAMMVPEeehTrEdjWwgmQ" name="Procedure"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sGAqMMVPEeehTrEdjWwgmQ" name="RewardPoints"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yTAX8MVPEeehTrEdjWwgmQ" memberEnd="_yTBmEcVPEeehTrEdjWwgmQ _yTCNIMVPEeehTrEdjWwgmQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yTA_AMVPEeehTrEdjWwgmQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yTBmEMVPEeehTrEdjWwgmQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yTBmEcVPEeehTrEdjWwgmQ" name="rewardpoints" type="_sGAqMMVPEeehTrEdjWwgmQ" association="_yTAX8MVPEeehTrEdjWwgmQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yTCNIMVPEeehTrEdjWwgmQ" name="procedure" type="_qsmAMMVPEeehTrEdjWwgmQ" association="_yTAX8MVPEeehTrEdjWwgmQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zAfJAMVPEeehTrEdjWwgmQ" memberEnd="_zAgXIcVPEeehTrEdjWwgmQ _zAg-MMVPEeehTrEdjWwgmQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zAfwEMVPEeehTrEdjWwgmQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zAgXIMVPEeehTrEdjWwgmQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zAgXIcVPEeehTrEdjWwgmQ" name="procedure" type="_qsmAMMVPEeehTrEdjWwgmQ" association="_zAfJAMVPEeehTrEdjWwgmQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zAg-MMVPEeehTrEdjWwgmQ" name="rover" type="_9CKHsMItEeenJY8sKbqJvg" association="_zAfJAMVPEeehTrEdjWwgmQ"/>
+  </packagedElement>
 </uml:Model>
