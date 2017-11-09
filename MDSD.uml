@@ -125,7 +125,7 @@
     <packagedElement xmi:type="uml:Dependency" xmi:id="_MLaKsMJuEeedeenu39lz6w" client="_5-mcAMJtEeedeenu39lz6w" supplier="_Gb-isMJuEeedeenu39lz6w"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_PYRvUMJuEeedeenu39lz6w" name="Check collision"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_Wdtg8MJuEeedeenu39lz6w" name="Move from one point to another"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_atsIYMJuEeedeenu39lz6w" name="Check mission"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FYZ0IMVTEeeXoZ7UVqxPmA" name="Perform mission"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_8fY9wMJtEeedeenu39lz6w" memberEnd="_8fdPMMJtEeedeenu39lz6w _8fd2QMJtEeedeenu39lz6w">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8fcBEMJtEeedeenu39lz6w" source="org.eclipse.papyrus">
@@ -162,13 +162,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ZMHA4sJuEeedeenu39lz6w" name="move from one point to another" type="_Wdtg8MJuEeedeenu39lz6w" association="_ZMFywMJuEeedeenu39lz6w"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ZMHA48JuEeedeenu39lz6w" type="_RzLrgMJuEeedeenu39lz6w" association="_ZMFywMJuEeedeenu39lz6w"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_cmljsMJuEeedeenu39lz6w" memberEnd="_cmmKwsJuEeedeenu39lz6w _cmmx0MJuEeedeenu39lz6w">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cmmKwMJuEeedeenu39lz6w" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cmmKwcJuEeedeenu39lz6w" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_cmmKwsJuEeedeenu39lz6w" name="check mission" type="_atsIYMJuEeedeenu39lz6w" association="_cmljsMJuEeedeenu39lz6w"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_cmmx0MJuEeedeenu39lz6w" name="rover" type="_BtNtgMJuEeedeenu39lz6w" association="_cmljsMJuEeedeenu39lz6w"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_m1-xcMLSEeedLb_g75mFtA" name="Interface"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_vIsOgMLSEeedLb_g75mFtA" name="CentralStation"/>
@@ -223,4 +216,5 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_zAgXIcVPEeehTrEdjWwgmQ" name="procedure" type="_qsmAMMVPEeehTrEdjWwgmQ" association="_zAfJAMVPEeehTrEdjWwgmQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_zAg-MMVPEeehTrEdjWwgmQ" name="rover" type="_9CKHsMItEeenJY8sKbqJvg" association="_zAfJAMVPEeehTrEdjWwgmQ"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UXJEUMVTEeeXoZ7UVqxPmA"/>
 </uml:Model>
