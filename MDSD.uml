@@ -217,4 +217,78 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_zAg-MMVPEeehTrEdjWwgmQ" name="rover" type="_9CKHsMItEeenJY8sKbqJvg" association="_zAfJAMVPEeehTrEdjWwgmQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_UXJEUMVTEeeXoZ7UVqxPmA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_v5oRQMYJEeefPIx_7DiXqA" name="Rover">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_IfwnkMYMEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_D0w4EMYMEeefPIx_7DiXqA" contract="_D0w4EMYMEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_tnEt4MYLEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_YbcTEMYKEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_utotUMYLEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_HLWEQMYKEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_vq3KkMYLEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_KiTZAMYKEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_ube-oMYREeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_GQCOYMYREeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_HUA-cMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_kt0YwMYMEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Q6phgMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_2kL9YMYMEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_1isykMYJEeefPIx_7DiXqA" name="Proximity Sensor">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_cCNwAMYLEeefPIx_7DiXqA" client="_1isykMYJEeefPIx_7DiXqA" supplier="_HLWEQMYKEeefPIx_7DiXqA" contract="_HLWEQMYKEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_4sqNIMYJEeefPIx_7DiXqA" name="Wheels">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_g0FjkMYLEeefPIx_7DiXqA" client="_4sqNIMYJEeefPIx_7DiXqA" supplier="_KiTZAMYKEeefPIx_7DiXqA" contract="_KiTZAMYKEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_8Y5OUMYJEeefPIx_7DiXqA" name="GPS">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_iKadUMYLEeefPIx_7DiXqA" client="_8Y5OUMYJEeefPIx_7DiXqA" supplier="_R7RKoMYKEeefPIx_7DiXqA" contract="_R7RKoMYKEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="__TSi4MYJEeefPIx_7DiXqA" name="Network Device">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_RekyIMYLEeefPIx_7DiXqA" client="__TSi4MYJEeefPIx_7DiXqA" supplier="_YbcTEMYKEeefPIx_7DiXqA" contract="_YbcTEMYKEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_EhjXgMYKEeefPIx_7DiXqA" name="Camera">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_j3BJEMYLEeefPIx_7DiXqA" client="_EhjXgMYKEeefPIx_7DiXqA" supplier="_VRwlUMYKEeefPIx_7DiXqA" contract="_VRwlUMYKEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_HLWEQMYKEeefPIx_7DiXqA" name="Proximity Sensor Manager"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_KiTZAMYKEeefPIx_7DiXqA" name="Wheel Manager"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_R7RKoMYKEeefPIx_7DiXqA" name="GPS Manager"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_VRwlUMYKEeefPIx_7DiXqA" name="Camera Manager"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_YbcTEMYKEeefPIx_7DiXqA" name="Network Device Manager"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_xqbOkMYLEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_R7RKoMYKEeefPIx_7DiXqA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ygZ0UMYLEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_VRwlUMYKEeefPIx_7DiXqA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_D0w4EMYMEeefPIx_7DiXqA" name="Rover Manager"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_UW84AMYMEeefPIx_7DiXqA" name="Procedure">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_xey0EMYQEeefPIx_7DiXqA" client="_UW84AMYMEeefPIx_7DiXqA" supplier="_kt0YwMYMEeefPIx_7DiXqA" contract="_kt0YwMYMEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_NBRcMMYSEeefPIx_7DiXqA" client="_UW84AMYMEeefPIx_7DiXqA" supplier="_2kL9YMYMEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_WsJNwMYMEeefPIx_7DiXqA" name="Reward Point">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yXQtIMYQEeefPIx_7DiXqA" client="_WsJNwMYMEeefPIx_7DiXqA" supplier="_2kL9YMYMEeefPIx_7DiXqA" contract="_2kL9YMYMEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_kt0YwMYMEeefPIx_7DiXqA" name="Procedure Manager"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_2kL9YMYMEeefPIx_7DiXqA" name="Reward Point Manager"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_7op80MYMEeefPIx_7DiXqA" name="Mission">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_julzkMYQEeefPIx_7DiXqA" client="_7op80MYMEeefPIx_7DiXqA" supplier="_962B4MYMEeefPIx_7DiXqA" contract="_962B4MYMEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_fo8h8MYSEeefPIx_7DiXqA" client="_7op80MYMEeefPIx_7DiXqA" supplier="_IjqasMYNEeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_lJWPcMYSEeefPIx_7DiXqA" client="_7op80MYMEeefPIx_7DiXqA" supplier="_B5We0MYNEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_962B4MYMEeefPIx_7DiXqA" name="Mission Manager"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_AYM1IMYNEeefPIx_7DiXqA" name="Strategy">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mbYxAMYQEeefPIx_7DiXqA" client="_AYM1IMYNEeefPIx_7DiXqA" supplier="_B5We0MYNEeefPIx_7DiXqA" contract="_B5We0MYNEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_B5We0MYNEeefPIx_7DiXqA" name="Strategy Manager"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Fn8QcMYNEeefPIx_7DiXqA" name="Point">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_qyIHwMYQEeefPIx_7DiXqA" client="_Fn8QcMYNEeefPIx_7DiXqA" supplier="_IjqasMYNEeefPIx_7DiXqA" contract="_IjqasMYNEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_IjqasMYNEeefPIx_7DiXqA" name="Point Manager"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_0N6FsMYQEeefPIx_7DiXqA" name="Operator View">
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_nlZQkMYREeefPIx_7DiXqA" client="_0N6FsMYQEeefPIx_7DiXqA" supplier="_GQCOYMYREeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_Mx8KQMYTEeefPIx_7DiXqA" client="_0N6FsMYQEeefPIx_7DiXqA" supplier="_D0w4EMYMEeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="__Ggm8MYQEeefPIx_7DiXqA" name="Environment">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_KjqmwMYREeefPIx_7DiXqA" client="__Ggm8MYQEeefPIx_7DiXqA" supplier="_GQCOYMYREeefPIx_7DiXqA" contract="_GQCOYMYREeefPIx_7DiXqA"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_kFlh0MYREeefPIx_7DiXqA" client="__Ggm8MYQEeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_GQCOYMYREeefPIx_7DiXqA" name="Environment Manager"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_ORHI4MYREeefPIx_7DiXqA" name="Physical Area">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_WpizcMYREeefPIx_7DiXqA" client="_ORHI4MYREeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA" contract="_SIxW8MYREeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Ppl-wMYREeefPIx_7DiXqA" name="Logical Area">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_V63vkMYREeefPIx_7DiXqA" client="_Ppl-wMYREeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA" contract="_SIxW8MYREeefPIx_7DiXqA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_SIxW8MYREeefPIx_7DiXqA" name="Area Manager"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_pb0xQMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_962B4MYMEeefPIx_7DiXqA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_8U6-MMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_B5We0MYNEeefPIx_7DiXqA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_P6hEwMYTEeefPIx_7DiXqA" client="_0N6FsMYQEeefPIx_7DiXqA" supplier="_962B4MYMEeefPIx_7DiXqA"/>
 </uml:Model>
