@@ -360,10 +360,20 @@
     <packagedElement xmi:type="uml:Dependency" xmi:id="_kFlh0MYREeefPIx_7DiXqA" client="__Ggm8MYQEeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_GQCOYMYREeefPIx_7DiXqA" name="Environment Manager">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_q--xkMbMEeeoWLj19PTZwg" name="getBoundaries"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_0FNWQMbMEeeoWLj19PTZwg" name="setBoundaries"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_2pM9AMbMEeeoWLj19PTZwg" name="addArea"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_-0Pr0MbMEeeoWLj19PTZwg" name="getAreaType"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_q--xkMbMEeeoWLj19PTZwg" name="getBoundaries">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_x41_8MfKEeeqNOjemIFasw" name="bounds" type="_wxiZoMfKEeeqNOjemIFasw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0FNWQMbMEeeoWLj19PTZwg" name="setBoundaries">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3PNnsMfKEeeqNOjemIFasw" name="bounds" type="_wxiZoMfKEeeqNOjemIFasw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2pM9AMbMEeeoWLj19PTZwg" name="addArea">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-w_-IMfKEeeqNOjemIFasw" name="type" type="_-dpkUMfKEeeqNOjemIFasw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_FQ1vYMfLEeeqNOjemIFasw" name="areaBounds" type="_wxiZoMfKEeeqNOjemIFasw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-0Pr0MbMEeeoWLj19PTZwg" name="getAreaType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_XpfhsMfLEeeqNOjemIFasw" name="position" type="_uCpSsMbTEeeqNOjemIFasw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cvlRwMfLEeeqNOjemIFasw" name="type" type="_-dpkUMfKEeeqNOjemIFasw" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_ORHI4MYREeefPIx_7DiXqA" name="Physical Area">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_WpizcMYREeefPIx_7DiXqA" client="_ORHI4MYREeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA" contract="_SIxW8MYREeefPIx_7DiXqA"/>
@@ -372,8 +382,12 @@
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_V63vkMYREeefPIx_7DiXqA" client="_Ppl-wMYREeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA" contract="_SIxW8MYREeefPIx_7DiXqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_SIxW8MYREeefPIx_7DiXqA" name="Area Manager">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Bu3C0MbNEeeoWLj19PTZwg" name="getAreaType"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Cq1i4MbNEeeoWLj19PTZwg" name="getAreaBoundaries"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Bu3C0MbNEeeoWLj19PTZwg" name="getAreaType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1PxqEMfLEeeqNOjemIFasw" name="type" type="_-dpkUMfKEeeqNOjemIFasw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Cq1i4MbNEeeoWLj19PTZwg" name="getAreaBoundaries">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_s7BloMfLEeeqNOjemIFasw" name="bounds" type="_wxiZoMfKEeeqNOjemIFasw" direction="return"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_pb0xQMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_962B4MYMEeefPIx_7DiXqA"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_8U6-MMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_B5We0MYNEeefPIx_7DiXqA"/>
@@ -383,4 +397,6 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_I2cP4MbVEeeqNOjemIFasw" name="DataPackage"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_Tz53kMfIEeeqNOjemIFasw" name="ProximityValue"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_cwyTAMfIEeeqNOjemIFasw" name="CameraPicture"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wxiZoMfKEeeqNOjemIFasw" name="Boundaries"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-dpkUMfKEeeqNOjemIFasw" name="AreaType"/>
 </uml:Model>
