@@ -529,16 +529,19 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_78QZ0srkEeeFg9xynNwgMw" name="area" type="_ClnlYMrjEeeFg9xynNwgMw" association="_78PLsMrkEeeFg9xynNwgMw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Wie8IM63EeeSLqr7E5O4ew" name="User">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_sOWysM63EeeSLqr7E5O4ew" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_sOTIUM63EeeSLqr7E5O4ew">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wvv6QM63EeeSLqr7E5O4ew"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wv2n8M63EeeSLqr7E5O4ew" value="*"/>
-    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xWnvMM7GEeeeLrGNogZIrg" name="updatePosition">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xWnvMc7GEeeeLrGNogZIrg" type="_Dy7UEMIyEeenJY8sKbqJvg"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_sOTIUM63EeeSLqr7E5O4ew" memberEnd="_sOWysM63EeeSLqr7E5O4ew _sOYA0M63EeeSLqr7E5O4ew">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sOU9gM63EeeSLqr7E5O4ew" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sOVkkM63EeeSLqr7E5O4ew" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_sOYA0M63EeeSLqr7E5O4ew" name="user" type="_Wie8IM63EeeSLqr7E5O4ew" association="_sOTIUM63EeeSLqr7E5O4ew"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_sOWysM63EeeSLqr7E5O4ew" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_sOTIUM63EeeSLqr7E5O4ew">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wvv6QM63EeeSLqr7E5O4ew"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wv2n8M63EeeSLqr7E5O4ew" value="*"/>
+    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_x9anQM63EeeSLqr7E5O4ew" memberEnd="_x9b1Ys63EeeSLqr7E5O4ew _x9cccM63EeeSLqr7E5O4ew">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_x9b1YM63EeeSLqr7E5O4ew" source="org.eclipse.papyrus">
@@ -566,7 +569,6 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-6EHEc67EeeSLqr7E5O4ew" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_-6EuIM67EeeSLqr7E5O4ew" name="strategytypes" type="_fPLCoM67EeeSLqr7E5O4ew" association="_-6C48M67EeeSLqr7E5O4ew"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_-6FVMM67EeeSLqr7E5O4ew" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_-6C48M67EeeSLqr7E5O4ew"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_-6FVMM67EeeSLqr7E5O4ew" name="strategy" type="_nD0SsMrhEeeFg9xynNwgMw" association="_-6C48M67EeeSLqr7E5O4ew"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_GZG8cM7FEeeQqMYyUPtJdA" name="chalmers"/>
 </uml:Model>
