@@ -19,7 +19,7 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 
 		EnvironmentDescription e = new EnvironmentDescription();
-
+		
 		Color c = Color.GRAY;
 
 		Boundary w1 = new HorizontalBoundary(-5.0f, -5.0f, 5.0f, e, c);
@@ -30,13 +30,24 @@ public class Main {
 
 		Boundary w4 = new VerticalBoundary(-5.0f, -5.0f, 5.0f, e, c);
 
-		AbstractWall roomWall1 = new HorizontalWall(-1f, 4.5f, 1f, e, c);
+		//create four rooms with doors
+		
+		AbstractWall roomWall1 = new HorizontalWall(0f, 2.0f, 0f, e, c);
 
-		AbstractWall roomWall2 = new HorizontalWall(-4.5f, 4.5f, 1f, e, c);
+		AbstractWall roomWall2 = new HorizontalWall(0f, -2.0f, 0f, e, c);
 
-		AbstractWall roomWall3 = new VerticalWall(4.5f, -4.5f, -1f, e, c);
+		AbstractWall roomWall3 = new VerticalWall(0f, 2f, 0f, e, c);
 
-		AbstractWall roomWall4 = new VerticalWall(1f, -4.5f, -1f, e, c);
+		AbstractWall roomWall4 = new VerticalWall(0f, -2f, 0f, e, c);
+		
+		AbstractWall roomWall5 = new HorizontalWall(0f, 5.0f, 3.0f, e, c);
+
+		AbstractWall roomWall6 = new HorizontalWall(0f, -5.0f, -3.0f, e, c);
+
+		AbstractWall roomWall7 = new VerticalWall(0f, 5f, 3f, e, c);
+
+		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, e, c);
+
 
 		Set<RobotAvatar> robots = new HashSet<>();
 
