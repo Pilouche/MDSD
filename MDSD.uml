@@ -568,4 +568,5 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_-6EuIM67EeeSLqr7E5O4ew" name="strategytypes" type="_fPLCoM67EeeSLqr7E5O4ew" association="_-6C48M67EeeSLqr7E5O4ew"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_-6FVMM67EeeSLqr7E5O4ew" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_-6C48M67EeeSLqr7E5O4ew"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_GZG8cM7FEeeQqMYyUPtJdA" name="chalmers"/>
 </uml:Model>
