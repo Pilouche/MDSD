@@ -8,8 +8,8 @@ import simbad.sim.EnvironmentDescription;
 
 public class SimulatorMonitor extends AbstractSimulatorMonitor<Rover> {
 
-	public SimulatorMonitor( Set<Rover> robots, EnvironmentDescription e) {
-		super(robots, e);
+	public SimulatorMonitor( Set<Rover> rovers, EnvironmentDescription e) {
+		super(rovers, e);
 	}
 
 	@Override

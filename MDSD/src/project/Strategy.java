@@ -21,6 +21,7 @@ public class Strategy {
 	 * @return 
 	 * @param type 
 	 */
-	public Point calculateNextPoint(Mission mission, Environment environment, StrategyTypes type) {
+	public Position calculateNextPoint(Mission mission, Environment environment, StrategyTypes type) {
+		
 	}
 };

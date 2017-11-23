@@ -23,5 +23,6 @@ public class Procedure {
 	 * @return 
 	 */
 	public int calculateRewards(Area area) {
+		
 	}
 };
