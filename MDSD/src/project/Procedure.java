@@ -29,18 +29,18 @@ public class Procedure {
 		
 		if(type == ProcedureType.procedureA) {
 			for(Rover rover : rovers) {
-				if(rover.rover.area.getAreaType() == AreaType.physical) {
-					rover.setRewardPoints(1);
-				} else if(rover.rover.area.getAreaType() == AreaType.logical) {
+				if(rover.inEnvironment.area.getAreaType() == AreaType.physical) {
+					rover.addRewardPoints(1);
+				} else if(rover.inEnvironment.area.getAreaType() == AreaType.logical) {
 					changeProcedure = true;
 				}
 			}
 		} else if(type == ProcedureType.procedureB) {
 			for(Rover rover : rovers) {
-				if(rover.rover.area.getAreaType() == AreaType.physical) {
+				if(rover.inEnvironment.area.getAreaType() == AreaType.physical) {
 					changeProcedure = true;
-				} else if(rover.rover.area.getAreaType() == AreaType.logical) {
-					rover.setRewardPoints(1);
+				} else if(rover.inEnvironment.area.getAreaType() == AreaType.logical) {
+					rover.addRewardPoints(1);
 				}
 			}
 		}

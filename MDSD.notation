@@ -2033,7 +2033,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nD2vAcrhEeeFg9xynNwgMw"/>
       </children>
       <element xmi:type="uml:Class" href="MDSD.uml#_nD0SsMrhEeeFg9xynNwgMw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nD2H4crhEeeFg9xynNwgMw" x="880" y="180"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nD2H4crhEeeFg9xynNwgMw" x="960" y="180"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_NRyCkMriEeeFg9xynNwgMw" type="Class_Shape">
       <children xmi:type="notation:DecorationNode" xmi:id="_NRyCksriEeeFg9xynNwgMw" type="Class_NameLabel"/>

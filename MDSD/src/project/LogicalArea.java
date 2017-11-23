@@ -11,4 +11,9 @@ import project.Area;
  * 
  */
 public class LogicalArea extends Area {
+
+	public LogicalArea(AreaType type) {
+		super(type);
+		// TODO Auto-generated constructor stub
+	}
 };
