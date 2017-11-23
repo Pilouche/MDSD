@@ -13,7 +13,7 @@ import project.Position;
  */
 public class Rover extends RobotAvatar{
 	
-
+	private Position position;
 	/**
 	 * 
 	 */
@@ -23,8 +23,9 @@ public class Rover extends RobotAvatar{
 	 */
 	public Environment rover;
 	
-	public Rover(Point position, String name) {
+	public Rover(Position position, String name) {
 		super(position, name);
+		this.position = position;
 	}
 
 	/**
@@ -50,4 +51,9 @@ public class Rover extends RobotAvatar{
 	public void moveToPoint(Position pos) {
 		this.setDestination(pos);
 	}
+	
+	public Position getPosition() {
+		return this.position;
+	}
+	
 };

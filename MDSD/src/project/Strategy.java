@@ -43,7 +43,13 @@ public class Strategy {
 		//Else go to the target room
 		
 		// Assignement 1 test
-		return points[nextPositionIndex];
+		if (nextPositionIndex < points.length) {
+			return points[nextPositionIndex];
+		} else {
+			System.out.println("End");
+			return points[points.length-1];
+		}
+		
 		
 		/*
 		

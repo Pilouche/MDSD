@@ -51,7 +51,6 @@ public class User {
 
 		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, e, c);
 
-		
 		Position exit1 = new Position(-2.5,7);
 		Position exit2 = new Position(-2.5,-7);
 		Position exit3 = new Position(2.5,-7);
@@ -80,8 +79,14 @@ public class User {
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, e);
 		
+		System.out.println(rover1.getPosition().toString());
+		
 		while(true) {
-			mission1.updateRoverPosition(rover1.getPosition());
+			//System.out.println("Call to position");
+			mission1.updateRoverPosition(mission1.getNextPosition());
+			mission2.updateRoverPosition(mission2.getNextPosition());
+			mission3.updateRoverPosition(mission3.getNextPosition());
+			mission4.updateRoverPosition(mission4.getNextPosition());
 		}
 
 	}
