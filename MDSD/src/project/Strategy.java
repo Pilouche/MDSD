@@ -14,6 +14,21 @@ import project.Point;
  * 
  */
 public class Strategy {
+	
+	private static Strategy instance;
+	
+	private Strategy() {
+		
+	}
+	
+	public static Strategy getInstance() {
+		if(instance == null) {
+			instance = new Strategy();
+		}
+		return instance;
+	}
+	
+	
 	/**
 	 * 
 	 * @param mission 
@@ -22,6 +37,12 @@ public class Strategy {
 	 * @param type 
 	 */
 	public Position calculateNextPoint(Mission mission, Environment environment, StrategyTypes type) {
+		Position[] points = mission.getMissionPoints();
 		
+		switch(type) {
+		case optimizeLength: return points[0];//Do stuff
+		case optimizeTime: return points[0];//Do stuff
+		default: return null;
+		}
 	}
 };
