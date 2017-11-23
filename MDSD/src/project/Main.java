@@ -49,7 +49,7 @@ public class Main {
 		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, e, c);
 
 		
-		Set<Rover> robots = new HashSet<>();
+		Set<Rover> rovers = new HashSet<>();
 		Rover robot1 = new Rover(new Position(0, 0), "Robot 1");
 		Rover robot2 = new Rover(new Position(1, 3), "Robot 2");
 		Rover robot3 = new Rover(new Position(1, 3), "Robot 3");
@@ -65,10 +65,10 @@ public class Main {
 		Mission mission3 = new Mission();
 		Mission mission4 = new Mission();
 
-		robots.add(robot1);
-		robots.add(robot2);
-		robots.add(robot3);
-		robots.add(robot4);
+		rovers.add(robot1);
+		rovers.add(robot2);
+		rovers.add(robot3);
+		rovers.add(robot4);
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(robots, e);
 
