@@ -405,6 +405,9 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_NKzGQMrhEeeFg9xynNwgMw" name="stopMission"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_U9YzMNBPEeexNJmJXyGWXw" name="updateRoverPosition">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_U9YzMdBPEeexNJmJXyGWXw" name="newPosition" type="_2bRegMrZEeeFg9xynNwgMw"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_QcPeUMrgEeeFg9xynNwgMw" memberEnd="_QcShoMrgEeeFg9xynNwgMw _QcVk8MrgEeeFg9xynNwgMw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QcR6kMrgEeeFg9xynNwgMw" source="org.eclipse.papyrus">

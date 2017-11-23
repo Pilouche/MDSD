@@ -16,19 +16,34 @@ class Mission {
 	 * 
 	 */
 
-
+	private Position nextPosition;
 	public StrategyTypes[] strategyType;
+	private Strategy strategy = Strategy.getInstance();
+	private Position[] missionPoints;
+	private Rover rover;
 
 	/**
 	 * 
 	 * @param points 
 	 */
 	public void setMission(Position[] position) {
+		missionPoints = position;
 	}
 
 	/**
 	 * 
 	 */
 	public void stopMission() {
+	}
+	
+	public void updateRoverPosition(Position newPosition) {
+		if(newPosition.equals(nextPosition)) {
+			nextPosition = strategy.calculateNextPoint(this, null, StrategyTypes.optimizeLength);
+			rover.moveToPoint(nextPosition);
+		}
+	}
+	
+	public Position[] getMissionPoints() {
+		return missionPoints;
 	}
 };
