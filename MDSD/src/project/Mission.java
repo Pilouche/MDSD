@@ -12,9 +12,13 @@ import project.StrategyTypes;
  * 
  */
 class Mission {
+	int step;
 	/**
 	 * 
 	 */
+	public Mission(Position[] positions) {
+		this.setMission(positions);
+	}
 
 	private Position nextPosition;
 	public StrategyTypes[] strategyType;
@@ -26,6 +30,7 @@ class Mission {
 	 * 
 	 * @param points 
 	 */
+
 	public void setMission(Position[] position) {
 		missionPoints = position;
 	}
