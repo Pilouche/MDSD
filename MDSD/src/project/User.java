@@ -26,19 +26,22 @@ public class User {
 
 		Boundary w2 = new HorizontalBoundary(5.0f, -5.0f, 5.0f, e, c);
 
-		Boundary w3 = new VerticalBoundary(5.0f, -5.0f, 5.0f, e, c);
+		Boundary w3 = new VerticalBoundary(5.0f, -5.0f, -3.0f, e, c);
 
-		Boundary w4 = new VerticalBoundary(-5.0f, -5.0f, 5.0f, e, c);
+		Boundary w4 = new VerticalBoundary(5.0f, -2.0f, 2.0f, e, c);
+		
+		Boundary w5 = new VerticalBoundary(5.0f, 3f, 5.0f, e, c);
+		
+		Boundary w6 = new VerticalBoundary(-5.0f, -5.0f, -3.0f, e, c);
 
+		Boundary w7 = new VerticalBoundary(-5.0f, -2.0f, 2.0f, e, c);
+		
+		Boundary w8 = new VerticalBoundary(-5.0f, 3f, 5.0f, e, c);
 		//create four rooms with doors
 		
-		AbstractWall roomWall1 = new HorizontalWall(0f, 2.0f, 0f, e, c);
+		AbstractWall roomWall2 = new HorizontalWall(0f, -2.0f, 2f, e, c);
 
-		AbstractWall roomWall2 = new HorizontalWall(0f, -2.0f, 0f, e, c);
-
-		AbstractWall roomWall3 = new VerticalWall(0f, 2f, 0f, e, c);
-
-		AbstractWall roomWall4 = new VerticalWall(0f, -2f, 0f, e, c);
+		AbstractWall roomWall3 = new VerticalWall(0f, -2f, 2f, e, c);
 		
 		AbstractWall roomWall5 = new HorizontalWall(0f, 5.0f, 3.0f, e, c);
 
@@ -49,16 +52,21 @@ public class User {
 		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, e, c);
 
 		
-		Set<Rover> rovers = new HashSet<>();
-		Rover rover1 = new Rover(new Position(0, 0), "Robot 1");
-		Rover rover2 = new Rover(new Position(1, 3), "Robot 2");
-		Rover rover3 = new Rover(new Position(1, 3), "Robot 3");
-		Rover rover4 = new Rover(new Position(1, 3), "Robot 4");
+		Position exit1 = new Position(-2.5,7);
+		Position exit2 = new Position(-2.5,-7);
+		Position exit3 = new Position(2.5,-7);
+		Position exit4 = new Position(2.5,7);
 		
-		Position room1 = new Position(0,0);
-		Position room2 = new Position(0,0);
-		Position room3 = new Position(0,0);
-		Position room4 = new Position(0,0);
+		Set<Rover> rovers = new HashSet<>();
+		Rover rover1 = new Rover(exit1, "Rover 1");
+		Rover rover2 = new Rover(exit2, "Rover 2");
+		Rover rover3 = new Rover(exit3, "Rover 3");
+		Rover rover4 = new Rover(exit4, "Rover 4");
+		
+		Position room1 = new Position(-2.5,2.5);
+		Position room2 = new Position(-2.5,-2.5);
+		Position room3 = new Position(2.5,-2.5);
+		Position room4 = new Position(2.5,2.5);
 		
 		Mission mission1 = new Mission();
 		Mission mission2 = new Mission();
