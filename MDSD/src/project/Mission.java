@@ -18,6 +18,7 @@ class Mission {
 	public Mission(Rover r, Position[] positions) {
 		this.setMission(positions);
 		this.rover = r;
+		nextPositionIndex = 1;
 	}
 
 	private Position nextPosition;
@@ -25,6 +26,7 @@ class Mission {
 	private Strategy strategy = Strategy.getInstance();
 	private Position[] missionPoints;
 	private Rover rover;
+	private int nextPositionIndex;
 
 	/**
 	 * 
@@ -39,10 +41,10 @@ class Mission {
 	 */
 	public void stopMission() {
 	}
-	
+		
 	public void updateRoverPosition(Position newPosition) {
 		if(newPosition.equals(nextPosition)) {
-			nextPosition = strategy.calculateNextPoint(this, null, StrategyTypes.optimizeLength);
+			nextPosition = strategy.calculateNextPoint(this, null, StrategyTypes.optimizeLength,nextPositionIndex);
 			rover.moveToPoint(nextPosition);
 		}
 	}

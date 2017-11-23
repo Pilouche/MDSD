@@ -79,6 +79,10 @@ public class User {
 		rovers.add(rover4);
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, e);
+		
+		while(true) {
+			mission1.updateRoverPosition(rover1.getPosition());
+		}
 
 	}
 

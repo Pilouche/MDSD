@@ -47,6 +47,7 @@ public class Rover extends RobotAvatar{
 	 * 
 	 * @param point 
 	 */
-	public void moveToPoint(Point point) {
+	public void moveToPoint(Position pos) {
+		this.setDestination(pos);
 	}
 };
