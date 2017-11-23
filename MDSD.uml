@@ -374,10 +374,10 @@
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_jwA_oMrhEeeFg9xynNwgMw" name="moveToPoint">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_jwA_ocrhEeeFg9xynNwgMw" name="point" type="_Dy7UEMIyEeenJY8sKbqJvg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_jwA_ocrhEeeFg9xynNwgMw" name="point" type="_2bRegMrZEeeFg9xynNwgMw"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_2bRegMrZEeeFg9xynNwgMw" name="Point">
+  <packagedElement xmi:type="uml:Class" xmi:id="_2bRegMrZEeeFg9xynNwgMw" name="Position">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_CrR3kMraEeeFg9xynNwgMw" name="x" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
@@ -399,7 +399,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d1pq8M67EeeSLqr7E5O4ew" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_AgO4IMrhEeeFg9xynNwgMw" name="setMission">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgO4IcrhEeeFg9xynNwgMw" name="points" type="_Dy7UEMIyEeenJY8sKbqJvg">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgO4IcrhEeeFg9xynNwgMw" name="points" type="_uCpSsMbTEeeqNOjemIFasw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGs6QMrhEeeFg9xynNwgMw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IGyZ0MrhEeeFg9xynNwgMw" value="*"/>
       </ownedParameter>
@@ -430,8 +430,8 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_6SUu8MrhEeeFg9xynNwgMw" name="calculateNextPoint">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu8srhEeeFg9xynNwgMw" name="mission" type="_76et8MItEeenJY8sKbqJvg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu88rhEeeFg9xynNwgMw" name="environment" type="_Vs8fEMIxEeenJY8sKbqJvg"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu9MrhEeeFg9xynNwgMw" name="point" type="_Dy7UEMIyEeenJY8sKbqJvg" direction="return"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_veOgoM66EeeSLqr7E5O4ew" name="type"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu9MrhEeeFg9xynNwgMw" name="point" type="_uCpSsMbTEeeqNOjemIFasw" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_veOgoM66EeeSLqr7E5O4ew" name="type" type="_fPLCoM67EeeSLqr7E5O4ew"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_HADl0MriEeeFg9xynNwgMw" memberEnd="_HAEM4sriEeeFg9xynNwgMw _HAEz8MriEeeFg9xynNwgMw">
@@ -530,7 +530,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Wie8IM63EeeSLqr7E5O4ew" name="User">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xWnvMM7GEeeeLrGNogZIrg" name="updatePosition">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xWnvMc7GEeeeLrGNogZIrg" type="_Dy7UEMIyEeenJY8sKbqJvg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xWnvMc7GEeeeLrGNogZIrg" name="position" type="_uCpSsMbTEeeqNOjemIFasw"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_sOTIUM63EeeSLqr7E5O4ew" memberEnd="_sOWysM63EeeSLqr7E5O4ew _sOYA0M63EeeSLqr7E5O4ew">
