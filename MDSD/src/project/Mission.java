@@ -12,7 +12,6 @@ import project.StrategyTypes;
  * 
  */
 class Mission {
-	int step;
 	/**
 	 * 
 	 */
@@ -30,7 +29,6 @@ class Mission {
 	 * 
 	 * @param points 
 	 */
-
 	public void setMission(Position[] position) {
 		missionPoints = position;
 	}

@@ -68,10 +68,10 @@ public class User {
 		Position room3 = new Position(2.5,-2.5);
 		Position room4 = new Position(2.5,2.5);
 		
-		Mission mission1 = new Mission();
-		Mission mission2 = new Mission();
-		Mission mission3 = new Mission();
-		Mission mission4 = new Mission();
+		Mission mission1 = new Mission(new Position[]{exit1,room1,room2,exit2});
+		Mission mission2 = new Mission(new Position[]{exit2,room2,room3,exit3});
+		Mission mission3 = new Mission(new Position[]{exit3,room3,room4,exit4});
+		Mission mission4 = new Mission(new Position[]{exit4,room4,room1,exit1});
 
 		rovers.add(rover1);
 		rovers.add(rover2);

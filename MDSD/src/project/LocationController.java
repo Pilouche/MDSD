@@ -1,5 +1,7 @@
 package project;
 
+import simbad.sim.EnvironmentDescription;
+
 public class LocationController {
 	/**
 	* CONSTRUCTOR
