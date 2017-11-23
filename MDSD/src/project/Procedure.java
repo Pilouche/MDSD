@@ -13,17 +13,33 @@ import project.ProcedureType;
 /**
  * 
  */
-public class Procedure {
+public class Procedure extends Thread {
 	/**
 	 * 
 	 */
 	private Set<Rover> rovers;
 	private ProcedureType type = ProcedureType.procedureA;
+	
+	public Procedure(Set<Rover> rovers) {
+		this.rovers = rovers;
+	}
+	
+	@Override
+	public void start() {
+		calculateRewards();
+	}
 
 	/**
 	 *  
 	 */
 	public void calculateRewards() {
+		
+		try {
+			this.sleep(20000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		boolean changeProcedure = false;
 		
@@ -50,5 +66,7 @@ public class Procedure {
 		} else if(changeProcedure && type == ProcedureType.procedureB) {
 			type = ProcedureType.procedureA;
 		}
+		
+		calculateRewards();
 	}
 };
