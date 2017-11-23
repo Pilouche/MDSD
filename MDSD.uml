@@ -398,6 +398,7 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d1ghAM67EeeSLqr7E5O4ew"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d1pq8M67EeeSLqr7E5O4ew" value="*"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JaHAcNBTEeexNJmJXyGWXw" name="missionPoints" type="_uCpSsMbTEeeqNOjemIFasw"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_AgO4IMrhEeeFg9xynNwgMw" name="setMission">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgO4IcrhEeeFg9xynNwgMw" name="points" type="_uCpSsMbTEeeqNOjemIFasw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGs6QMrhEeeFg9xynNwgMw" value="1"/>
@@ -407,6 +408,9 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_NKzGQMrhEeeFg9xynNwgMw" name="stopMission"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_U9YzMNBPEeexNJmJXyGWXw" name="updateRoverPosition">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_U9YzMdBPEeexNJmJXyGWXw" name="newPosition" type="_2bRegMrZEeeFg9xynNwgMw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_e2qooNBTEeexNJmJXyGWXw" name="getMissionPoints">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_e2qoodBTEeexNJmJXyGWXw" name="points" type="_uCpSsMbTEeeqNOjemIFasw" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_QcPeUMrgEeeFg9xynNwgMw" memberEnd="_QcShoMrgEeeFg9xynNwgMw _QcVk8MrgEeeFg9xynNwgMw">
@@ -429,12 +433,16 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aJwsgMrgEeeFg9xynNwgMw" value="1"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_nD0SsMrhEeeFg9xynNwgMw" name="Strategy">
+  <packagedElement xmi:type="uml:Class" xmi:id="_nD0SsMrhEeeFg9xynNwgMw" name="Strategy" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_soLGINBSEeexNJmJXyGWXw" name="instance" visibility="private" type="_RyaakMVPEeehTrEdjWwgmQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_6SUu8MrhEeeFg9xynNwgMw" name="calculateNextPoint">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu8srhEeeFg9xynNwgMw" name="mission" type="_76et8MItEeenJY8sKbqJvg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu88rhEeeFg9xynNwgMw" name="environment" type="_Vs8fEMIxEeenJY8sKbqJvg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu9MrhEeeFg9xynNwgMw" name="point" type="_uCpSsMbTEeeqNOjemIFasw" direction="return"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_veOgoM66EeeSLqr7E5O4ew" name="type" type="_fPLCoM67EeeSLqr7E5O4ew"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5L0M4NBSEeexNJmJXyGWXw" name="getInstance">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_5L0M4dBSEeexNJmJXyGWXw" name="instance" type="_RyaakMVPEeehTrEdjWwgmQ" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_HADl0MriEeeFg9xynNwgMw" memberEnd="_HAEM4sriEeeFg9xynNwgMw _HAEz8MriEeeFg9xynNwgMw">
