@@ -15,8 +15,9 @@ class Mission {
 	/**
 	 * 
 	 */
-	public Mission(Position[] positions) {
+	public Mission(Rover r, Position[] positions) {
 		this.setMission(positions);
+		this.rover = r;
 	}
 
 	private Position nextPosition;
