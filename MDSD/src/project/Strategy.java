@@ -46,7 +46,7 @@ public class Strategy {
 		if (nextPositionIndex < points.length) {
 			return points[nextPositionIndex];
 		} else {
-			System.out.println("End");
+			//System.out.println("End");
 			return points[points.length-1];
 		}
 		
