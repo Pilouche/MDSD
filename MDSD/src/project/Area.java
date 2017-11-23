@@ -29,6 +29,7 @@ public abstract class Area {
 	 * @return 
 	 */
 	public Boundaries getBoundaries() {
+		return null;
 	}
 
 	/**

@@ -24,7 +24,7 @@ public class Environment {
 	/**
 	 * 
 	 */
-	public Rover[] rovers;
+	public Rover[] roversInEnvironment;
 
 	/**
 	 * 
