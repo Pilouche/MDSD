@@ -8,5 +8,6 @@ package project;
 /**
  * 
  */
-public class ProcedureType {
+public enum ProcedureType {
+	procedureA, procedureB;
 };

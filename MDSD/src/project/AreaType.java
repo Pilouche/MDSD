@@ -8,6 +8,6 @@ package project;
 /**
  * 
  */
-public class AreaType {
-	
+public enum AreaType {
+	physical, logical;
 };
