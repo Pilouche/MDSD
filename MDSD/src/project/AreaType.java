@@ -9,4 +9,5 @@ package project;
  * 
  */
 public class AreaType {
+	
 };

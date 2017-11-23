@@ -29,6 +29,7 @@ public abstract class Area {
 	 * @return 
 	 */
 	public Boundaries getBoundaries() {
+		return this.boundaries;
 	}
 
 	/**
@@ -36,5 +37,6 @@ public abstract class Area {
 	 * @param boundaries 
 	 */
 	public void setBoundaries(Boundaries boundaries) {
+		this.boundaries = boundaries;
 	}
 };
