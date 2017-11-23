@@ -11,7 +11,7 @@ import project.Boundaries;
 /**
  * 
  */
-public abstract class Area {
+public class Area {
 	/**
 	 * 
 	 */
