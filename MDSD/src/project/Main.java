@@ -49,7 +49,7 @@ public class Main {
 		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, e, c);
 
 		
-		Set<RobotAvatar> robots = new HashSet<>();
+		Set<Rover> robots = new HashSet<>();
 		Rover robot1 = new Rover(new Position(0, 0), "Robot 1");
 		Rover robot2 = new Rover(new Position(1, 3), "Robot 2");
 		Rover robot3 = new Rover(new Position(1, 3), "Robot 3");

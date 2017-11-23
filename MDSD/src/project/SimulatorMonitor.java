@@ -6,14 +6,14 @@ import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
 import simbad.sim.EnvironmentDescription;
 
-public class SimulatorMonitor extends AbstractSimulatorMonitor<RobotAvatar> {
+public class SimulatorMonitor extends AbstractSimulatorMonitor<Rover> {
 
-	public SimulatorMonitor( Set<RobotAvatar> robots, EnvironmentDescription e) {
+	public SimulatorMonitor( Set<Rover> robots, EnvironmentDescription e) {
 		super(robots, e);
 	}
 
 	@Override
-	public void update(RobotAvatar robot) {
+	public void update(Rover rover) {
 		//p.newGPSpositionChangeDetected(robot.getPosition ());
 	}
 
