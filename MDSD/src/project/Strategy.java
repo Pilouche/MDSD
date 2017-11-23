@@ -22,6 +22,11 @@ public class Strategy {
 	 * @param type 
 	 */
 	public Position calculateNextPoint(Mission mission, Environment environment, StrategyTypes type) {
+		Position nextPosition;
+		//If the target room (next point) has more than 1 rover, then wait (return the rover position)
+		//Else go to the target room
+		
+		return nextPosition;
 		
 	}
 };

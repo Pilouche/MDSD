@@ -12,10 +12,14 @@ import project.StrategyTypes;
  * 
  */
 class Mission {
+	Position[] positions;
+	int step;
 	/**
 	 * 
 	 */
-
+	public Mission(Position[] positions) {
+		this.setMission(positions);
+	}
 
 	public StrategyTypes[] strategyType;
 
@@ -23,7 +27,8 @@ class Mission {
 	 * 
 	 * @param points 
 	 */
-	public void setMission(Position[] position) {
+	public void setMission(Position[] p) {
+		this.positions=p;
 	}
 
 	/**
