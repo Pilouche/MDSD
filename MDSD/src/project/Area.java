@@ -16,13 +16,18 @@ public abstract class Area {
 	 * 
 	 */
 	private Boundaries boundaries;
+	private AreaType type;
+	
+	public Area(AreaType type) {
+		this.type = type;
+	}
 
 	/**
 	 * 
 	 * @param areaType 
 	 */
 	public AreaType getAreaType() {
-		return null; //Fix this
+		return type; //Fix this
 	}
 
 	/**
