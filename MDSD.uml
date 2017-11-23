@@ -509,12 +509,6 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_SVosEcrkEeeFg9xynNwgMw" name="boundaries" type="_wxiZoMfKEeeqNOjemIFasw"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_X9JuMMrkEeeFg9xynNwgMw" name="PhysicalArea">
-    <generalization xmi:type="uml:Generalization" xmi:id="_jvWw8MrkEeeFg9xynNwgMw" general="_z3-20MrjEeeFg9xynNwgMw"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_aOh68MrkEeeFg9xynNwgMw" name="LogicalArea">
-    <generalization xmi:type="uml:Generalization" xmi:id="_kmXRcMrkEeeFg9xynNwgMw" general="_z3-20MrjEeeFg9xynNwgMw"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_nWQmMMrkEeeFg9xynNwgMw" memberEnd="_nWR0UsrkEeeFg9xynNwgMw _nWSbYMrkEeeFg9xynNwgMw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nWR0UMrkEeeFg9xynNwgMw" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nWR0UcrkEeeFg9xynNwgMw" key="nature" value="UML_Nature"/>
@@ -581,5 +575,8 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_-6EuIM67EeeSLqr7E5O4ew" name="strategytypes" type="_fPLCoM67EeeSLqr7E5O4ew" association="_-6C48M67EeeSLqr7E5O4ew"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_-6FVMM67EeeSLqr7E5O4ew" name="strategy" type="_nD0SsMrhEeeFg9xynNwgMw" association="_-6C48M67EeeSLqr7E5O4ew"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_RR6i0NBWEee9lo7XoycZxg" name="AreaType" visibility="package">
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ETRFoNBXEee9lo7XoycZxg" name="physicalArea"/>
   </packagedElement>
 </uml:Model>
