@@ -8,7 +8,7 @@ package project;
 /**
  * 
  */
-public enum StrategyTypes {
+public enum StrategyType {
 	/**
 	 * 
 	 */

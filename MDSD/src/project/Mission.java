@@ -5,7 +5,7 @@
 package project;
 
 import project.Position;
-import project.StrategyTypes;
+import project.StrategyType;
 
 /************************************************************/
 /**
@@ -21,7 +21,7 @@ class Mission {
 	}
 
 	private Position nextPosition;
-	public StrategyTypes[] strategyType;
+	public StrategyType[] strategyType;
 	private Strategy strategy = Strategy.getInstance();
 	private Position[] missionPoints;
 	private Rover rover;
@@ -42,7 +42,7 @@ class Mission {
 	
 	public void updateRoverPosition(Position newPosition) {
 		if(newPosition.equals(nextPosition)) {
-			nextPosition = strategy.calculateNextPoint(this, null, StrategyTypes.optimizeLength);
+			nextPosition = strategy.calculateNextPoint(this, null, StrategyType.optimizeLength);
 			rover.moveToPoint(nextPosition);
 		}
 	}
