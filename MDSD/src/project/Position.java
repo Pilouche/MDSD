@@ -8,13 +8,21 @@ package project;
 /**
  * 
  */
-public enum StrategyTypes {
+public class Position {
 	/**
 	 * 
 	 */
-	optimizeLength,
+	private int x;
 	/**
 	 * 
 	 */
-	optimizeTime;
+	private int y;
+
+	/**
+	 * 
+	 * @param x 
+	 * @param y 
+	 */
+	public void updatePosition(int x, int y) {
+	}
 };
