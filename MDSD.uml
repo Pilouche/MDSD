@@ -565,7 +565,7 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_07lokM63EeeSLqr7E5O4ew" name="environment" type="_ClnlYMrjEeeFg9xynNwgMw" association="_07jzYM63EeeSLqr7E5O4ew"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_07lokc63EeeSLqr7E5O4ew" name="user" type="_Wie8IM63EeeSLqr7E5O4ew" association="_07jzYM63EeeSLqr7E5O4ew"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Enumeration" xmi:id="_fPLCoM67EeeSLqr7E5O4ew" name="StrategyTypes">
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_fPLCoM67EeeSLqr7E5O4ew" name="StrategyType">
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hVo_4M67EeeSLqr7E5O4ew" name="optimizeLength"/>
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_jWjHsM67EeeSLqr7E5O4ew" name="optimizeTime"/>
   </packagedElement>
@@ -578,5 +578,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Enumeration" xmi:id="_RR6i0NBWEee9lo7XoycZxg" name="AreaType" visibility="package">
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ETRFoNBXEee9lo7XoycZxg" name="physicalArea"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Hc6hsNBYEee9lo7XoycZxg" name="logicalArea"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_G0YFkNBZEee9lo7XoycZxg" client="_z3-20MrjEeeFg9xynNwgMw" supplier="_RR6i0NBWEee9lo7XoycZxg"/>
 </uml:Model>
