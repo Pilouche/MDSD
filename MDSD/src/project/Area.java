@@ -21,7 +21,8 @@ public abstract class Area {
 	 * 
 	 * @param areaType 
 	 */
-	public void getAreaType(AreaType areaType) {
+	public AreaType getAreaType() {
+		return null; //Fix this
 	}
 
 	/**
