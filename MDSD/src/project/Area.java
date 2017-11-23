@@ -11,17 +11,23 @@ import project.Boundaries;
 /**
  * 
  */
-public abstract class Area {
+public class Area {
 	/**
 	 * 
 	 */
 	private Boundaries boundaries;
+	private AreaType type;
+	
+	public Area(AreaType type) {
+		this.type = type;
+	}
 
 	/**
 	 * 
 	 * @param areaType 
 	 */
-	public void getAreaType(AreaType areaType) {
+	public AreaType getAreaType() {
+		return type; //Fix this
 	}
 
 	/**
@@ -29,6 +35,7 @@ public abstract class Area {
 	 * @return 
 	 */
 	public Boundaries getBoundaries() {
+
 		return this.boundaries;
 	}
 

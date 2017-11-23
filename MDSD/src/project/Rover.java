@@ -21,7 +21,7 @@ public class Rover extends RobotAvatar{
 	/**
 	 * 
 	 */
-	public Environment rover;
+	public Environment inEnvironment;
 	
 	public Rover(Position position, String name) {
 		super(position, name);
@@ -33,15 +33,15 @@ public class Rover extends RobotAvatar{
 	 * @return 
 	 */
 	public int getRewardPoints() {
-		int i = 0;
-		return i;
+		return rewardPoints;
 	}
 
 	/**
 	 * 
 	 * @param points 
 	 */
-	public void setRewardPoints(int points) {
+	public void addRewardPoints(int points) {
+		rewardPoints += points; 
 	}
 
 	/**

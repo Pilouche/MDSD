@@ -4,6 +4,8 @@
 
 package project;
 
+import java.util.Set;
+
 import project.Area;
 import project.ProcedureType;
 
@@ -15,14 +17,38 @@ public class Procedure {
 	/**
 	 * 
 	 */
-	private ProcedureType type;
+	private Set<Rover> rovers;
+	private ProcedureType type = ProcedureType.procedureA;
 
 	/**
-	 * 
-	 * @param area 
-	 * @return 
+	 *  
 	 */
-	public int calculateRewards(Area area) {
+	public void calculateRewards() {
 		
+		boolean changeProcedure = false;
+		
+		if(type == ProcedureType.procedureA) {
+			for(Rover rover : rovers) {
+				if(rover.inEnvironment.area.getAreaType() == AreaType.physical) {
+					rover.addRewardPoints(1);
+				} else if(rover.inEnvironment.area.getAreaType() == AreaType.logical) {
+					changeProcedure = true;
+				}
+			}
+		} else if(type == ProcedureType.procedureB) {
+			for(Rover rover : rovers) {
+				if(rover.inEnvironment.area.getAreaType() == AreaType.physical) {
+					changeProcedure = true;
+				} else if(rover.inEnvironment.area.getAreaType() == AreaType.logical) {
+					rover.addRewardPoints(1);
+				}
+			}
+		}
+		
+		if(changeProcedure && type == ProcedureType.procedureA) {
+			type = ProcedureType.procedureB;
+		} else if(changeProcedure && type == ProcedureType.procedureB) {
+			type = ProcedureType.procedureA;
+		}
 	}
 };

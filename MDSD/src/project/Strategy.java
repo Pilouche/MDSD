@@ -36,7 +36,7 @@ public class Strategy {
 	 * @return 
 	 * @param type 
 	 */
-	public Position calculateNextPoint(Mission mission, Environment environment, StrategyTypes type, int nextPositionIndex) {
+	public Position calculateNextPoint(Mission mission, Environment environment, StrategyType type, int nextPositionIndex) {
 		Position[] points = mission.getMissionPoints();
 		//For the assignement
 		//If the target room (next point) has more than 1 rover, then wait or return the rover position
