@@ -8,7 +8,8 @@ package project;
 /**
  * 
  */
-public class Position {
+public class Position extends Point{
+
 	/**
 	 * 
 	 */
@@ -17,6 +18,11 @@ public class Position {
 	 * 
 	 */
 	private int y;
+	
+	public Position(double x, double z) {
+		super(x, z);
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * 

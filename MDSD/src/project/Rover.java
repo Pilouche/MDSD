@@ -11,7 +11,9 @@ import project.Position;
 /**
  * 
  */
-public class Rover {
+public class Rover extends RobotAvatar{
+	
+
 	/**
 	 * 
 	 */
@@ -20,6 +22,10 @@ public class Rover {
 	 * 
 	 */
 	public Environment rover;
+	
+	public Rover(Point position, String name) {
+		super(position, name);
+	}
 
 	/**
 	 * 
