@@ -20,11 +20,11 @@ public class Environment {
 	/**
 	 * 
 	 */
-	public Area environment;
+	public Area area;
 	/**
 	 * 
 	 */
-	public Rover[] environment;
+	public Rover[] rovers;
 
 	/**
 	 * 
