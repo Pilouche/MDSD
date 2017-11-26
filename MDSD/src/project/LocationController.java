@@ -74,7 +74,7 @@ public class LocationController {
 			while(toBeReleased){
 				if(Math.sqrt(Math.pow(a.getPosition().getX()-pos.getX(), 2)
 						+Math.pow(a.getPosition().getZ()-pos.getZ(), 2)) > radius) {
-					available = false;
+					available = true;
 					activeBot = null;
 					toBeReleased = false;
 				}
