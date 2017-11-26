@@ -67,6 +67,11 @@ public class User {
 		Position room3 = new Position(2.5,-2.5);
 		Position room4 = new Position(2.5,2.5);
 		
+		LocationController room1Ctrl = new LocationController(room1, 2.5, e);
+		LocationController room2Ctrl = new LocationController(room2, 2.5, e);
+		LocationController room3Ctrl = new LocationController(room3, 2.5, e);
+		LocationController room4Ctrl = new LocationController(room4, 2.5, e);
+		
 		Mission mission1 = new Mission(rover1, new Position[]{exit1,room1,room2,exit2});
 		Mission mission2 = new Mission(rover2, new Position[]{exit2,room2,room3,exit3});
 		Mission mission3 = new Mission(rover3, new Position[]{exit3,room3,room4,exit4});

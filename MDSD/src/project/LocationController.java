@@ -64,14 +64,21 @@ public class LocationController {
 	* the robot
 	*/
 	public void release(AbstractRobotSimulator a ) {
-		//needs to listen for when activeBot leaves the radius to release as the javadoc describes it, thus toBeReleased
+		//needs to listen for when activeBot leaves the radius to release as the javadoc describes it,
+		//a real observer would be nice and maybe a blocking polling like this won't work
 		if (a == activeBot){
+			//available = false;
+			//activeBot = null;
+			
 			toBeReleased = true;
-			available = false;
-			activeBot = null;
+			while(toBeReleased){
+				if(Math.sqrt(Math.pow(a.getPosition().getX()-pos.getX(), 2)
+						+Math.pow(a.getPosition().getZ()-pos.getZ(), 2)) > radius) {
+					available = false;
+					activeBot = null;
+					toBeReleased = false;
+				}
+			}
 		}
 	}
-	
-	
-	
 }
