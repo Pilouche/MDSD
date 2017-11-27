@@ -10,14 +10,14 @@ package project;
  */
 public class Position extends Point{
 
+
+
 	/**
 	 * 
 	 */
-	private int x;
 	/**
 	 * 
 	 */
-	private int y;
 	
 	public Position(double x, double z) {
 		super(x, z);
@@ -29,6 +29,14 @@ public class Position extends Point{
 	 * @param x 
 	 * @param y 
 	 */
-	public void updatePosition(int x, int y) {
+	public void updatePosition(double x, double z) {
+		this.setX(x);
+		this.setZ(z);
+		
+	}
+	
+	
+	public double getDistance(Position otherPosition) {
+		return Math.sqrt(Math.pow((otherPosition.getZ()-this.getZ()),2)+Math.pow(otherPosition.getX()-this.getX(),2));
 	}
 };

@@ -16,5 +16,13 @@ public enum StrategyType {
 	/**
 	 * 
 	 */
+	NNPath,
+	/**
+	 * 
+	 */
+	InMissionOrder,
+	/**
+	 * 
+	 */
 	optimizeTime;
 };

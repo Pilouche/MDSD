@@ -4,6 +4,8 @@
 
 package project;
 
+import java.util.Arrays;
+
 import project.Position;
 import project.StrategyType;
 
@@ -26,6 +28,7 @@ class Mission {
 	public StrategyType[] strategyType;
 	private Strategy strategy = Strategy.getInstance();
 	private Position[] missionPoints;
+	private Position[] unvisitedPoints;
 	private Rover rover;
 	private int nextPositionIndex;
 
@@ -35,6 +38,7 @@ class Mission {
 	 */
 	public void setMission(Position[] position) {
 		missionPoints = position;
+		unvisitedPoints = position;
 	}
 
 	/**
@@ -48,8 +52,18 @@ class Mission {
 		//System.out.println(newPosition.toString());
 		if(rover.isAtPosition(newPosition)) {
 			nextPositionIndex++;
-			nextPosition = strategy.calculateNextPoint(this, null, StrategyType.optimizeLength,nextPositionIndex);
+			nextPosition = strategy.calculateNextPoint(this, null, StrategyType.InMissionOrder,nextPositionIndex, newPosition);
 			rover.moveToPoint(nextPosition);
+			Position tempArray[] = new Position[unvisitedPoints.length-1];
+			
+			//Should probably be changed to some utility package or moved to some helper class we make code in as we need it. Basically just ArrayUtils.RemoveElement
+			int y = 0;
+			for(int x = 0; x < unvisitedPoints.length; x++) {
+				if(unvisitedPoints[x].equals(nextPosition)) x++;
+				tempArray[y] = unvisitedPoints[x];
+				y++;
+			}
+			unvisitedPoints = tempArray;
 		}
 	}
 	
@@ -57,6 +71,9 @@ class Mission {
 		return nextPosition;
 	}
 	public Position[] getMissionPoints() {
+		return missionPoints;
+	}
+	public Position[] getUnvisitedPoints() {
 		return missionPoints;
 	}
 };

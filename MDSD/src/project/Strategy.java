@@ -36,27 +36,34 @@ public class Strategy {
 	 * @return 
 	 * @param type 
 	 */
-	public Position calculateNextPoint(Mission mission, Environment environment, StrategyType type, int nextPositionIndex) {
-		Position[] points = mission.getMissionPoints();
+	public Position calculateNextPoint(Mission mission, Environment environment, StrategyType type, int nextPositionIndex, Position currentPosition) {
+		Position[] points = mission.getUnvisitedPoints(); 
+		if(points.length == 0) return null;
 		//For the assignement
 		//If the target room (next point) has more than 1 rover, then wait or return the rover position
 		//Else go to the target room
 		
 		// Assignement 1 test
-		if (nextPositionIndex < points.length) {
+		switch(type) {
+			case NNPath: 
+				int closestPoint = 0; //First point in the array of unvisited points.
+				for(int index = 1; index < points.length; index++)
+					if(currentPosition.getDistance(points[index]) < currentPosition.getDistance(points[closestPoint])) {
+						closestPoint = index;
+					}
+				return points[closestPoint];//Do stuff Nearest Neighbor Path 
+			case InMissionOrder:
+				return points[0]; //Probably this we should use in the first mission because the order we visit the points in is very important.
+			case optimizeTime: return points[0];//Do stuff
+		default: return null;
+		}
+		
+		
+		/*if (nextPositionIndex < points.length) {
 			return points[nextPositionIndex];
 		} else {
 			//System.out.println("End");
 			return points[points.length-1];
-		}
-		
-		
-		/*
-		
-		switch(type) {
-		case optimizeLength: return points[0];//Do stuff
-		case optimizeTime: return points[0];//Do stuff
-		default: return null;
 		}*/
 	}
 	
