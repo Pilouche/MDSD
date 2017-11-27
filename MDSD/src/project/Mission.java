@@ -77,6 +77,7 @@ class Mission {
 				}
 				unvisitedPoints = tempArray;
 			}
+		}
 	}
 	
 	public Position getNextPosition() {
