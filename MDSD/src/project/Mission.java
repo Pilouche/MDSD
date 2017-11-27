@@ -44,8 +44,8 @@ class Mission {
 	}
 		
 	public void updateRoverPosition(Position newPosition) {
-		//System.out.println(rover.getPosition().toString());
-		//System.out.println(newPosition.toString());
+		System.out.println(rover.getPosition().toString());
+		System.out.println(newPosition.toString());
 		if(rover.isAtPosition(newPosition)) {
 			nextPositionIndex++;
 			nextPosition = strategy.calculateNextPoint(this, null, StrategyType.optimizeLength,nextPositionIndex);

@@ -5,8 +5,7 @@
 package project;
 
 import project.AreaType;
-import project.Boundaries;
-
+import simbad.sim.Boundary;
 /************************************************************/
 /**
  * 
@@ -15,7 +14,8 @@ public class Area {
 	/**
 	 * 
 	 */
-	private Boundaries boundaries;
+	//TODO: should be Bonundary[] or a hashset or something. Also fix in diagram later
+	private Boundary boundaries;
 	private AreaType type;
 	
 	public Area(AreaType type) {
@@ -34,7 +34,7 @@ public class Area {
 	 * 
 	 * @return 
 	 */
-	public Boundaries getBoundaries() {
+	public Boundary getBoundaries() {
 
 		return this.boundaries;
 	}
@@ -43,7 +43,7 @@ public class Area {
 	 * 
 	 * @param boundaries 
 	 */
-	public void setBoundaries(Boundaries boundaries) {
+	public void setBoundaries(Boundary boundaries) {
 		this.boundaries = boundaries;
 	}
 };
