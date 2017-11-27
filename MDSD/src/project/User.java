@@ -3,6 +3,7 @@ package project;
 import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import project.AbstractSimulatorMonitor;
 import project.Point;
@@ -87,11 +88,15 @@ public class User {
 		System.out.println(rover1.getPosition().toString());
 		
 		while(true) {
-			//System.out.println("Call to position");
-			mission1.updateRoverPosition(mission1.getNextPosition());
-			mission2.updateRoverPosition(mission2.getNextPosition());
-			mission3.updateRoverPosition(mission3.getNextPosition());
-			mission4.updateRoverPosition(mission4.getNextPosition());
+			System.out.println(mission3.getMissionStatus());
+			if(mission1.getMissionStatus() && mission3.getMissionStatus()) {
+				mission2.updateRoverPosition(mission2.getNextPosition());
+				mission4.updateRoverPosition(mission4.getNextPosition());
+			} else {
+				mission1.updateRoverPosition(mission1.getNextPosition());
+				mission3.updateRoverPosition(mission3.getNextPosition());
+			}
+			
 		}
 
 	}
