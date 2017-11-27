@@ -8,11 +8,6 @@ import java.util.Set;
 
 import project.AreaType;
 import simbad.sim.Boundary;
-
-/************************************************************/
-/**
- * 
- */
 public class Area {
 	/**
 	 * 

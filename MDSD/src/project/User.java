@@ -52,10 +52,10 @@ public class User {
 
 		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, e, c);
 
-		Position exit1 = new Position(-2.5,7);
-		Position exit2 = new Position(-2.5,-7);
-		Position exit3 = new Position(2.5,-7);
-		Position exit4 = new Position(2.5,7);
+		Position exit1 = new Position(2.5,-7);
+		Position exit2 = new Position(2.5,7);
+		Position exit3 = new Position(-2.5,7);
+		Position exit4 = new Position(-2.5,-7);
 		
 		Set<Rover> rovers = new HashSet<>();
 		Rover rover1 = new Rover(exit1, "Rover 1");
@@ -63,10 +63,10 @@ public class User {
 		Rover rover3 = new Rover(exit3, "Rover 3");
 		Rover rover4 = new Rover(exit4, "Rover 4");
 		
-		Position room1 = new Position(-2.5,2.5);
-		Position room2 = new Position(-2.5,-2.5);
-		Position room3 = new Position(2.5,-2.5);
-		Position room4 = new Position(2.5,2.5);
+		Position room1 = new Position(2.5,-2.5);
+		Position room2 = new Position(2.5, 2.5);
+		Position room3 = new Position(-2.5,2.5);
+		Position room4 = new Position(-2.5,-2.5);
 		
 		LocationController room1Ctrl = new LocationController(room1, 2.5, e);
 		LocationController room2Ctrl = new LocationController(room2, 2.5, e);
