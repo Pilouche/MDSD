@@ -6,7 +6,7 @@ package project;
 
 import java.util.Set;
 
-import project.Area;
+import area.Area;
 import project.ProcedureType;
 
 /************************************************************/
