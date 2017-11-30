@@ -14,7 +14,7 @@ import project.Position;
 /**
  * 
  */
-public class Rover extends RobotAvatar{
+public class Rover extends RobotAvatar {
 	
 	private Position position;
 	/**
@@ -63,6 +63,16 @@ public class Rover extends RobotAvatar{
 	
 	public void observe(RoverObserver obs) {
 		this.obs.add(obs);
+	}
+
+	public void update() {
+		Position newPosition = new Position(super.getPosition().getX(), super.getPosition().getZ());
+		if(newPosition.getX() != position.getX() || newPosition.getZ() != position.getZ()) {
+			position = newPosition;
+			for(RoverObserver o : obs) {
+				o.updateRoverPosition(position);
+			}
+		}
 	}
 	
 };
