@@ -64,7 +64,8 @@ class Mission {
 					tempArray = new Position[unvisitedPoints.length-1];
 				}
 				
-				//Should probably be changed to some utility package or moved to some helper class we make code in as we need it. Basically just ArrayUtils.RemoveElement
+				//Should probably be changed to some utility package or moved to some 
+				//helper class we make code in as we need it. Basically just ArrayUtils.RemoveElement
 				int y = 0;
 				for(int x = 0; x < unvisitedPoints.length; x++) {
 					if(unvisitedPoints[x].equals(nextPosition)) {
