@@ -7,43 +7,26 @@ package project;
 import java.util.HashSet;
 import java.util.Set;
 
-import project.Area;
+import area.Area;
 import project.Rover;
-import simbad.sim.Boundary;
-import simbad.sim.EnvironmentDescription;
-import simbad.sim.Wall;
 
 /************************************************************/
 /**
  * 
  */
 public class Environment {
+
 	/**
 	 * 
 	 */
-	private EnvironmentDescription envDesc;
-	/**
-	 * 
-	 */
-	private Set<Boundary> boundaries;
-	/**
-	 * 
-	 */
-	private Set<Wall> walls;
-	/**
-	 * 
-	 */
-	public Area area;
-	/**
-	 * 
-	 */
+	protected Set<Boundary> boundaries;
+	private Set<Area> areas;
 	public Rover[] rovers;
 	
-	public Environment(EnvironmentDescription e, Set<Boundary> b, Set<Wall> w, Rover[] r) {
+	public Environment(Set<Boundary> b, Set<Area> a, Rover[] r) {
 		this.rovers=r;
-		this.walls=w;
+		this.areas=a;
 		this.boundaries=b;
-		this.envDesc=e;
 	}
 
 	/**
@@ -62,19 +45,11 @@ public class Environment {
 		return boundaries;
 	}
 	
-	/**
-	 * 
-	 * @param walls 
-	 */
-	public void setWalls(Set<Wall> walls) {
-		this.walls=walls;
+	public Set<Area> getAreas(){
+		return areas;
 	}
-
-	/**
-	 * 
-	 * 
-	 */
-	public Set<Wall> getWalls() {
-		return walls;
+	
+	public void addArea(Area a) {
+		areas.add(a);
 	}
 };

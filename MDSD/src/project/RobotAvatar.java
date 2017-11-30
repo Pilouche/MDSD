@@ -14,6 +14,9 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	@Override
 	public String toString() {
 		return "Robot " + this.getName();
+		
 	}
+	
+	
 
 }
