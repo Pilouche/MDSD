@@ -88,7 +88,7 @@ public class User {
 		System.out.println(rover1.getPosition().toString());
 		
 		while(true) {
-			System.out.println(mission3.getMissionStatus());
+			//System.out.println(mission3.getMissionStatus());
 			if(mission1.getMissionStatus() && mission3.getMissionStatus()) {
 				mission2.updateRoverPosition(mission2.getNextPosition());
 				mission4.updateRoverPosition(mission4.getNextPosition());

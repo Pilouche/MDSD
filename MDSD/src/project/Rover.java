@@ -4,6 +4,9 @@
 
 package project;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import project.Environment;
 import project.Position;
 
@@ -22,10 +25,12 @@ public class Rover extends RobotAvatar{
 	 * 
 	 */
 	public Environment inEnvironment;
+	private List<RoverObserver> obs;
 	
 	public Rover(Position position, String name) {
 		super(position, name);
 		this.position = position;
+		obs = new ArrayList<RoverObserver>();
 	}
 
 	/**
@@ -54,6 +59,10 @@ public class Rover extends RobotAvatar{
 	
 	public Position getPosition() {
 		return this.position;
+	}
+	
+	public void observe(RoverObserver obs) {
+		this.obs.add(obs);
 	}
 	
 };
