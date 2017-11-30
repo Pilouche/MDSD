@@ -14,7 +14,7 @@ public class SimulatorMonitor extends AbstractSimulatorMonitor<Rover> {
 
 	@Override
 	public void update(Rover rover) {
-		//p.newGPSpositionChangeDetected(robot.getPosition ());
+		rover.update();
 	}
 
 }
