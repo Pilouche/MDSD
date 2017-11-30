@@ -66,13 +66,15 @@ public class Rover extends RobotAvatar {
 	}
 
 	public void update() {
+		System.out.println("Updateing rover");
 		Position newPosition = new Position(super.getPosition().getX(), super.getPosition().getZ());
-		if(newPosition.getX() != position.getX() || newPosition.getZ() != position.getZ()) {
+		//if(newPosition.getX() != position.getX() || newPosition.getZ() != position.getZ()) {
+			System.out.println("New position");
 			position = newPosition;
 			for(RoverObserver o : obs) {
 				o.updateRoverPosition(position);
 			}
-		}
+		//}
 	}
 	
 };

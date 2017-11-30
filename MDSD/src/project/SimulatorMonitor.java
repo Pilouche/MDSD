@@ -11,7 +11,7 @@ public class SimulatorMonitor extends AbstractSimulatorMonitor<Rover> {
 	public SimulatorMonitor( Set<Rover> rovers, EnvironmentDescription e) {
 		super(rovers, e);
 	}
-
+	
 	@Override
 	public void update(Rover rover) {
 		rover.update();
