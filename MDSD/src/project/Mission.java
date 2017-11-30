@@ -13,7 +13,7 @@ import project.StrategyType;
 /**
  * 
  */
-class Mission {
+class Mission implements RoverObserver{
 	/**
 	 * 
 	 */
@@ -23,6 +23,7 @@ class Mission {
 		nextPositionIndex = 0;
 		nextPosition = missionPoints[nextPositionIndex];
 		strategy = strat;
+		r.observe(this);
 	}
 
 	private Position nextPosition;
@@ -51,7 +52,7 @@ class Mission {
 	}
 		
 	public void updateRoverPosition(Position newPosition) {
-		//System.out.println(rover.getPosition().toString());
+		System.out.println(rover.getPosition().toString());
 		//System.out.println(newPosition.toString());
 		//if(rover.isAtPosition(newPosition)) {
 		if(rover.isAtPosition(newPosition) && !missionStatus) {
