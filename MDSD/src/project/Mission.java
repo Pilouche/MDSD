@@ -24,6 +24,7 @@ class Mission implements RoverObserver{
 		nextPosition = missionPoints[nextPositionIndex];
 		strategy = strat;
 		r.observe(this);
+		nextPosition = rover.getPosition();
 	}
 
 	private Position nextPosition;
@@ -51,16 +52,18 @@ class Mission implements RoverObserver{
 	public void stopMission() {
 	}
 		
-	public void updateRoverPosition(Position newPosition) {
-		System.out.println(rover.getPosition().toString());
-		//System.out.println(newPosition.toString());
+	public void updateRoverPosition(Position newPos) {
+		//System.out.println(rover.getPosition().toString());
+		//System.out.println(nextPosition.getX() == newPos.getX() && (nextPosition.getZ() == newPos.getZ()));
 		//if(rover.isAtPosition(newPosition)) {
-		if(rover.isAtPosition(newPosition) && !missionStatus) {
+		if((((nextPosition.getX() + 0.1 >= newPos.getX() && nextPosition.getX() - 0.1 <= newPos.getX()) 
+				&& (nextPosition.getZ() + 0.1 >= newPos.getZ() && nextPosition.getZ() - 0.1 <= newPos.getZ())) 
+				&& !missionStatus) || nextPosition == null) {
 			if(unvisitedPoints.length == 0) {
 				missionStatus = true;
 			} else {
-				nextPositionIndex++;
-				nextPosition = strategy.calculateNextPoint(unvisitedPoints, null,nextPositionIndex, newPosition);
+				//nextPositionIndex++;
+				nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, nextPosition);
 				rover.moveToPoint(nextPosition);
 				Position tempArray[] = new Position[0];
 				if(unvisitedPoints.length-1>0) {
@@ -72,6 +75,7 @@ class Mission implements RoverObserver{
 				int y = 0;
 				for(int x = 0; x < unvisitedPoints.length; x++) {
 					if(unvisitedPoints[x].equals(nextPosition)) {
+						System.out.println("removed visited point at index " + x);
 						x++;
 					}
 					if(y < unvisitedPoints.length-1) {

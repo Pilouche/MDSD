@@ -31,19 +31,6 @@ public class StrategyNNPath extends AbstractStrategy {
 			}
 		return points[closestPoint];//Do stuff Nearest Neighbor Path 
 		
-		// Assignement 1 test
-		/*switch(type) {
-			case NNPath: 
-				int closestPoint = 0; //First point in the array of unvisited points.
-				for(int index = 1; index < points.length; index++)
-					if(currentPosition.getDistance(points[index]) < currentPosition.getDistance(points[closestPoint])) {
-						closestPoint = index;
-					}
-				return points[closestPoint];//Do stuff Nearest Neighbor Path 
-			case InMissionOrder:
-				return points[0]; //Probably this we should use in the first mission because the order we visit the points in is very important.
-			case optimizeTime: return points[0];//Do stuff
-		default: return null;
-		}	*/
+			
 	}
 };
