@@ -17,21 +17,23 @@ class Mission {
 	/**
 	 * 
 	 */
-	public Mission(Rover r, Position[] positions) {
+	public Mission(Rover r, Position[] positions, AbstractStrategy strat) {
 		this.setMission(positions);
 		this.rover = r;
 		nextPositionIndex = 0;
 		nextPosition = missionPoints[nextPositionIndex];
+		strategy = strat;
 	}
 
 	private Position nextPosition;
-	public StrategyType[] strategyType;
-	private Strategy strategy = Strategy.getInstance();
+	//public StrategyType[] strategyType;
+	//private AbstractStrategy strategy = AbstractStrategy.getInstance();
 	private Position[] missionPoints;
 	private Position[] unvisitedPoints;
 	private Rover rover;
 	private int nextPositionIndex;
 	private boolean missionStatus;
+	private AbstractStrategy strategy;
 
 	/**
 	 * 
@@ -57,7 +59,7 @@ class Mission {
 				missionStatus = true;
 			} else {
 				nextPositionIndex++;
-				nextPosition = strategy.calculateNextPoint(this, null, StrategyType.InMissionOrder,nextPositionIndex, newPosition);
+				nextPosition = strategy.calculateNextPoint(unvisitedPoints, null,nextPositionIndex, newPosition);
 				rover.moveToPoint(nextPosition);
 				Position tempArray[] = new Position[0];
 				if(unvisitedPoints.length-1>0) {

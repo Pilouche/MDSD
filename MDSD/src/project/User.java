@@ -73,10 +73,10 @@ public class User {
 		LocationController room3Ctrl = new LocationController(room3, 2.5, e);
 		LocationController room4Ctrl = new LocationController(room4, 2.5, e);
 		
-		Mission mission1 = new Mission(rover1, new Position[]{exit1,room1,room2,exit2});
-		Mission mission2 = new Mission(rover2, new Position[]{exit2,room2,room3,exit3});
-		Mission mission3 = new Mission(rover3, new Position[]{exit3,room3,room4,exit4});
-		Mission mission4 = new Mission(rover4, new Position[]{exit4,room4,room1,exit1});
+		Mission mission1 = new Mission(rover1, new Position[]{exit1,room1,room2,exit2}, new StrategyInMissionOrder());
+		Mission mission2 = new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrder());
+		Mission mission3 = new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder());
+		Mission mission4 = new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder());
 
 		rovers.add(rover1);
 		rovers.add(rover2);
