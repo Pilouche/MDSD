@@ -83,7 +83,12 @@ public class User {
 		rovers.add(rover3);
 		rovers.add(rover4);
 		
+		
+		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, e);
+		
+		Procedure p = new Procedure(rovers, new NormalProcedure());
+		p.start();
 		
 		System.out.println(rover1.getPosition().toString());
 		/**

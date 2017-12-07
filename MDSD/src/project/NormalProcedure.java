@@ -18,7 +18,12 @@ public class NormalProcedure implements ProcedureType {
 		
 		
 			Environment rovEnvironment = rover.getEnvironment();
+			
+			if(rovEnvironment == null) return;
+			
+			if(rovEnvironment.getAreas() == null) return;
 			for(Area a: rovEnvironment.getAreas()) {
+				if(a == null) return;
 				if(currentProcedure == PROCEDURE_A) {
 					if(a.getClass().equals(PhysicalArea.class)) {
 						rover.addRewardPoints(1);

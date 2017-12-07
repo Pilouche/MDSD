@@ -13,8 +13,12 @@ public class HospitalProcedure implements ProcedureType {
 	public void calculateRewards(Rover rover) {
 		Environment rovEnv = rover.getEnvironment();
 		
+		if(rovEnv == null) return;
+		if(rovEnv.getAreas() == null) return;
+		
 		//TODO: fix the point calculation when area and environment classes are done
 		for(Area a : rovEnv.getAreas()) {
+			if(a == null) return;
 			if(a.getClass().equals(ConsultingRoom.class)) {
 				rover.addRewardPoints(10);
 			}
