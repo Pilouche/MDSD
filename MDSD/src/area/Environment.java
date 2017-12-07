@@ -25,6 +25,10 @@ public class Environment extends EnvironmentDescription{
 	private Set<Area> areas;
 	public Rover[] rovers;
 	
+	public Environment() {
+		super();
+	}
+	
 	public Environment(Set<Position> p, Set<Area> a, Rover[] r) {
 		this.rovers=r;
 		this.areas=a;
