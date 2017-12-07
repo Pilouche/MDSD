@@ -1,8 +1,6 @@
 package project;
 
-import area.Area;
-import area.LogicalArea;
-import area.PhysicalArea;
+import area.*;
 
 public class HospitalProcedure implements ProcedureType {
 
@@ -17,11 +15,19 @@ public class HospitalProcedure implements ProcedureType {
 		
 		//TODO: fix the point calculation when area and environment classes are done
 		for(Area a : rovEnv.getAreas()) {
-			if(a.getClass().equals(PhysicalArea.class)) {
+			if(a.getClass().equals(ConsultingRoom.class)) {
 				rover.addRewardPoints(10);
 			}
 			
-			if(a.getClass().equals(LogicalArea.class)) {
+			if(a.getClass().equals(SurgeryRoom.class)) {
+				rover.addRewardPoints(20);
+			}
+			
+			if(a.getClass().equals(WiFi.class)) {
+				rover.addRewardPoints(10);
+			}
+			
+			if(a.getClass().equals(EatingArea.class)) {
 				rover.addRewardPoints(10);
 			}
 		}
