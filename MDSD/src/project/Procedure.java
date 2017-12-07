@@ -7,6 +7,8 @@ package project;
 import java.util.Set;
 
 import area.Area;
+import area.LogicalArea;
+import area.PhysicalArea;
 import project.ProcedureType;
 
 /************************************************************/
@@ -43,30 +45,33 @@ public class Procedure extends Thread {
 		
 		boolean changeProcedure = false;
 		
-		if(type == ProcedureType.procedureA) {
+		
 			for(Rover rover : rovers) {
-				if(rover.inEnvironment.area.getAreaType() == AreaType.physical) {
-					rover.addRewardPoints(1);
-				} else if(rover.inEnvironment.area.getAreaType() == AreaType.logical) {
-					changeProcedure = true;
+				Environment rovEnvironment = rover.getEnvironment();
+				for(Area a: rovEnvironment.getAreas()) {
+					if(type == ProcedureType.procedureA) {
+						if(a.getClass().equals(PhysicalArea.class)) {
+							rover.addRewardPoints(1);
+						} else if(a.getClass().equals(LogicalArea.class)) {
+							changeProcedure = true;
+						}
+					}
+					else if(type == ProcedureType.procedureB) {
+						if(a.getClass().equals(PhysicalArea.class)) {
+							changeProcedure = true;
+						} else if(a.getClass().equals(LogicalArea.class)) {
+							rover.addRewardPoints(1);
+						}
+					}
 				}
 			}
-		} else if(type == ProcedureType.procedureB) {
-			for(Rover rover : rovers) {
-				if(rover.inEnvironment.area.getAreaType() == AreaType.physical) {
-					changeProcedure = true;
-				} else if(rover.inEnvironment.area.getAreaType() == AreaType.logical) {
-					rover.addRewardPoints(1);
-				}
-			}
-		}
 		
 		if(changeProcedure && type == ProcedureType.procedureA) {
 			type = ProcedureType.procedureB;
 		} else if(changeProcedure && type == ProcedureType.procedureB) {
 			type = ProcedureType.procedureA;
 		}
-		
+		changeProcedure=false;
 		calculateRewards();
 	}
 };

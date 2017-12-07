@@ -62,6 +62,10 @@ public class Rover extends RobotAvatar {
 		return this.position;
 	}
 	
+	public Environment getEnvironment() {
+		return this.inEnvironment;
+	}
+	
 	public void observe(RoverObserver obs) {
 		this.obs.add(obs);
 	}
