@@ -57,7 +57,7 @@ public class Console {
 		Mission chosenMission = null;
 		while(chosenMission == null) {
 			System.out.println("Choose mission to change:");
-			Set<Mission> setMissions=; //fetch set of missions from user that are started or not? user.getMission(started)
+			Set<Mission> setMissions=User.getMissions(); //fetch set of missions from user that are started or not? user.getMission(started)
 			Mission[] missions = setMissions.toArray(new Mission[setMissions.size()]);
 			
 			for(int i=0;i<missions.length;i++) {
