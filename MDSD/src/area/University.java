@@ -5,8 +5,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 import project.LocationController;
+import project.Mission;
 import project.Position;
 import project.Rover;
+import project.StrategyInMissionOrder;
 import simbad.sim.AbstractWall;
 import simbad.sim.Boundary;
 import simbad.sim.HorizontalBoundary;
@@ -16,10 +18,9 @@ import simbad.sim.VerticalWall;
 
 public class University extends Environment{
 
-	Set<Position> exits = new HashSet<>();
-	Set<Position> rooms = new HashSet<>();
 	Set<Rover> rovers = new HashSet<>();
-	
+	Mission[] missions = new Mission[4];
+
 	public University() {
 		super();
 		Color c = Color.GRAY;
@@ -82,49 +83,41 @@ public class University extends Environment{
 		AbstractWall roomWall7 = new VerticalWall(0f, 5f, 3f, this, c);
 
 		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, this, c);
-		
+
 		Position exit1 = new Position(2.5,-7);
 		Position exit2 = new Position(2.5,7);
 		Position exit3 = new Position(-2.5,7);
 		Position exit4 = new Position(-2.5,-7);
-		exits.add(exit1);
-		exits.add(exit2);
-		exits.add(exit3);
-		exits.add(exit4);
-		
+
 		Position room1 = new Position(2.5,-2.5);
 		Position room2 = new Position(2.5, 2.5);
 		Position room3 = new Position(-2.5,2.5);
 		Position room4 = new Position(-2.5,-2.5);
-		rooms.add(room1);
-		rooms.add(room2);
-		rooms.add(room3);
-		rooms.add(room4);
-		
+
 		Rover rover1 = new Rover(exit1, "Rover 1", this);
 		Rover rover2 = new Rover(exit2, "Rover 2", this);
 		Rover rover3 = new Rover(exit3, "Rover 3", this);
 		Rover rover4 = new Rover(exit4, "Rover 4", this);
-		
 		rovers.add(rover1);
 		rovers.add(rover2);
 		rovers.add(rover3);
 		rovers.add(rover4);
+
+		missions[0] = new Mission(rover1, new Position[]{exit1,room1,room2,exit2}, new StrategyInMissionOrder());
+		missions[1] = new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrder());
+		missions[2] = new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder());
+		missions[3] = new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder());
 	}
 
 	public University(Set<Position> p, Set<Area> a, Rover[] r) {
 		super(p, a, r);
 	}
-	
-	public Set<Position> getExits() {
-		return exits;
-	}
-	
-	public Set<Position> getRooms() {
-		return rooms;
-	}
-	
+
 	public Set<Rover> getRovers() {
 		return rovers;
+	}
+	
+	public Mission[] getMissions() {
+		return missions;
 	}
 }

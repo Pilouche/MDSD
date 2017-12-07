@@ -25,33 +25,20 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 		University h = new University();
-		Position[] exits = h.getExits().toArray(new Position[0]);
-		Position[] rooms = h.getRooms().toArray(new Position[0]);
-		Rover[] rovers= h.getRovers().toArray(new Rover[0]);
+		Set<Rover> rovers = h.getRovers();
+		Mission[] missions = h.getMissions();
+	
+		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, h);
+	
+		User u = new User(h.getRovers(), h.getMissions());
 		
-		LocationController room1Ctrl = new LocationController(rooms[0], 2.5, h);
-		LocationController room2Ctrl = new LocationController(rooms[1], 2.5, h);
-		LocationController room3Ctrl = new LocationController(rooms[2], 2.5, h);
-		LocationController room4Ctrl = new LocationController(rooms[3], 2.5, h);
+		u.setRovers(rovers);
 		
-		AbstractSimulatorMonitor controller = new SimulatorMonitor(h.getRovers(), h);
-		
-		Mission[] missions = {new Mission(rovers[0], new Position[]{exits[0],rooms[0],rooms[1],exits[1]}, new StrategyInMissionOrder()),
-		new Mission(rovers[1], new Position[]{exits[1],rooms[1],rooms[2],exits[2]}, new StrategyInMissionOrder()),
-		new Mission(rovers[2], new Position[]{exits[2],rooms[2],rooms[3],exits[3]}, new StrategyInMissionOrder()),
-		new Mission(rovers[3], new Position[]{exits[3],rooms[3],rooms[0],exits[0]}, new StrategyInMissionOrder())};
-		
-		User u = new User(h.getRovers(), missions);
-		
-		u.setRovers(h.getRovers());
-		
-		Procedure p = new Procedure(h.getRovers(), new NormalProcedure());
+		Procedure p = new Procedure(rovers, new NormalProcedure());
 		p.start();
 		
-		System.out.println(rovers[0].getPosition().toString());
-		
 		/*
-		while(true) {
+		while(truh) {
 			for(Area a : areas) {
 				if (a.contains(rover1.getPosition())) {
 					System.out.println("Rover 1 in " + a);
@@ -60,7 +47,7 @@ public class Main {
 		}*/
 		
 		/**
-		while(true) {
+		while(truh) {
 			System.out.println(mission3.getMissionStatus());
 			if(mission1.getMissionStatus() && mission3.getMissionStatus()) {
 				mission2.updateRoverPosition(mission2.getNextPosition());
