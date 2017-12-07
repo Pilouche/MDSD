@@ -101,4 +101,7 @@ class Mission implements RoverObserver{
 	public boolean getMissionStatus() {
 		return missionStatus;
 	}
+	public void setStrategy(AbstractStrategy strat) {
+		this.strategy = strat;
+	}
 };
