@@ -4,33 +4,20 @@
 
 package area;
 
-import project.Boundary;
 import java.util.Set;
+import java.awt.Polygon;
+import project.Position;
 
-public abstract class Area {
-	/**
-	 * 
-	 */
-	private Set<Boundary> boundaries;
+public abstract class Area extends Polygon{
 	
-	public Area(Set<Boundary> boundaries) {
-		this.boundaries = boundaries;
+	public Area(Set<Position> corners) {
+		super();
+		for(Position p : corners) {
+			this.addPoint((int)(p.getX()), (int)(p.getZ()));
+		}	
 	}
 
-	/**
-	 * 
-	 * @return boundaries
-	 */
-	public Set<Boundary> getBoundaries() {
-
-		return this.boundaries;
-	}
-
-	/**
-	 * 
-	 * @param boundaries 
-	 */
-	public void setBoundaries(Set<Boundary> boundaries) {
-		this.boundaries = boundaries;
+	public boolean contains(Position p) {
+		return this.contains(p.getX(),p.getZ());
 	}
 };

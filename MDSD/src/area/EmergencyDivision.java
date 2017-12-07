@@ -2,12 +2,12 @@ package area;
 
 import java.util.Set;
 
-import project.Boundary;
+import project.Position;
 
 public class EmergencyDivision extends AbstractDivision {
 
-	public EmergencyDivision(Set<Boundary> boundaries) {
-		super(boundaries);
+	public EmergencyDivision(Set<Position> positions) {
+		super(positions);
 	}
 
 }

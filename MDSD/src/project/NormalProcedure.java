@@ -1,6 +1,7 @@
 package project;
 
 import area.Area;
+import area.Environment;
 import area.LogicalArea;
 import area.PhysicalArea;
 

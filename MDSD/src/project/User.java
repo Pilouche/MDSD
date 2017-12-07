@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import area.Area;
+import area.PhysicalArea;
 import project.AbstractSimulatorMonitor;
 import project.Point;
 import simbad.sim.AbstractWall;
@@ -24,6 +26,36 @@ public class User {
 		EnvironmentDescription e = new EnvironmentDescription();
 		
 		Color c = Color.GRAY;
+		
+		Position p1 = new Position(-5,5);
+		Position p2 = new Position(-5,0);
+		Position p3 = new Position(-5,-5);
+		Position p4 = new Position(0,5);
+		Position p5 = new Position(0,0);
+		Position p6 = new Position(0,-5);
+		Position p7 = new Position(5,5);
+		Position p8 = new Position(5,0);
+		Position p9 = new Position(5,-5);
+		
+		Set<Position> roomA = new HashSet<>();
+		roomA.add(p1);roomA.add(p2);roomA.add(p5);roomA.add(p4);
+		Area a1 = new PhysicalArea(roomA);
+		
+		Set<Position> roomB = new HashSet<>();
+		roomB.add(p2);roomB.add(p3);roomB.add(p6);roomB.add(p5);
+		Area a2 = new PhysicalArea(roomB);
+		
+		Set<Position> roomC = new HashSet<>();
+		roomC.add(p4);roomC.add(p5);roomC.add(p8);roomC.add(p7);
+		Area a3 = new PhysicalArea(roomC);
+		
+		Set<Position> roomD = new HashSet<>();
+		roomD.add(p5);roomD.add(p6);roomD.add(p9);roomD.add(p8);
+		Area a4 = new PhysicalArea(roomD);
+		
+		Set<Area> areas = new HashSet<>();
+		areas.add(a1);areas.add(a2);areas.add(a3);areas.add(a4);
+		
 
 		Boundary w1 = new HorizontalBoundary(-5.0f, -5.0f, 5.0f, e, c);
 
@@ -100,6 +132,16 @@ public class User {
 		
 		
 		System.out.println(rover1.getPosition().toString());
+		
+		/*
+		while(true) {
+			for(Area a : areas) {
+				if (a.contains(rover1.getPosition())) {
+					System.out.println("Rover 1 in " + a);
+				}
+			}
+		}*/
+		
 		/**
 		while(true) {
 			System.out.println(mission3.getMissionStatus());

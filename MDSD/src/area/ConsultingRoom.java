@@ -2,12 +2,12 @@ package area;
 
 import java.util.Set;
 
-import project.Boundary;
+import project.Position;
 
 public class ConsultingRoom extends AbstractRoom {
 	
-	public ConsultingRoom(Set<Boundary> boundaries, AbstractDivision division) {
-		super(boundaries, division);
+	public ConsultingRoom(Set<Position> positions, AbstractDivision division) {
+		super(positions,division);
 	}
 	
 }

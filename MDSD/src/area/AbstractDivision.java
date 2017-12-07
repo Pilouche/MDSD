@@ -2,12 +2,12 @@ package area;
 
 import java.util.Set;
 
-import project.Boundary;
+import project.Position;
 
 public abstract class AbstractDivision extends PhysicalArea {
 
-	public AbstractDivision(Set<Boundary> boundaries) {
-		super(boundaries);
+	public AbstractDivision(Set<Position> positions) {
+		super(positions);
 	}
 
 }
