@@ -7,6 +7,7 @@ package area;
 import java.util.HashSet;
 import java.util.Set;
 
+import project.Mission;
 import project.Position;
 import project.Rover;
 import simbad.sim.EnvironmentDescription;
@@ -16,31 +17,27 @@ import simbad.sim.Boundary;
 /**
  * 
  */
-public class Environment extends EnvironmentDescription{
+public abstract class Environment extends EnvironmentDescription{
 
 	/**
 	 * 
 	 */
 	protected Set<Position> positions;
 	private Set<Area> areas;
-	public Rover[] rovers;
+	protected Set<Rover> rovers = new HashSet<>();
+	protected Mission[] missions = new Mission[4];
+
 	
 	public Environment() {
 		super();
 		areas = new HashSet<>();
-	}
-	
-	public Environment(Set<Position> p, Set<Area> a, Rover[] r) {
-		this.rovers=r;
-		this.areas=a;
-		this.positions=p;
 	}
 
 	/**
 	 * 
 	 * @param boundaries 
 	 */
-	public void setBoundaries(Set<Position> positions) {
+	public void setPositions(Set<Position> positions) {
 		this.positions=positions;
 	}
 
@@ -48,7 +45,7 @@ public class Environment extends EnvironmentDescription{
 	 * 
 	 *
 	 */
-	public Set<Position> getBoundaries() {
+	public Set<Position> getPositions() {
 		return positions;
 	}
 	
@@ -58,5 +55,13 @@ public class Environment extends EnvironmentDescription{
 	
 	public void addArea(Area a) {
 		areas.add(a);
+	}
+	
+	public Set<Rover> getRovers() {
+		return rovers;
+	}
+	
+	public Mission[] getMissions() {
+		return missions;
 	}
 };

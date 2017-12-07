@@ -24,13 +24,13 @@ import simbad.sim.VerticalWall;
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
-		University h = new University();
+		Environment h = new University();
 		Set<Rover> rovers = h.getRovers();
 		Mission[] missions = h.getMissions();
 	
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, h);
 	
-		User u = new User(h.getRovers(), h.getMissions());
+		User u = new User(rovers, missions);
 		
 		u.setRovers(rovers);
 		

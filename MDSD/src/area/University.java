@@ -18,11 +18,10 @@ import simbad.sim.VerticalWall;
 
 public class University extends Environment{
 
-	Set<Rover> rovers = new HashSet<>();
-	Mission[] missions = new Mission[4];
-
 	public University() {
 		super();
+		this.rovers = new HashSet<>();
+		this.missions = new Mission[4];
 		Color c = Color.GRAY;
 
 		Position p1 = new Position(-5,5);
@@ -107,17 +106,5 @@ public class University extends Environment{
 		missions[1] = new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrder());
 		missions[2] = new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder());
 		missions[3] = new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder());
-	}
-
-	public University(Set<Position> p, Set<Area> a, Rover[] r) {
-		super(p, a, r);
-	}
-
-	public Set<Rover> getRovers() {
-		return rovers;
-	}
-	
-	public Mission[] getMissions() {
-		return missions;
 	}
 }

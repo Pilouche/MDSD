@@ -9,8 +9,5 @@ public class Zoo extends Environment {
 	public Zoo() {
 		super();
 	}
-	
-	public Zoo(Set<Position> p, Set<Area> a, Rover[] r) {
-		super(p, a, r);
-	}
+
 }
