@@ -7,7 +7,6 @@ package project;
 import java.util.Arrays;
 
 import project.Position;
-import project.StrategyType;
 
 /************************************************************/
 /**
@@ -86,7 +85,7 @@ class Mission implements RoverObserver{
 				missionStatus = true;
 			} else {
 				//nextPositionIndex++;
-				nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, nextPosition);
+				nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, nextPosition, rover);
 				rover.moveToPoint(nextPosition);
 				
 				unvisitedPoints = removePointFromArray(unvisitedPoints, nextPosition);

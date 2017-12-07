@@ -24,6 +24,6 @@ public abstract class AbstractStrategy {
 	 * @param type 
 	 */
 	
-	public abstract Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex, Position currentPosition);
+	public abstract Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex, Position currentPosition, Rover r);
 	
 };

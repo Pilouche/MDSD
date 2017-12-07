@@ -27,10 +27,11 @@ public class Rover extends RobotAvatar {
 	public Environment inEnvironment;
 	private List<RoverObserver> obs;
 	
-	public Rover(Position position, String name) {
+	public Rover(Position position, String name, Environment e) {
 		super(position, name);
 		this.position = position;
 		obs = new ArrayList<RoverObserver>();
+		this.inEnvironment=e;
 	}
 
 	/**

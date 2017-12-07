@@ -27,6 +27,7 @@ public class Environment extends EnvironmentDescription{
 	
 	public Environment() {
 		super();
+		areas = new HashSet<>();
 	}
 	
 	public Environment(Set<Position> p, Set<Area> a, Rover[] r) {
