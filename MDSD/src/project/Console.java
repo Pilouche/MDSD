@@ -6,7 +6,8 @@ import java.util.Set;
 public class Console {
 	static Scanner sc;
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
+		System.out.println("Running main2");
 		boolean menu = true;
 		while(menu) {
 			System.out.println("Menu");
@@ -36,7 +37,7 @@ public class Console {
 					break;
 				case 2:
 					m = chooseMission(false);
-					//m.startMission(); do we have a startMission method?
+					m.startMission();
 					break;
 				case 3:
 					m = chooseMission(true);
