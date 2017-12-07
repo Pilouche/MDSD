@@ -56,7 +56,7 @@ public class Rover extends RobotAvatar {
 	 */
 	public void moveToPoint(Position pos) {
 		this.setDestination(pos);
-		System.out.println("Rover: " + super.getName() + " Moving to: " + pos.getX() + ", " + pos.getZ());
+		//System.out.println("Rover: " + super.getName() + " Moving to: " + pos.getX() + ", " + pos.getZ());
 	}
 	
 	public Position getPosition() {
@@ -82,7 +82,7 @@ public class Rover extends RobotAvatar {
 			//System.out.println("New position: " + newPosition.toString());
 			position = newPosition;
 			for(RoverObserver o : obs) {
-				o.updateRoverPosition(position);
+				o.updateRoverPosition(position, super.getName());
 			}
 		//}
 	}

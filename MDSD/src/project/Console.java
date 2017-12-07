@@ -1,5 +1,6 @@
 package project;
 
+import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -20,7 +21,8 @@ public class Console implements GUI {
 			System.out.println("1. Change mission");
 			System.out.println("2. Start mission");
 			System.out.println("3. Stop mission");
-			System.out.println("4. Exit");
+			System.out.println("4. List positions");
+			System.out.println("5. Exit");
 			sc = new Scanner(System.in);
 			int choice = sc.nextInt();
 			Mission m;
@@ -50,14 +52,25 @@ public class Console implements GUI {
 					m.stopMission();
 					break;
 				case 4:
+					listMissions();
+					break;
+				case 5:
 					menu = false;
 					break;
+					
 				default:
 					System.out.println("Invalid choice");
 					break;
 			}		
 		}
 		return;
+	}
+	
+	public void listMissions() {
+		Map<String,Position> map = user.getRoverPositions();
+		for(String s : map.keySet()) {
+			System.out.println(s + " " + map.get(s).toString() );
+		}
 	}
 	
 	public Mission chooseMission(boolean started) {

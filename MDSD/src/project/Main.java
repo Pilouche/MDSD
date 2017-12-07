@@ -90,10 +90,10 @@ public class Main {
 		Position exit4 = new Position(-2.5,-7);
 		
 		Set<Rover> rovers = new HashSet<>();
-		Rover rover1 = new Rover(exit1, "Rover 1");
-		Rover rover2 = new Rover(exit2, "Rover 2");
-		Rover rover3 = new Rover(exit3, "Rover 3");
-		Rover rover4 = new Rover(exit4, "Rover 4");
+		Rover rover1 = new Rover(exit1, "Rover 1", null);
+		Rover rover2 = new Rover(exit2, "Rover 2", null);
+		Rover rover3 = new Rover(exit3, "Rover 3", null);
+		Rover rover4 = new Rover(exit4, "Rover 4", null);
 		
 		Position room1 = new Position(2.5,-2.5);
 		Position room2 = new Position(2.5, 2.5);
@@ -116,25 +116,20 @@ public class Main {
 		new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrder()),
 		new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder()),
 		new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder())};
+
+		Procedure p = new Procedure(rovers, new NormalProcedure());
+		p.start();
 		
 		User u = new User(rovers, missions);
 		
 		
-		
-		
-		
-		
-		
-		
-		u.setRovers(rovers);
+
 		
 
 		
 		
 		
 		
-		Procedure p = new Procedure(rovers, new NormalProcedure());
-		p.start();
 		
 		
 		

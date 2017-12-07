@@ -74,7 +74,7 @@ class Mission implements RoverObserver{
 		}
 	}
 		
-	public void updateRoverPosition(Position newPos) {
+	public void updateRoverPosition(Position newPos, String name) {
 		//System.out.println(rover.getPosition().toString());
 		//System.out.println(nextPosition.getX() == newPos.getX() && (nextPosition.getZ() == newPos.getZ()));
 		//if(rover.isAtPosition(newPosition)) {
@@ -131,7 +131,7 @@ class Mission implements RoverObserver{
 		int y = 0;
 		for(int x = 0; x < array.length; x++) {
 			if(array[x].equals(removedPos)) {
-				System.out.println("removed visited point at index " + x);
+				//System.out.println("removed visited point at index " + x);
 				x++;
 				pointExistedInArray = true;
 			}

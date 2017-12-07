@@ -1,7 +1,11 @@
 package project;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -10,20 +14,21 @@ public class User implements RoverObserver{
 	private Set<Rover> rovers;
 	private Mission[] currentMissions;
 	private GUI gui;
+	private Map<String, Position> positions;
 	
 	public User(Set<Rover> rovers, Mission[] missions) {
 		this.rovers = rovers;
 		this.currentMissions = missions;
-		gui = new Console(this);
-		for(Rover r : rovers) {
+		positions = new HashMap<String, Position>();
+		for(Rover r : this.rovers) {
 			r.observe(this);
 		}
+		gui = new Console(this);
 	}
 
 	@Override
-	public void updateRoverPosition(Position newPosition) {
-		// TODO Auto-generated method stub
-		
+	public void updateRoverPosition(Position newPosition, String name) {
+		positions.put(name, newPosition);
 	}
 	
 	public void addMission(Mission addedMission) {
@@ -40,5 +45,9 @@ public class User implements RoverObserver{
 	
 	public void setRovers(Set<Rover> rovers) {
 		this.rovers = rovers;
+	}
+	
+	public Map<String, Position> getRoverPositions(){
+		return positions;
 	}
 }

@@ -27,15 +27,12 @@ public class Procedure extends Thread {
 		this.type = type;
 	}
 	
-	@Override
-	public void start() {
-		calculateRewards();
-	}
 
 	/**
 	 *  
 	 */
-	public void calculateRewards() {
+	@Override
+	public void run() {
 		
 		while(true) {
 		
