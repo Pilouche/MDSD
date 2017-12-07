@@ -17,7 +17,7 @@ public class StrategyNNPath extends AbstractStrategy {
 		super();
 	}
 	
-	public Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex, Position currentPosition) {
+	public Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex, Position currentPosition, Rover r) {
 		Position[] points = unvisitedPoints; 
 		if(points.length == 0) return null;
 		//For the assignement

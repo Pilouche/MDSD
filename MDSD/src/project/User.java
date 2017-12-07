@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import area.Area;
+import area.Environment;
 import area.PhysicalArea;
 import project.AbstractSimulatorMonitor;
 import project.Point;
@@ -23,7 +24,7 @@ public class User {
 
 	public static void main(String[] args) throws InterruptedException {
 		currentMissions = new Mission[0];
-		EnvironmentDescription e = new EnvironmentDescription();
+		Environment e = new Environment();
 		
 		Color c = Color.GRAY;
 		
@@ -40,21 +41,24 @@ public class User {
 		Set<Position> roomA = new HashSet<>();
 		roomA.add(p1);roomA.add(p2);roomA.add(p5);roomA.add(p4);
 		Area a1 = new PhysicalArea(roomA);
+		e.addArea(a1);
 		
 		Set<Position> roomB = new HashSet<>();
 		roomB.add(p2);roomB.add(p3);roomB.add(p6);roomB.add(p5);
 		Area a2 = new PhysicalArea(roomB);
+		e.addArea(a2);
 		
 		Set<Position> roomC = new HashSet<>();
 		roomC.add(p4);roomC.add(p5);roomC.add(p8);roomC.add(p7);
 		Area a3 = new PhysicalArea(roomC);
+		e.addArea(a3);
 		
 		Set<Position> roomD = new HashSet<>();
 		roomD.add(p5);roomD.add(p6);roomD.add(p9);roomD.add(p8);
 		Area a4 = new PhysicalArea(roomD);
+		e.addArea(a4);
+
 		
-		Set<Area> areas = new HashSet<>();
-		areas.add(a1);areas.add(a2);areas.add(a3);areas.add(a4);
 		
 
 		Boundary w1 = new HorizontalBoundary(-5.0f, -5.0f, 5.0f, e, c);
@@ -92,10 +96,10 @@ public class User {
 		Position exit4 = new Position(-2.5,-7);
 		
 		Set<Rover> rovers = new HashSet<>();
-		Rover rover1 = new Rover(exit1, "Rover 1");
-		Rover rover2 = new Rover(exit2, "Rover 2");
-		Rover rover3 = new Rover(exit3, "Rover 3");
-		Rover rover4 = new Rover(exit4, "Rover 4");
+		Rover rover1 = new Rover(exit1, "Rover 1",e);
+		Rover rover2 = new Rover(exit2, "Rover 2",e);
+		Rover rover3 = new Rover(exit3, "Rover 3",e);
+		Rover rover4 = new Rover(exit4, "Rover 4",e);
 		
 		Position room1 = new Position(2.5,-2.5);
 		Position room2 = new Position(2.5, 2.5);
@@ -107,10 +111,10 @@ public class User {
 		LocationController room3Ctrl = new LocationController(room3, 2.5, e);
 		LocationController room4Ctrl = new LocationController(room4, 2.5, e);
 		
-		addMission(new Mission(rover1, new Position[]{exit1,room1,room2,exit2}, new StrategyInMissionOrder()));
-		addMission(new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrder()));
-		addMission(new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder()));
-		addMission(new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder()));
+		addMission(new Mission(rover1, new Position[]{exit1,room1,room2,exit2}, new StrategyInMissionOrderWaitRoom()));
+		addMission(new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrderWaitRoom()));
+		addMission(new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrderWaitRoom()));
+		addMission(new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrderWaitRoom()));
 
 		rovers.add(rover1);
 		rovers.add(rover2);
