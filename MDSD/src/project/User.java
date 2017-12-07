@@ -80,6 +80,9 @@ public class User {
 		addMission(new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder()));
 		addMission(new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder()));
 
+		
+		
+		currentMissions[0].stopMission();
 		rovers.add(rover1);
 		rovers.add(rover2);
 		rovers.add(rover3);
@@ -89,8 +92,12 @@ public class User {
 		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, e);
 		
+		Console.main2(args);
+		
 		Procedure p = new Procedure(rovers, new NormalProcedure());
 		p.start();
+		
+		
 		
 		System.out.println(rover1.getPosition().toString());
 		/**

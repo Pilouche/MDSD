@@ -51,10 +51,12 @@ class Mission implements RoverObserver{
 	 */
 	public void stopMission() {
 		missionStatus = true;
+		//System.out.println("Stopping " + missionStatus);
 	}
 	
 	public void startMission() {
 		missionStatus = false;
+		//System.out.println("starting " + missionStatus);
 	}
 		
 	public void addPosition(Position addedPos) {
@@ -110,7 +112,7 @@ class Mission implements RoverObserver{
 	}
 	
 	private Position[] addPointToArray(Position[] array, Position addedPos) {
-		Position[] tempPositionArray = new Position[array.length];
+		Position[] tempPositionArray = new Position[array.length + 1];
 		for(int x = 0; x < array.length; x++) {
 			tempPositionArray[x] = missionPoints[x];
 		}
