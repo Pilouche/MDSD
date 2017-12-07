@@ -1,5 +1,5 @@
 package project;
 
 public interface RoverObserver {
-	void updateRoverPosition(Position newPosition);
+	void updateRoverPosition(Position newPosition, String name);
 }
