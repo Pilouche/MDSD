@@ -1,6 +1,7 @@
 package project;
 
 import java.awt.Color;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -18,9 +19,10 @@ import simbad.sim.VerticalBoundary;
 import simbad.sim.VerticalWall;
 
 public class User {
+	static Mission[] currentMissions;
 
 	public static void main(String[] args) throws InterruptedException {
-
+		currentMissions = new Mission[0];
 		EnvironmentDescription e = new EnvironmentDescription();
 		
 		Color c = Color.GRAY;
@@ -105,17 +107,22 @@ public class User {
 		LocationController room3Ctrl = new LocationController(room3, 2.5, e);
 		LocationController room4Ctrl = new LocationController(room4, 2.5, e);
 		
-		Mission mission1 = new Mission(rover1, new Position[]{exit1,room1,room2,exit2}, new StrategyInMissionOrder());
-		Mission mission2 = new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrder());
-		Mission mission3 = new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder());
-		Mission mission4 = new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder());
+		addMission(new Mission(rover1, new Position[]{exit1,room1,room2,exit2}, new StrategyInMissionOrder()));
+		addMission(new Mission(rover2, new Position[]{exit2,room2,room3,exit3}, new StrategyInMissionOrder()));
+		addMission(new Mission(rover3, new Position[]{exit3,room3,room4,exit4}, new StrategyInMissionOrder()));
+		addMission(new Mission(rover4, new Position[]{exit4,room4,room1,exit1}, new StrategyInMissionOrder()));
 
 		rovers.add(rover1);
 		rovers.add(rover2);
 		rovers.add(rover3);
 		rovers.add(rover4);
 		
+		
+		
 		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, e);
+		
+		Procedure p = new Procedure(rovers, new NormalProcedure());
+		p.start();
 		
 		System.out.println(rover1.getPosition().toString());
 		
@@ -142,5 +149,16 @@ public class User {
 		}**/
 
 	}
-
+	
+	public static void addMission(Mission addedMission) {
+		Mission[] tempMissionsArray = new Mission[currentMissions.length + 1];
+		for(int x = 0; x < currentMissions.length; x++) {
+			tempMissionsArray[x] = currentMissions[x];
+		}
+		tempMissionsArray[currentMissions.length] = addedMission;
+		currentMissions = tempMissionsArray;
+	}
+	public static Set<Mission> getMissions(){
+		return new HashSet<Mission>(Arrays.asList(currentMissions));
+	}
 }

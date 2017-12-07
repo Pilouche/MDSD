@@ -69,12 +69,16 @@ public class Rover extends RobotAvatar {
 	public void observe(RoverObserver obs) {
 		this.obs.add(obs);
 	}
+	
+	public void removeObserver(RoverObserver obs) {
+		this.obs.remove(obs);
+	}
 
 	public void update() {
 		//System.out.println("Updateing rover");
 		Position newPosition = new Position(super.getPosition().getX(), super.getPosition().getZ());
 		//if(newPosition.getX() != position.getX() || newPosition.getZ() != position.getZ()) {
-			System.out.println("New position: " + newPosition.toString());
+			//System.out.println("New position: " + newPosition.toString());
 			position = newPosition;
 			for(RoverObserver o : obs) {
 				o.updateRoverPosition(position);

@@ -8,6 +8,6 @@ package project;
 /**
  * 
  */
-public enum ProcedureType {
-	procedureA, procedureB;
+public interface ProcedureType {
+	public void calculateRewards(Rover rover);
 };

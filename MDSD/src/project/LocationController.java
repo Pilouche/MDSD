@@ -2,14 +2,14 @@ package project;
 
 import simbad.sim.EnvironmentDescription;
 
-public class LocationController {
+public class LocationController implements RoverObserver {
 
 	Point pos;
 	Double radius;
 	EnvironmentDescription ed;
 	boolean available;
-	AbstractRobotSimulator activeBot;
-	boolean toBeReleased;
+	Rover activeBot;
+	Point roverPos; 
 	
 	/**
 	* CONSTRUCTOR
@@ -37,18 +37,18 @@ public class LocationController {
 	* The method should only be called
 	* by a robot within range .
 	*
-	* @param a
+	* @param rover
 	* the robot
 	* @return true if successful , false if unsuccessful
 	*/
-	public synchronized boolean tryAcquire(AbstractRobotSimulator a){
-		if (Math.sqrt(Math.pow(a.getPosition().getX()-pos.getX(), 2)
-			+Math.pow(a.getPosition().getZ()-pos.getZ(), 2)) < radius) {
+	public synchronized boolean tryAcquire(Rover rover){
+		if (getEuclidDist(rover.getPosition()) < radius) {
 			return false;
 		}
 		if (available){
 			available = false;
-			activeBot = a;
+			activeBot = rover;
+			rover.observe(this);
 			return true;
 		}else {
 			return false;
@@ -63,22 +63,22 @@ public class LocationController {
 	7
 	* the robot
 	*/
-	public void release(AbstractRobotSimulator a ) {
-		//needs to listen for when activeBot leaves the radius to release as the javadoc describes it,
-		//a real observer would be nice and maybe a blocking polling like this won't work
-		if (a == activeBot){
-			//available = false;
-			//activeBot = null;
-			
-			toBeReleased = true;
-			while(toBeReleased){
-				if(Math.sqrt(Math.pow(a.getPosition().getX()-pos.getX(), 2)
-						+Math.pow(a.getPosition().getZ()-pos.getZ(), 2)) > radius) {
-					available = true;
-					activeBot = null;
-					toBeReleased = false;
-				}
-			}
+	public void release(Rover a) {
+		activeBot.removeObserver(this);
+		available = true;
+		activeBot = null;
+		roverPos = null;
+	}
+	
+	private double getEuclidDist(Point p) {
+		return Math.sqrt(Math.pow(p.getX()-pos.getX(), 2)
+				+Math.pow(p.getZ()-pos.getZ(), 2));
+	}
+	@Override
+	public void updateRoverPosition(Position newPosition) {
+		roverPos = newPosition;
+		if(getEuclidDist(newPosition) > radius) {
+			release(activeBot);
 		}
 	}
 }
