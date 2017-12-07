@@ -4,7 +4,7 @@
 
 package area;
 
-import project.Boundary;
+import simbad.sim.Boundary;
 import java.util.Set;
 
 public abstract class Area {

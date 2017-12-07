@@ -9,12 +9,14 @@ import java.util.Set;
 
 import area.Area;
 import project.Rover;
+import simbad.sim.EnvironmentDescription;
+import simbad.sim.Boundary;
 
 /************************************************************/
 /**
  * 
  */
-public class Environment {
+public class Environment extends EnvironmentDescription{
 
 	/**
 	 * 
