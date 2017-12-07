@@ -20,10 +20,11 @@ public class Procedure extends Thread {
 	 * 
 	 */
 	private Set<Rover> rovers;
-	private ProcedureType type = ProcedureType.procedureA;
+	private ProcedureType type;
 	
-	public Procedure(Set<Rover> rovers) {
+	public Procedure(Set<Rover> rovers, ProcedureType type) {
 		this.rovers = rovers;
+		this.type = type;
 	}
 	
 	@Override
@@ -43,35 +44,14 @@ public class Procedure extends Thread {
 			e.printStackTrace();
 		}
 		
-		boolean changeProcedure = false;
-		
-		
-			for(Rover rover : rovers) {
-				Environment rovEnvironment = rover.getEnvironment();
-				for(Area a: rovEnvironment.getAreas()) {
-					if(type == ProcedureType.procedureA) {
-						if(a.getClass().equals(PhysicalArea.class)) {
-							rover.addRewardPoints(1);
-						} else if(a.getClass().equals(LogicalArea.class)) {
-							changeProcedure = true;
-						}
-					}
-					else if(type == ProcedureType.procedureB) {
-						if(a.getClass().equals(PhysicalArea.class)) {
-							changeProcedure = true;
-						} else if(a.getClass().equals(LogicalArea.class)) {
-							rover.addRewardPoints(1);
-						}
-					}
-				}
-			}
-		
-		if(changeProcedure && type == ProcedureType.procedureA) {
-			type = ProcedureType.procedureB;
-		} else if(changeProcedure && type == ProcedureType.procedureB) {
-			type = ProcedureType.procedureA;
+		for(Rover rover : rovers) {
+			type.calculateRewards(rover);
 		}
-		changeProcedure=false;
+		
 		calculateRewards();
+	}
+	
+	public void changeProcedureType(ProcedureType newType) {
+		this.type = newType;
 	}
 };

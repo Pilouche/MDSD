@@ -455,13 +455,15 @@
     </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_NRwNYMriEeeFg9xynNwgMw" name="Procedure">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_goTyYMriEeeFg9xynNwgMw" name="type" visibility="private" type="_dcIxUMriEeeFg9xynNwgMw"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_tRhVoMriEeeFg9xynNwgMw" name="calculateRewards">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_tRhVocriEeeFg9xynNwgMw" name="area" type="_cxOaIMIxEeenJY8sKbqJvg"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_tRhVosriEeeFg9xynNwgMw" name="points" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
-    </ownedOperation>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_goTyYMriEeeFg9xynNwgMw" name="type" visibility="private" type="_dcIxUMriEeeFg9xynNwgMw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GL4NkNtOEeeQy4htDOg_Aw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GL7Q4NtOEeeQy4htDOg_Aw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zzp5ENtNEeeQy4htDOg_Aw" name="proceduretype" type="_j9KhgNtNEeeQy4htDOg_Aw" association="_zzm1wNtNEeeQy4htDOg_Aw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zzruQNtNEeeQy4htDOg_Aw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zzruQdtNEeeQy4htDOg_Aw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_tRhVoMriEeeFg9xynNwgMw" name="startCalculateRewards"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_dcIxUMriEeeFg9xynNwgMw" name="ProcedureType"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_wqgqsMriEeeFg9xynNwgMw" memberEnd="_wqhRwsriEeeFg9xynNwgMw _wqhRw8riEeeFg9xynNwgMw">
@@ -582,11 +584,6 @@
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_GlVAINBdEeeYkpFGTRHSXg" name="physcal"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_eGMpcNBdEeeYkpFGTRHSXg" client="_z3-20MrjEeeFg9xynNwgMw" supplier="_tOFEANBcEeeYkpFGTRHSXg"/>
-  <packagedElement xmi:type="uml:Enumeration" xmi:id="_ksF_YNBdEeeYkpFGTRHSXg" name="ProcedureType">
-    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_plqWYNBdEeeYkpFGTRHSXg" name="procedureA"/>
-    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_q-oUcNBdEeeYkpFGTRHSXg" name="procedureB"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Usage" xmi:id="_xl8msNBdEeeYkpFGTRHSXg" client="_NRwNYMriEeeFg9xynNwgMw" supplier="_ksF_YNBdEeeYkpFGTRHSXg"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_11lYYNYaEeeodIuDDvK1GQ" name="RoverObserver"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_MxcQINYbEeeodIuDDvK1GQ" memberEnd="_MxdeQNYbEeeodIuDDvK1GQ _MxdeQ9YbEeeodIuDDvK1GQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mxc3MNYbEeeodIuDDvK1GQ" source="org.eclipse.papyrus">
@@ -599,5 +596,22 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PcSs0dYbEeeodIuDDvK1GQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_PcTT4tYbEeeodIuDDvK1GQ" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_PcSFwNYbEeeodIuDDvK1GQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_j9KhgNtNEeeQy4htDOg_Aw" name="ProcedureType">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vNeYINtNEeeQy4htDOg_Aw" name="calculateRewards">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vNeYIdtNEeeQy4htDOg_Aw" name="rover" type="_9CKHsMItEeenJY8sKbqJvg"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zzm1wNtNEeeQy4htDOg_Aw" memberEnd="_zzp5ENtNEeeQy4htDOg_Aw _zzruQttNEeeQy4htDOg_Aw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zzoq8NtNEeeQy4htDOg_Aw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zzpSANtNEeeQy4htDOg_Aw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_zzruQttNEeeQy4htDOg_Aw" name="procedure" type="_NRwNYMriEeeFg9xynNwgMw" association="_zzm1wNtNEeeQy4htDOg_Aw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1pv4ANtNEeeQy4htDOg_Aw" name="NormalProcedure">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_72dR4NtNEeeQy4htDOg_Aw" client="_1pv4ANtNEeeQy4htDOg_Aw" supplier="_j9KhgNtNEeeQy4htDOg_Aw" contract="_j9KhgNtNEeeQy4htDOg_Aw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3SKnUNtNEeeQy4htDOg_Aw" name="HospitalProcedure">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_8wn0ENtNEeeQy4htDOg_Aw" client="_3SKnUNtNEeeQy4htDOg_Aw" supplier="_j9KhgNtNEeeQy4htDOg_Aw" contract="_j9KhgNtNEeeQy4htDOg_Aw"/>
   </packagedElement>
 </uml:Model>
