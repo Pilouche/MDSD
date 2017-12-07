@@ -2,12 +2,12 @@ package area;
 
 import java.util.Set;
 
-import project.Boundary;
+import project.Position;
 
 public class EatingArea extends LogicalArea {
 
-	public EatingArea(Set<Boundary> boundaries) {
-		super(boundaries);
+	public EatingArea(Set<Position> positions) {
+		super(positions);
 	}
 
 }

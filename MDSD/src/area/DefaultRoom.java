@@ -2,12 +2,12 @@ package area;
 
 import java.util.Set;
 
-import project.Boundary;
+import project.Position;
 
 public class DefaultRoom extends AbstractRoom {
 
-	public DefaultRoom(Set<Boundary> boundaries) {
-		super(boundaries);
+	public DefaultRoom(Set<Position> positions) {
+		super(positions);
 	}
 
 }

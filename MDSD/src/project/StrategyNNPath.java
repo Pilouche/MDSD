@@ -1,6 +1,6 @@
 package project;
 
-import project.Environment;
+import area.Environment;
 import project.Mission;
 import project.Point;
 
