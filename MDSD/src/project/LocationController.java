@@ -74,8 +74,9 @@ public class LocationController implements RoverObserver {
 		return Math.sqrt(Math.pow(p.getX()-pos.getX(), 2)
 				+Math.pow(p.getZ()-pos.getZ(), 2));
 	}
+	
 	@Override
-	public void updateRoverPosition(Position newPosition) {
+	public void updateRoverPosition(Position newPosition, String name) {
 		roverPos = newPosition;
 		if(getEuclidDist(newPosition) > radius) {
 			release(activeBot);
