@@ -363,6 +363,10 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4vEsI8rkEeeFg9xynNwgMw" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4vEsJMrkEeeFg9xynNwgMw" value="1"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_MxdeQNYbEeeodIuDDvK1GQ" name="roverobserver" type="_11lYYNYaEeeodIuDDvK1GQ" association="_MxcQINYbEeeodIuDDvK1GQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MxdeQdYbEeeodIuDDvK1GQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MxdeQtYbEeeodIuDDvK1GQ" value="*"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_YY9AwMrhEeeFg9xynNwgMw" name="getRewardPoints">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_YY9AwcrhEeeFg9xynNwgMw" name="points" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -399,6 +403,11 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d1pq8M67EeeSLqr7E5O4ew" value="*"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_JaHAcNBTEeexNJmJXyGWXw" name="missionPoints" type="_uCpSsMbTEeeqNOjemIFasw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PcSs0tYbEeeodIuDDvK1GQ" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_PcSFwNYbEeeodIuDDvK1GQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PcTT4NYbEeeodIuDDvK1GQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PcTT4dYbEeeodIuDDvK1GQ" value="1"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="__nhzkNYaEeeodIuDDvK1GQ" client="_djblwMraEeeFg9xynNwgMw" supplier="_11lYYNYaEeeodIuDDvK1GQ" contract="_11lYYNYaEeeodIuDDvK1GQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_AgO4IMrhEeeFg9xynNwgMw" name="setMission">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgO4IcrhEeeFg9xynNwgMw" name="points" type="_uCpSsMbTEeeqNOjemIFasw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IGs6QMrhEeeFg9xynNwgMw" value="1"/>
@@ -419,19 +428,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_QcShoMrgEeeFg9xynNwgMw" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_QcPeUMrgEeeFg9xynNwgMw"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_QcVk8MrgEeeFg9xynNwgMw" name="point" type="_2bRegMrZEeeFg9xynNwgMw" association="_QcPeUMrgEeeFg9xynNwgMw"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_XatFQMrgEeeFg9xynNwgMw" memberEnd="_XatsUsrgEeeFg9xynNwgMw _XauTYMrgEeeFg9xynNwgMw">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XatsUMrgEeeFg9xynNwgMw" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XatsUcrgEeeFg9xynNwgMw" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_XauTYMrgEeeFg9xynNwgMw" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_XatFQMrgEeeFg9xynNwgMw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bbVpIMrgEeeFg9xynNwgMw" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bbXeUMrgEeeFg9xynNwgMw" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_XatsUsrgEeeFg9xynNwgMw" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_XatFQMrgEeeFg9xynNwgMw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aJoJoMrgEeeFg9xynNwgMw" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aJwsgMrgEeeFg9xynNwgMw" value="1"/>
-    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_nD0SsMrhEeeFg9xynNwgMw" name="Strategy" visibility="public">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_soLGINBSEeexNJmJXyGWXw" name="instance" visibility="private" type="_RyaakMVPEeehTrEdjWwgmQ"/>
@@ -591,4 +587,17 @@
     <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_q-oUcNBdEeeYkpFGTRHSXg" name="procedureB"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Usage" xmi:id="_xl8msNBdEeeYkpFGTRHSXg" client="_NRwNYMriEeeFg9xynNwgMw" supplier="_ksF_YNBdEeeYkpFGTRHSXg"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_11lYYNYaEeeodIuDDvK1GQ" name="RoverObserver"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_MxcQINYbEeeodIuDDvK1GQ" memberEnd="_MxdeQNYbEeeodIuDDvK1GQ _MxdeQ9YbEeeodIuDDvK1GQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mxc3MNYbEeeodIuDDvK1GQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Mxc3MdYbEeeodIuDDvK1GQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MxdeQ9YbEeeodIuDDvK1GQ" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_MxcQINYbEeeodIuDDvK1GQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PcSFwNYbEeeodIuDDvK1GQ" memberEnd="_PcSs0tYbEeeodIuDDvK1GQ _PcTT4tYbEeeodIuDDvK1GQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PcSs0NYbEeeodIuDDvK1GQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PcSs0dYbEeeodIuDDvK1GQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_PcTT4tYbEeeodIuDDvK1GQ" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_PcSFwNYbEeeodIuDDvK1GQ"/>
+  </packagedElement>
 </uml:Model>
