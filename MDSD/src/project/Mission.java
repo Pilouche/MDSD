@@ -12,7 +12,7 @@ import project.Position;
 /**
  * 
  */
-class Mission implements RoverObserver{
+public class Mission implements RoverObserver{
 	/**
 	 * 
 	 */
