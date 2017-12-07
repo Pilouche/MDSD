@@ -37,18 +37,20 @@ public class Procedure extends Thread {
 	 */
 	public void calculateRewards() {
 		
-		try {
-			this.sleep(20000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		while(true) {
 		
-		for(Rover rover : rovers) {
-			type.calculateRewards(rover);
-		}
+			try {
+				this.sleep(20000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		
-		calculateRewards();
+			for(Rover rover : rovers) {
+				type.calculateRewards(rover);
+			}
+		}
+
 	}
 	
 	public void changeProcedureType(ProcedureType newType) {
