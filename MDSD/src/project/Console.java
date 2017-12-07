@@ -3,10 +3,16 @@ package project;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Console {
-	static Scanner sc;
+public class Console implements GUI {
+	private Scanner sc;
+	private User user;
+	
+	public Console(User user) {
+		this.user = user;
+		startGUI();
+	}
 
-	public static void main2(String[] args) {
+	public void startGUI() {
 		System.out.println("Running main2");
 		boolean menu = true;
 		while(menu) {
@@ -54,11 +60,11 @@ public class Console {
 		return;
 	}
 	
-	public static Mission chooseMission(boolean started) {
+	public Mission chooseMission(boolean started) {
 		Mission chosenMission = null;
 		while(chosenMission == null) {
 			System.out.println("Choose mission to change:");
-			Set<Mission> setMissions=User.getMissions(); //fetch set of missions from user that are started or not? user.getMission(started)
+			Set<Mission> setMissions = user.getMissions(); //fetch set of missions from user that are started or not? user.getMission(started)
 			Mission[] missions = setMissions.toArray(new Mission[setMissions.size()]);
 			
 			for(int i=0;i<missions.length;i++) {
@@ -76,7 +82,7 @@ public class Console {
 		
 	}
 	
-	public static void addPositionMission(Mission m) {
+	public void addPositionMission(Mission m) {
 		System.out.println("x coordinate : ");
 		float x = sc.nextFloat();
 		System.out.println("z coordinate : ");
@@ -86,14 +92,15 @@ public class Console {
 		
 	}
 	
-	public static void removePositionMission(Mission m) {
-		Position[] positions = m.getMissionPoints();
+	public void removePositionMission(Mission m) {
+		Position[] positions = m.getUnvisitedPoints();
 		for (int i =0; i< positions.length;i++) {
 			System.out.println(i+". Position "+i+" : ("+ positions[i].getX()+","+positions[i].getZ()+")");
 		}
 		int choice = sc.nextInt();
 		m.removePosition(choice); // to implement
 	}
+
 	
 	
 
