@@ -27,5 +27,9 @@ public abstract class Area extends Polygon{
 	public Set<Position> getCorners() {
 		return corners;
 	}
+	
+	public void setCorners(Set<Position> corners) {
+		this.corners = corners;
+	}
 
 };

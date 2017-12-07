@@ -33,7 +33,7 @@ public class University extends Environment{
 		Position p7 = new Position(5,5);
 		Position p8 = new Position(5,0);
 		Position p9 = new Position(5,-5);
-
+		
 		Set<Position> roomA = new HashSet<>();
 		roomA.add(p1);roomA.add(p2);roomA.add(p5);roomA.add(p4);
 		Area a1 = new PhysicalArea(roomA);
@@ -52,8 +52,8 @@ public class University extends Environment{
 		Set<Position> roomD = new HashSet<>();
 		roomD.add(p5);roomD.add(p6);roomD.add(p9);roomD.add(p8);
 		Area a4 = new PhysicalArea(roomD);
-		this.addArea(a4);	
-
+		this.addArea(a4);
+		
 		Boundary w1 = new HorizontalBoundary(-5.0f, -5.0f, 5.0f, this, c);
 
 		Boundary w2 = new HorizontalBoundary(5.0f, -5.0f, 5.0f, this, c);
@@ -71,17 +71,17 @@ public class University extends Environment{
 		Boundary w8 = new VerticalBoundary(-5.0f, 3f, 5.0f, this, c);
 		//create four rooms with doors
 
-		AbstractWall roomWall2 = new HorizontalWall(0f, -2.0f, 2f, this, c);
+		AbstractWall roomWall1 = new HorizontalWall(0f, -2.0f, 2f, this, c);
 
-		AbstractWall roomWall3 = new VerticalWall(0f, -2f, 2f, this, c);
+		AbstractWall roomWall2 = new VerticalWall(0f, -2f, 2f, this, c);
 
-		AbstractWall roomWall5 = new HorizontalWall(0f, 5.0f, 3.0f, this, c);
+		AbstractWall roomWall3 = new HorizontalWall(0f, 5.0f, 3.0f, this, c);
 
-		AbstractWall roomWall6 = new HorizontalWall(0f, -5.0f, -3.0f, this, c);
+		AbstractWall roomWall4 = new HorizontalWall(0f, -5.0f, -3.0f, this, c);
 
-		AbstractWall roomWall7 = new VerticalWall(0f, 5f, 3f, this, c);
+		AbstractWall roomWall5 = new VerticalWall(0f, 5f, 3f, this, c);
 
-		AbstractWall roomWall8 = new VerticalWall(0f, -5f, -3f, this, c);
+		AbstractWall roomWall6 = new VerticalWall(0f, -5f, -3f, this, c);
 
 		Position exit1 = new Position(2.5,-7);
 		Position exit2 = new Position(2.5,7);

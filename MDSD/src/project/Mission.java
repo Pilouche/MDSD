@@ -52,28 +52,28 @@ public class Mission implements RoverObserver{
 		missionStatus = true;
 		//System.out.println("Stopping " + missionStatus);
 	}
-	
+
 	public void startMission() {
 		missionStatus = false;
 		//System.out.println("starting " + missionStatus);
 	}
-		
+
 	public void addPosition(Position addedPos) {
 		missionPoints = addPointToArray(missionPoints, addedPos);
 		unvisitedPoints = addPointToArray(unvisitedPoints, addedPos);
 	}
-	
+
 	public void removePosition(Position removedPos) {
 		unvisitedPoints = removePointFromArray(unvisitedPoints, removedPos);
 		missionPoints = removePointFromArray(missionPoints, removedPos);
 	}
-	
+
 	public void removePosition(int removedPos) {
 		if(removedPos < unvisitedPoints.length) {
 			removePosition(unvisitedPoints[removedPos]);
 		}
 	}
-		
+
 	public void updateRoverPosition(Position newPos, String name) {
 		//System.out.println(rover.getPosition().toString());
 		//System.out.println(nextPosition.getX() == newPos.getX() && (nextPosition.getZ() == newPos.getZ()));
@@ -87,12 +87,12 @@ public class Mission implements RoverObserver{
 				//nextPositionIndex++;
 				nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, nextPosition, rover);
 				rover.moveToPoint(nextPosition);
-				
+
 				unvisitedPoints = removePointFromArray(unvisitedPoints, nextPosition);
 			}
 		}
 	}
-	
+
 	public Position getNextPosition() {
 		return nextPosition;
 	}
@@ -102,14 +102,14 @@ public class Mission implements RoverObserver{
 	public Position[] getUnvisitedPoints() {
 		return unvisitedPoints;
 	}
-	
+
 	public boolean getMissionStatus() {
 		return missionStatus;
 	}
 	public void setStrategy(AbstractStrategy strat) {
 		this.strategy = strat;
 	}
-	
+
 	private Position[] addPointToArray(Position[] array, Position addedPos) {
 		Position[] tempPositionArray = new Position[array.length + 1];
 		for(int x = 0; x < array.length; x++) {
@@ -125,16 +125,19 @@ public class Mission implements RoverObserver{
 		if(array.length-1>0) {
 			tempArray = new Position[array.length-1];
 		}
-		
+
 		//Should probably be changed to some utility package or moved to some 
 		//helper class we make code in as we need it. Basically just ArrayUtils.RemoveElement
 		int y = 0;
 		for(int x = 0; x < array.length; x++) {
+
 			if(array[x].equals(removedPos)) {
 				//System.out.println("removed visited point at index " + x);
+				if(x+1<array.length)
 				x++;
 				pointExistedInArray = true;
 			}
+
 			if(y < array.length-1) {
 				tempArray[y] = array[x];
 			}
