@@ -429,16 +429,15 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_QcShoMrgEeeFg9xynNwgMw" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_QcPeUMrgEeeFg9xynNwgMw"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_QcVk8MrgEeeFg9xynNwgMw" name="point" type="_2bRegMrZEeeFg9xynNwgMw" association="_QcPeUMrgEeeFg9xynNwgMw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_nD0SsMrhEeeFg9xynNwgMw" name="Strategy" visibility="public">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_soLGINBSEeexNJmJXyGWXw" name="instance" visibility="private" type="_RyaakMVPEeehTrEdjWwgmQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nD0SsMrhEeeFg9xynNwgMw" name="AbstractStrategy" visibility="public" isAbstract="true">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_6SUu8MrhEeeFg9xynNwgMw" name="calculateNextPoint">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu8srhEeeFg9xynNwgMw" name="mission" type="_76et8MItEeenJY8sKbqJvg"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu88rhEeeFg9xynNwgMw" name="environment" type="_Vs8fEMIxEeenJY8sKbqJvg"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6SUu9MrhEeeFg9xynNwgMw" name="point" type="_uCpSsMbTEeeqNOjemIFasw" direction="return"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_veOgoM66EeeSLqr7E5O4ew" name="type"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_5L0M4NBSEeexNJmJXyGWXw" name="getInstance">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_5L0M4dBSEeexNJmJXyGWXw" name="instance" type="_RyaakMVPEeehTrEdjWwgmQ" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YrPOUNweEeeiXPxAensrSA" name="unvisitedPoints" type="_uCpSsMbTEeeqNOjemIFasw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pXB2MNweEeeiXPxAensrSA" name="nextPositionIndex">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_uTODYNweEeeiXPxAensrSA" name="currentPosition" type="_uCpSsMbTEeeqNOjemIFasw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_zF7kcNweEeeiXPxAensrSA" name="r" type="_9CKHsMItEeenJY8sKbqJvg"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_HADl0MriEeeFg9xynNwgMw" memberEnd="_HAEM4sriEeeFg9xynNwgMw _HAEz8MriEeeFg9xynNwgMw">
@@ -576,13 +575,6 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z-FBIdwcEeeiXPxAensrSA" name="positions" type="_uCpSsMbTEeeqNOjemIFasw" direction="return"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_07jzYM63EeeSLqr7E5O4ew" memberEnd="_07lokM63EeeSLqr7E5O4ew _07lokc63EeeSLqr7E5O4ew">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_07kacM63EeeSLqr7E5O4ew" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_07lBgM63EeeSLqr7E5O4ew" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_07lokM63EeeSLqr7E5O4ew" name="environment" type="_ClnlYMrjEeeFg9xynNwgMw" association="_07jzYM63EeeSLqr7E5O4ew"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_07lokc63EeeSLqr7E5O4ew" name="user" type="_Wie8IM63EeeSLqr7E5O4ew" association="_07jzYM63EeeSLqr7E5O4ew"/>
-  </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_11lYYNYaEeeodIuDDvK1GQ" name="RoverObserver">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_xcHY4NwcEeeiXPxAensrSA" name="updateRoverPosition">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_xcHY4dwcEeeiXPxAensrSA" name="newPosition" type="_uCpSsMbTEeeqNOjemIFasw"/>
@@ -704,5 +696,14 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8AldMdwcEeeiXPxAensrSA" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_8AmEQ9wcEeeiXPxAensrSA" name="user" type="_Wie8IM63EeeSLqr7E5O4ew" association="_8Ak2INwcEeeiXPxAensrSA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_o4hxwNwdEeeiXPxAensrSA" name="StrategyNNPath">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Hu3z0NweEeeiXPxAensrSA" general="_nD0SsMrhEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qr2wkNwdEeeiXPxAensrSA" name="StrategyInMissionOrder">
+    <generalization xmi:type="uml:Generalization" xmi:id="_IU__sNweEeeiXPxAensrSA" general="_nD0SsMrhEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_uxDrYNwdEeeiXPxAensrSA" name="StrategyInMissionOrderWaitRoom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_I2e8INweEeeiXPxAensrSA" general="_nD0SsMrhEeeFg9xynNwgMw"/>
   </packagedElement>
 </uml:Model>
