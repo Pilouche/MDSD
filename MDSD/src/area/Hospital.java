@@ -23,7 +23,8 @@ public class Hospital extends Environment{
 		super();
 		this.rovers = new HashSet<>();
 		this.missions = new Mission[4];
-		Color c = Color.GRAY;
+		Color c1 = Color.BLUE;
+		Color c2 = Color.RED;
 
 		Position p1 = new Position(-6,6);
 		Position p2 = new Position(-6,0);
@@ -71,38 +72,38 @@ public class Hospital extends Environment{
 		Area a5 = new ConsultingRoom(cRoom1,ed);
 		this.addArea(a5);	
 		
-		Boundary w1 = new HorizontalBoundary(-6.0f, -6.0f, 6.0f, this, c);
+		Boundary w1 = new HorizontalBoundary(-6.0f, -6.0f, 6.0f, this, c2);
 
-		Boundary w2 = new HorizontalBoundary(6.0f, -6.0f, 6.0f, this, c);
+		Boundary w2 = new HorizontalBoundary(6.0f, -6.0f, 6.0f, this, c2);
 
-		Boundary w3 = new VerticalBoundary(6.0f, -6.0f, -3.5f, this, c);
+		Boundary w3 = new VerticalBoundary(6.0f, -6.0f, -3.5f, this, c2);
 
-		Boundary w4 = new VerticalBoundary(6.0f, -2.5f, 2.5f, this, c);
+		Boundary w4 = new VerticalBoundary(6.0f, -2.5f, 2.5f, this, c2);
 
-		Boundary w5 = new VerticalBoundary(6.0f, 3.5f, 6.0f, this, c);
+		Boundary w5 = new VerticalBoundary(6.0f, 3.5f, 6.0f, this, c2);
 
-		Boundary w6 = new VerticalBoundary(-6.0f, -6.0f, -3.5f, this, c);
+		Boundary w6 = new VerticalBoundary(-6.0f, -6.0f, -3.5f, this, c2);
 
-		Boundary w7 = new VerticalBoundary(-6.0f, -2.5f, 2.5f, this, c);
+		Boundary w7 = new VerticalBoundary(-6.0f, -2.5f, 2.5f, this, c2);
 
-		Boundary w8 = new VerticalBoundary(-6.0f, 3.5f, 6.0f, this, c);
+		Boundary w8 = new VerticalBoundary(-6.0f, 3.5f, 6.0f, this, c2);
 		//create four rooms with doors
 
-		AbstractWall roomWall1 = new HorizontalWall(3f, -2.25f, 2.25f, this, c);
+		AbstractWall roomWall1 = new HorizontalWall(3f, -2.25f, 2.25f, this, c1);
 
-		AbstractWall roomWall2 = new VerticalWall(3f, -2.25f, 2.25f, this, c);
+		AbstractWall roomWall2 = new VerticalWall(3f, -2.25f, 2.25f, this, c1);
 		
-		AbstractWall roomWall3 = new HorizontalWall(-3f, -2.25f, 2.25f, this, c);
+		AbstractWall roomWall3 = new HorizontalWall(-3f, -2.25f, 2.25f, this, c1);
 
-		AbstractWall roomWall4 = new VerticalWall(-3f, -2.25f, 2.25f, this, c);
+		AbstractWall roomWall4 = new VerticalWall(-3f, -2.25f, 2.25f, this, c1);
 
-		AbstractWall roomWall5 = new HorizontalWall(0f, 6.0f, 4.0f, this, c);
+		AbstractWall roomWall5 = new HorizontalWall(0f, 6.0f, 4.0f, this, c2);
 
-		AbstractWall roomWall6 = new HorizontalWall(0f, -6.0f, -4.0f, this, c);
+		AbstractWall roomWall6 = new HorizontalWall(0f, -6.0f, -4.0f, this, c2);
 
-		AbstractWall roomWall7 = new VerticalWall(0f, 6f, 4.0f, this, c);
+		AbstractWall roomWall7 = new VerticalWall(0f, 6f, 4.0f, this, c2);
 
-		AbstractWall roomWall8 = new VerticalWall(0f, -6f, -4.0f, this, c);
+		AbstractWall roomWall8 = new VerticalWall(0f, -6f, -4.0f, this, c2);
 
 		Position room1 = new Position(5,-5);
 		Position room2 = new Position(5, 5);
