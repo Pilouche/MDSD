@@ -10,8 +10,8 @@ package project;
  */
 public class Position extends Point{
 
-
-
+	private boolean hasLock;
+	private LocationController lock;
 	/**
 	 * 
 	 */
@@ -21,7 +21,12 @@ public class Position extends Point{
 	
 	public Position(double x, double z) {
 		super(x, z);
-		// TODO Auto-generated constructor stub
+		hasLock = false;
+	}
+	public Position(double x, double z, double lockRadius) {
+		super(x, z);
+		this.hasLock = true;
+		lock = new LocationController(this, lockRadius);
 	}
 
 	/**
@@ -32,11 +37,20 @@ public class Position extends Point{
 	public void updatePosition(double x, double z) {
 		this.setX(x);
 		this.setZ(z);
-		
 	}
-	
 	
 	public double getDistance(Position otherPosition) {
 		return Math.sqrt(Math.pow((otherPosition.getZ()-this.getZ()),2)+Math.pow(otherPosition.getX()-this.getX(),2));
 	}
+	
+	public boolean hasLock() {
+		return hasLock;
+	}
+
+	public LocationController getLock() {
+		return lock;
+	}
 };
+
+
+

@@ -5,7 +5,9 @@
 package project;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import area.Environment;
 import project.Position;
@@ -26,7 +28,8 @@ public class Rover extends RobotAvatar {
 	 */
 	public Environment inEnvironment;
 	private List<RoverObserver> obs;
-	
+	private Set<LocationController> locks = new HashSet<LocationController>();
+	private LocationController activeLock;
 	public Rover(Position position, String name, Environment e) {
 		super(position, name);
 		this.position = position;
@@ -56,6 +59,18 @@ public class Rover extends RobotAvatar {
 	 */
 	public void moveToPoint(Position pos) {
 		this.setDestination(pos);
+		if(pos.hasLock()){
+			activeLock = pos.getLock();
+			if(activeLock.isInsideRadius(this)) {
+				if(activeLock.tryAcquire(this)) {
+					locks.add(activeLock);
+					System.out.println(this.getName() + " Successfully acquired a lock");
+				}else {
+					System.out.println(this.getName() + " is inside the area but failed to acquire a lock");
+				}
+			}
+			//position.getLock().tryAcquire(this);
+		}
 		//System.out.println("Rover: " + super.getName() + " Moving to: " + pos.getX() + ", " + pos.getZ());
 	}
 	
@@ -83,6 +98,27 @@ public class Rover extends RobotAvatar {
 			position = newPosition;
 			for(RoverObserver o : obs) {
 				o.updateRoverPosition(position, super.getName());
+			}
+			
+			if(!locks.contains(activeLock) && activeLock.isInsideRadius(this)) {
+				if(activeLock.tryAcquire(this)) {
+					locks.add(activeLock);
+				}else {
+					//System.out.println(this.getName() + " is inside the area but failed to acquire a lock");
+					
+					
+					
+					/*At this point the rover reached the border of the lock radius but could not acquire the area and should stop*/
+				}
+			}
+			
+			//this is a quick fix since setting each lock as a RoverObserver fucked with me more than I felt like handling
+			//ideally this should be handled in the LocationControllers updateRoverPosition() but that crashed the sim.
+			for(LocationController lc : locks) {
+				if(!lc.isInsideRadius(this)) {
+					lc.release(this);
+					locks.remove(lc);
+				}
 			}
 		//}
 	}

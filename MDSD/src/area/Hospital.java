@@ -16,7 +16,7 @@ import simbad.sim.HorizontalBoundary;
 import simbad.sim.HorizontalWall;
 import simbad.sim.VerticalBoundary;
 import simbad.sim.VerticalWall;
-
+import project.LocationController;
 public class Hospital extends Environment{
 
 	public Hospital() {
@@ -105,11 +105,13 @@ public class Hospital extends Environment{
 
 		AbstractWall roomWall8 = new VerticalWall(0f, -6f, -4.0f, this, c2);
 
-		Position room1 = new Position(5,-5);
-		Position room2 = new Position(5, 5);
-		Position room3 = new Position(-5,5);
-		Position room4 = new Position(-5,-5);
-		Position room5 = new Position(0,0);
+		double lockRadius = 2.0;
+
+		Position room1 = new Position(5,-5, lockRadius);
+		Position room2 = new Position(5, 5, lockRadius);
+		Position room3 = new Position(-5,5, lockRadius);
+		Position room4 = new Position(-5,-5, lockRadius);
+		Position room5 = new Position(0,0, lockRadius);
 
 		Rover rover1 = new Rover(room1, "Rover 1", this);
 		Rover rover2 = new Rover(room2, "Rover 2", this);

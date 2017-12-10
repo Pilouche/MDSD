@@ -23,7 +23,6 @@ public class StrategyInMissionOrder extends AbstractStrategy {
 		//For the assignement
 		//If the target room (next point) has more than 1 rover, then wait or return the rover position
 		//Else go to the target room
-
 		return points[0]; //Probably this we should use in the first mission because the order we visit the points in is very important.
 	}
 };

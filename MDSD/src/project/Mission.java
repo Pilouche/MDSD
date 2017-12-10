@@ -23,7 +23,6 @@ public class Mission implements RoverObserver{
 		nextPosition = missionPoints[nextPositionIndex];
 		strategy = strat;
 		r.observe(this);
-		nextPosition = rover.getPosition();
 	}
 
 	private Position nextPosition;

@@ -2,14 +2,13 @@ package project;
 
 import simbad.sim.EnvironmentDescription;
 
-public class LocationController implements RoverObserver {
+public class LocationController implements RoverObserver{
 
-	Point pos;
-	Double radius;
-	EnvironmentDescription ed;
-	boolean available;
-	Rover activeBot;
-	Point roverPos; 
+	private Point pos;
+	private Double radius;
+	private boolean available;
+	private Rover activeBot;
+	private Point roverPos; 
 	
 	/**
 	* CONSTRUCTOR
@@ -26,10 +25,9 @@ public class LocationController implements RoverObserver {
 	* @param wd
 	* the environment
 	*/
-	public LocationController(Point pos , double radius , EnvironmentDescription ed) {
+	public LocationController(Point pos , double radius) {
 		this.pos = pos;
 		this.radius = radius;
-		this.ed = ed;
 		available = true;
 	}
 	/**
@@ -42,13 +40,14 @@ public class LocationController implements RoverObserver {
 	* @return true if successful , false if unsuccessful
 	*/
 	public synchronized boolean tryAcquire(Rover rover){
-		if (getEuclidDist(rover.getPosition()) < radius) {
+		if (getEuclidDist(rover.getPosition()) > radius) {
+			System.out.println("failed due to being outside of the locks radius");
 			return false;
 		}
 		if (available){
 			available = false;
 			activeBot = rover;
-			rover.observe(this);
+			//rover.observe(this);
 			return true;
 		}else {
 			return false;
@@ -64,22 +63,33 @@ public class LocationController implements RoverObserver {
 	* the robot
 	*/
 	public void release(Rover a) {
-		activeBot.removeObserver(this);
+		System.out.println("lock released for rover: " + activeBot.getName());
+		//activeBot.removeObserver(this); //the thread crashed with these as observers, moved the same logic to each rovers update
 		available = true;
 		activeBot = null;
 		roverPos = null;
 	}
 	
-	private double getEuclidDist(Point p) {
+	public double getEuclidDist(Point p) {
 		return Math.sqrt(Math.pow(p.getX()-pos.getX(), 2)
 				+Math.pow(p.getZ()-pos.getZ(), 2));
 	}
 	
+	
+	/*Should be called automatically by the active rover and thus release when the rover moves outside of the radius
+	 * This crashed the simulator so I made the rover do the check and call release manually instead */
 	@Override
 	public void updateRoverPosition(Position newPosition, String name) {
 		roverPos = newPosition;
 		if(getEuclidDist(newPosition) > radius) {
 			release(activeBot);
 		}
+	}
+	public boolean isAvailable() {
+		return available;
+	}
+	
+	public boolean isInsideRadius(Rover rover) {
+		return getEuclidDist(rover.getPosition()) < radius;
 	}
 }
