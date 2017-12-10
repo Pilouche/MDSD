@@ -108,6 +108,10 @@ public class Mission implements RoverObserver{
 	public void setStrategy(AbstractStrategy strat) {
 		this.strategy = strat;
 	}
+	
+	public AbstractStrategy getStrategy() {
+		return this.strategy;
+	}
 
 	private Position[] addPointToArray(Position[] array, Position addedPos) {
 		Position[] tempPositionArray = new Position[array.length + 1];
