@@ -32,11 +32,14 @@ public class Console implements GUI {
 					System.out.println("Menu");
 					System.out.println("1. Add point");
 					System.out.println("2. Remove point");
+					System.out.println("3. Change strategy");
 					int choiceMission = sc.nextInt();
 					switch(choiceMission) {
 						case 1: addPositionMission(m);
 								break;
 						case 2: removePositionMission(m);
+								break;
+						case 3: chooseStrategy(m);
 								break;
 						default:
 								System.out.println("Invalid choice");
@@ -113,7 +116,27 @@ public class Console implements GUI {
 		int choice = sc.nextInt();
 		m.removePosition(choice); // to implement
 	}
-
+	
+	public void chooseStrategy(Mission m) {
+		System.out.println("Current strategy : " + m.getStrategy());
+		System.out.println("Select new strategy : ");
+		// hardcoded, maybe a loop is better? Maybe we should also not show the current one 
+		System.out.println("1. In mission order ");
+		System.out.println("2. In mission order, waits 2 seconds");
+		System.out.println("3. Shortest path");
+		int choice = sc.nextInt();
+		switch(choice) {
+			case 1: m.setStrategy(new StrategyInMissionOrder());;
+					break;
+			case 2: m.setStrategy(new StrategyInMissionOrderWaitRoom());;
+					break;
+			case 3: m.setStrategy(new StrategyNNPath());;
+					break;
+			default:
+					System.out.println("Invalid choice");
+					break;
+		}
+	}
 	
 	
 
