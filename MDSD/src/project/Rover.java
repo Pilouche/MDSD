@@ -59,6 +59,7 @@ public class Rover extends RobotAvatar {
 	 */
 	public void moveToPoint(Position pos) {
 		this.setDestination(pos);
+		//System.out.println(this.getName() + pos.toString());
 		if(pos.hasLock()){
 			activeLock = pos.getLock();
 			if(activeLock.isInsideRadius(this)) {
@@ -66,7 +67,7 @@ public class Rover extends RobotAvatar {
 					locks.add(activeLock);
 					System.out.println(this.getName() + " Successfully acquired a lock");
 				}else {
-					System.out.println(this.getName() + " is inside the area but failed to acquire a lock");
+					//System.out.println(this.getName() + " is inside the area but failed to acquire a lock");
 				}
 			}
 			//position.getLock().tryAcquire(this);

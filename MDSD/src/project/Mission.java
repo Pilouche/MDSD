@@ -77,7 +77,7 @@ public class Mission implements RoverObserver{
 		//System.out.println(rover.getPosition().toString());
 		//System.out.println(nextPosition.getX() == newPos.getX() && (nextPosition.getZ() == newPos.getZ()));
 		//if(rover.isAtPosition(newPosition)) {
-		if((((nextPosition.getX() + 0.1 >= newPos.getX() && nextPosition.getX() - 0.1 <= newPos.getX()) 
+		/*if((((nextPosition.getX() + 0.1 >= newPos.getX() && nextPosition.getX() - 0.1 <= newPos.getX()) 
 				&& (nextPosition.getZ() + 0.1 >= newPos.getZ() && nextPosition.getZ() - 0.1 <= newPos.getZ())) 
 				&& !missionStatus) || nextPosition == null) {
 			if(unvisitedPoints.length == 0) {
@@ -89,17 +89,26 @@ public class Mission implements RoverObserver{
 
 				unvisitedPoints = removePointFromArray(unvisitedPoints, nextPosition);
 			}
+		}*/
+		Position oldPos = nextPosition;
+		nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, newPos, rover);
+		if(nextPosition==null) {
+			missionStatus = true;
+		} else if(oldPos == nextPosition) {
+			rover.moveToPoint(nextPosition);
 		}
+		
+		
 	}
 
 	public Position getNextPosition() {
 		return nextPosition;
 	}
 	public Position[] getMissionPoints() {
-		return missionPoints;
+		return strategy.getAllMissionPoints();
 	}
 	public Position[] getUnvisitedPoints() {
-		return unvisitedPoints;
+		return strategy.getAllUnvisitedPoints();
 	}
 
 	public boolean getMissionStatus() {

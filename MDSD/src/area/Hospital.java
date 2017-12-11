@@ -72,38 +72,38 @@ public class Hospital extends Environment{
 		Area a5 = new ConsultingRoom(cRoom1,ed);
 		this.addArea(a5);	
 		
-		Boundary w1 = new HorizontalBoundary(-6.0f, -6.0f, 6.0f, this, c2);
+		super.addBoundry(-6.0f, -6.0f, 6.0f, this, c2, true);
+		
+		super.addBoundry(6.0f, -6.0f, 6.0f, this, c2, true);
 
-		Boundary w2 = new HorizontalBoundary(6.0f, -6.0f, 6.0f, this, c2);
+		super.addBoundry(6.0f, -6.0f, -3.5f, this, c2, false);
 
-		Boundary w3 = new VerticalBoundary(6.0f, -6.0f, -3.5f, this, c2);
+		super.addBoundry(6.0f, -2.5f, 2.5f, this, c2, false);
 
-		Boundary w4 = new VerticalBoundary(6.0f, -2.5f, 2.5f, this, c2);
+		super.addBoundry(6.0f, 3.5f, 6.0f, this, c2, false);
 
-		Boundary w5 = new VerticalBoundary(6.0f, 3.5f, 6.0f, this, c2);
+		super.addBoundry(-6.0f, -6.0f, -3.5f, this, c2, false);
 
-		Boundary w6 = new VerticalBoundary(-6.0f, -6.0f, -3.5f, this, c2);
+		super.addBoundry(-6.0f, -2.5f, 2.5f, this, c2, false);
 
-		Boundary w7 = new VerticalBoundary(-6.0f, -2.5f, 2.5f, this, c2);
-
-		Boundary w8 = new VerticalBoundary(-6.0f, 3.5f, 6.0f, this, c2);
+		super.addBoundry(-6.0f, 3.5f, 6.0f, this, c2, false);
 		//create four rooms with doors
 
-		AbstractWall roomWall1 = new HorizontalWall(3f, -2.25f, 2.25f, this, c1);
+		super.addWall(3f, -2.25f, 2.25f, this, c1, true);
 
-		AbstractWall roomWall2 = new VerticalWall(3f, -2.25f, 2.25f, this, c1);
+		super.addWall(3f, -2.25f, 2.25f, this, c1, false);
 		
-		AbstractWall roomWall3 = new HorizontalWall(-3f, -2.25f, 2.25f, this, c1);
+		super.addWall(-3f, -2.25f, 2.25f, this, c1, true);
 
-		AbstractWall roomWall4 = new VerticalWall(-3f, -2.25f, 2.25f, this, c1);
+		super.addWall(-3f, -2.25f, 2.25f, this, c1, false);
 
-		AbstractWall roomWall5 = new HorizontalWall(0f, 6.0f, 4.0f, this, c2);
+		super.addWall(0f, 6.0f, 4.0f, this, c2, true);
 
-		AbstractWall roomWall6 = new HorizontalWall(0f, -6.0f, -4.0f, this, c2);
+		super.addWall(0f, -6.0f, -4.0f, this, c2, true);
 
-		AbstractWall roomWall7 = new VerticalWall(0f, 6f, 4.0f, this, c2);
+		super.addWall(0f, 6f, 4.0f, this, c2, false);
 
-		AbstractWall roomWall8 = new VerticalWall(0f, -6f, -4.0f, this, c2);
+		super.addWall(0f, -6f, -4.0f, this, c2, false);
 
 		double lockRadius = 2.0;
 
