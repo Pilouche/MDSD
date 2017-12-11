@@ -4,7 +4,6 @@
 
 package project;
 
-
 import area.Environment;
 import project.Mission;
 import project.Point;
@@ -16,122 +15,129 @@ import project.Point;
 public abstract class AbstractStrategy {
 	private Position[] missionInOrder;
 	private Position[] missionWithExtraPositions;
-	private int currentPositionIndex; //Index in position points
-	private int currentRealPosition; // Index in the whole path including the points that are calculated for avoiding obstacles
+	private int currentPositionIndex; // Index in position points
+	private int currentRealPosition; // Index in the whole path including the points that are calculated for avoiding
+										// obstacles
 	private boolean newOrder;
-	public AbstractStrategy() {}
+
+	public AbstractStrategy() {
+	}
+
 	/**
 	 * 
-	 * @param mission 
-	 * @param environment 
-	 * @return 
-	 * @param type 
+	 * @param mission
+	 * @param environment
+	 * @return
+	 * @param type
 	 */
-	
-	public Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex, Position currentPosition, Rover r) {
-	if(missionInOrder == null) {
-		missionInOrder = unvisitedPoints;
-		currentPositionIndex = 0;
-	}
-	if(missionWithExtraPositions == null){
-		calculateWholePath(environment, currentPosition, r);
-	} else if(currentPositionIndex == missionInOrder.length) {
-		return null;
-	} else if(newOrder){
-		calculateWholePath(environment, currentPosition, r);
-	} else if(((missionWithExtraPositions[0].getX() + 0.1 >= currentPosition.getX() && missionWithExtraPositions[0].getX() - 0.1 <= currentPosition.getX()) 
-			&& (missionWithExtraPositions[0].getZ() + 0.1 >= currentPosition.getZ() && missionWithExtraPositions[0].getZ() - 0.1 <= currentPosition.getZ()))){
-		if(missionWithExtraPositions[0].equals(missionInOrder[currentPositionIndex])) {
-			currentPositionIndex++;
+
+	public Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex,
+			Position currentPosition, Rover r) {
+		if (missionInOrder == null) {
+			missionInOrder = unvisitedPoints;
+			currentPositionIndex = 0;
 		}
-		
-		missionWithExtraPositions = removePointFromArray(missionWithExtraPositions, missionWithExtraPositions[0]);
+		if (missionWithExtraPositions == null) {
+			calculateWholePath(environment, currentPosition, r);
+		} else if (currentPositionIndex == missionInOrder.length) {
+			return null;
+		} else if (newOrder) {
+			calculateWholePath(environment, currentPosition, r);
+		} else if (((missionWithExtraPositions[0].getX() + 0.1 >= currentPosition.getX()
+				&& missionWithExtraPositions[0].getX() - 0.1 <= currentPosition.getX())
+				&& (missionWithExtraPositions[0].getZ() + 0.1 >= currentPosition.getZ()
+						&& missionWithExtraPositions[0].getZ() - 0.1 <= currentPosition.getZ()))) {
+			if (missionWithExtraPositions[0].equals(missionInOrder[currentPositionIndex])) {
+				currentPositionIndex++;
+			}
+
+			missionWithExtraPositions = removePointFromArray(missionWithExtraPositions, missionWithExtraPositions[0]);
+		}
+		if (missionWithExtraPositions.length > 0) {
+			return missionWithExtraPositions[0];
+		}
+		return null;
 	}
-	if(missionWithExtraPositions.length > 0) {
-		return missionWithExtraPositions[0];
-	}
-	return null;
-	}
-	
+
 	public Position[] getAllMissionPoints() {
 		return missionInOrder;
 	}
-	
+
 	public Position[] getAllUnvisitedPoints() {
-		Position[] unvisitedPositions = new Position[missionInOrder.length-currentPositionIndex];
-		for(int x = 0; x<missionInOrder.length-currentPositionIndex; x++) {
-			unvisitedPositions[x] = missionInOrder[x+currentPositionIndex];
+		Position[] unvisitedPositions = new Position[missionInOrder.length - currentPositionIndex];
+		for (int x = 0; x < missionInOrder.length - currentPositionIndex; x++) {
+			unvisitedPositions[x] = missionInOrder[x + currentPositionIndex];
 		}
 		return unvisitedPositions;
 	}
-	
+
 	public void removeMissionPosition(Position removedPosition) {
 		removePointFromArray(missionInOrder, removedPosition);
 		newOrder = true;
 	}
-	
+
 	public void removeMissionPosition(int removedPosition) {
-		removePointFromArray(missionInOrder,getAllUnvisitedPoints()[removedPosition]);
+		removePointFromArray(missionInOrder, getAllUnvisitedPoints()[removedPosition]);
 		newOrder = true;
 	}
-	
+
 	public void addMissionPosition(Position addedPosition) {
 		addPointToArray(missionInOrder, addedPosition);
 		newOrder = true;
 	}
-	
-	
+
 	public void swapMissionOrder(int one, int two) {
-		Position temp = missionInOrder[one+currentPositionIndex];
-		missionInOrder[one+currentPositionIndex] = missionInOrder[two+currentPositionIndex];
-		missionInOrder[two+currentPositionIndex] = temp;
+		Position temp = missionInOrder[one + currentPositionIndex];
+		missionInOrder[one + currentPositionIndex] = missionInOrder[two + currentPositionIndex];
+		missionInOrder[two + currentPositionIndex] = temp;
 		newOrder = true;
 	}
-	
+
 	public abstract void calculateWholePath(Environment environment, Position currentPosition, Rover r);
-	
-	
+
 	private Position[] addPointToArray(Position[] array, Position addedPos) {
 		Position[] tempPositionArray = new Position[array.length + 1];
-		for(int x = 0; x < array.length; x++) {
+		for (int x = 0; x < array.length; x++) {
 			tempPositionArray[x] = array[x];
 		}
 		tempPositionArray[array.length] = addedPos;
 		return tempPositionArray;
 	}
-	
+
 	private Position[] removePointFromArray(Position[] array, Position removedPos) {
 		boolean pointExistedInArray = false;
 		Position tempArray[] = new Position[0];
-		if(array.length-1>0) {
-			tempArray = new Position[array.length-1];
+		if (array.length - 1 > 0) {
+			tempArray = new Position[array.length - 1];
 		}
 
-		//Should probably be changed to some utility package or moved to some 
-		//helper class we make code in as we need it. Basically just ArrayUtils.RemoveElement
+		// Should probably be changed to some utility package or moved to some
+		// helper class we make code in as we need it. Basically just
+		// ArrayUtils.RemoveElement
 		int y = 0;
-		for(int x = 0; x < array.length; x++) {
+		for (int x = 0; x < array.length; x++) {
 
-			if(array[x].equals(removedPos)) {
-				//System.out.println("removed visited point at index " + x);
-				if(x+1<array.length)
-				x++;
+			if (array[x].equals(removedPos)) {
+				// System.out.println("removed visited point at index " + x);
+				if (x + 1 < array.length)
+					x++;
 				pointExistedInArray = true;
 			}
 
-			if(y < array.length-1) {
+			if (y < array.length - 1) {
 				tempArray[y] = array[x];
 			}
 			y++;
 		}
-		
-		if(pointExistedInArray) {
+
+		if (pointExistedInArray) {
 			return tempArray;
 		} else {
 			return array;
 		}
 	}
-    public void setExtraPositions(Position[] extra) {
-    	missionWithExtraPositions = extra;
-    }
+
+	public void setExtraPositions(Position[] extra) {
+		missionWithExtraPositions = extra;
+	}
 };

@@ -12,7 +12,7 @@ import project.Position;
 /**
  * 
  */
-public class Mission implements RoverObserver{
+public class Mission implements RoverObserver {
 	/**
 	 * 
 	 */
@@ -26,8 +26,8 @@ public class Mission implements RoverObserver{
 	}
 
 	private Position nextPosition;
-	//public StrategyType[] strategyType;
-	//private AbstractStrategy strategy = AbstractStrategy.getInstance();
+	// public StrategyType[] strategyType;
+	// private AbstractStrategy strategy = AbstractStrategy.getInstance();
 	private Position[] missionPoints;
 	private Position[] unvisitedPoints;
 	private Rover rover;
@@ -37,7 +37,7 @@ public class Mission implements RoverObserver{
 
 	/**
 	 * 
-	 * @param points 
+	 * @param points
 	 */
 	public void setMission(Position[] position) {
 		missionPoints = position;
@@ -49,12 +49,12 @@ public class Mission implements RoverObserver{
 	 */
 	public void stopMission() {
 		missionStatus = true;
-		//System.out.println("Stopping " + missionStatus);
+		// System.out.println("Stopping " + missionStatus);
 	}
 
 	public void startMission() {
 		missionStatus = false;
-		//System.out.println("starting " + missionStatus);
+		// System.out.println("starting " + missionStatus);
 	}
 
 	public void addPosition(Position addedPos) {
@@ -68,45 +68,48 @@ public class Mission implements RoverObserver{
 	}
 
 	public void removePosition(int removedPos) {
-		if(removedPos < unvisitedPoints.length) {
+		if (removedPos < unvisitedPoints.length) {
 			removePosition(unvisitedPoints[removedPos]);
 		}
 	}
 
 	public void updateRoverPosition(Position newPos, String name) {
-		//System.out.println(rover.getPosition().toString());
-		//System.out.println(nextPosition.getX() == newPos.getX() && (nextPosition.getZ() == newPos.getZ()));
-		//if(rover.isAtPosition(newPosition)) {
-		/*if((((nextPosition.getX() + 0.1 >= newPos.getX() && nextPosition.getX() - 0.1 <= newPos.getX()) 
-				&& (nextPosition.getZ() + 0.1 >= newPos.getZ() && nextPosition.getZ() - 0.1 <= newPos.getZ())) 
-				&& !missionStatus) || nextPosition == null) {
-			if(unvisitedPoints.length == 0) {
+		// System.out.println(rover.getPosition().toString());
+		// System.out.println(nextPosition.getX() == newPos.getX() &&
+		// (nextPosition.getZ() == newPos.getZ()));
+		// if(rover.isAtPosition(newPosition)) {
+		/*
+		 * if((((nextPosition.getX() + 0.1 >= newPos.getX() && nextPosition.getX() - 0.1
+		 * <= newPos.getX()) && (nextPosition.getZ() + 0.1 >= newPos.getZ() &&
+		 * nextPosition.getZ() - 0.1 <= newPos.getZ())) && !missionStatus) ||
+		 * nextPosition == null) { if(unvisitedPoints.length == 0) { missionStatus =
+		 * true; } else { //nextPositionIndex++; nextPosition =
+		 * strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment,
+		 * nextPositionIndex, nextPosition, rover); rover.moveToPoint(nextPosition);
+		 * 
+		 * unvisitedPoints = removePointFromArray(unvisitedPoints, nextPosition); } }
+		 */
+		if (missionStatus == false) {
+			Position oldPos = nextPosition;
+			nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, newPos,
+					rover);
+			if (nextPosition == null) {
 				missionStatus = true;
-			} else {
-				//nextPositionIndex++;
-				nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, nextPosition, rover);
+			} else if (oldPos == nextPosition) {
 				rover.moveToPoint(nextPosition);
-
-				unvisitedPoints = removePointFromArray(unvisitedPoints, nextPosition);
 			}
-		}*/
-		Position oldPos = nextPosition;
-		nextPosition = strategy.calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, newPos, rover);
-		if(nextPosition==null) {
-			missionStatus = true;
-		} else if(oldPos == nextPosition) {
-			rover.moveToPoint(nextPosition);
 		}
-		
-		
+
 	}
 
 	public Position getNextPosition() {
 		return nextPosition;
 	}
+
 	public Position[] getMissionPoints() {
 		return strategy.getAllMissionPoints();
 	}
+
 	public Position[] getUnvisitedPoints() {
 		return strategy.getAllUnvisitedPoints();
 	}
@@ -114,49 +117,51 @@ public class Mission implements RoverObserver{
 	public boolean getMissionStatus() {
 		return missionStatus;
 	}
+
 	public void setStrategy(AbstractStrategy strat) {
 		this.strategy = strat;
 	}
-	
+
 	public AbstractStrategy getStrategy() {
 		return this.strategy;
 	}
 
 	private Position[] addPointToArray(Position[] array, Position addedPos) {
 		Position[] tempPositionArray = new Position[array.length + 1];
-		for(int x = 0; x < array.length; x++) {
+		for (int x = 0; x < array.length; x++) {
 			tempPositionArray[x] = missionPoints[x];
 		}
 		tempPositionArray[array.length] = addedPos;
 		return tempPositionArray;
 	}
-	
+
 	private Position[] removePointFromArray(Position[] array, Position removedPos) {
 		boolean pointExistedInArray = false;
 		Position tempArray[] = new Position[0];
-		if(array.length-1>0) {
-			tempArray = new Position[array.length-1];
+		if (array.length - 1 > 0) {
+			tempArray = new Position[array.length - 1];
 		}
 
-		//Should probably be changed to some utility package or moved to some 
-		//helper class we make code in as we need it. Basically just ArrayUtils.RemoveElement
+		// Should probably be changed to some utility package or moved to some
+		// helper class we make code in as we need it. Basically just
+		// ArrayUtils.RemoveElement
 		int y = 0;
-		for(int x = 0; x < array.length; x++) {
+		for (int x = 0; x < array.length; x++) {
 
-			if(array[x].equals(removedPos)) {
-				//System.out.println("removed visited point at index " + x);
-				if(x+1<array.length)
-				x++;
+			if (array[x].equals(removedPos)) {
+				// System.out.println("removed visited point at index " + x);
+				if (x + 1 < array.length)
+					x++;
 				pointExistedInArray = true;
 			}
 
-			if(y < array.length-1) {
+			if (y < array.length - 1) {
 				tempArray[y] = array[x];
 			}
 			y++;
 		}
-		
-		if(pointExistedInArray) {
+
+		if (pointExistedInArray) {
 			return tempArray;
 		} else {
 			return array;
