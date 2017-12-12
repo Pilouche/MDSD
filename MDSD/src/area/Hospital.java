@@ -105,13 +105,13 @@ public class Hospital extends Environment{
 
 		super.addWall(0f, -6f, -4.0f, this, c2, false);
 
-		double lockRadius = 2.0;
-
-		Position room1 = new Position(5,-5, lockRadius);
-		Position room2 = new Position(5, 5, lockRadius);
-		Position room3 = new Position(-5,5, lockRadius);
-		Position room4 = new Position(-5,-5, lockRadius);
-		Position room5 = new Position(0,0, lockRadius);
+		double surgeryLockRadius = 2.0;
+		double consultingLockRadius = 4.0;
+		Position room1 = new Position(5,-5, surgeryLockRadius);
+		Position room2 = new Position(5, 5, surgeryLockRadius);
+		Position room3 = new Position(-5,5, surgeryLockRadius);
+		Position room4 = new Position(-5,-5, surgeryLockRadius);
+		Position room5 = new Position(0,0, consultingLockRadius);
 
 		Rover rover1 = new Rover(room1, "Rover 1", this);
 		Rover rover2 = new Rover(room2, "Rover 2", this);

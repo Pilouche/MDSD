@@ -96,7 +96,8 @@ public class Mission implements RoverObserver {
 			if (nextPosition == null) {
 				missionStatus = true;
 			} else if (oldPos == nextPosition) {
-				rover.moveToPoint(nextPosition);
+				rover.moveToPoint(nextPosition, true);
+				
 			}
 		}
 
