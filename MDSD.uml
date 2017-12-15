@@ -475,7 +475,7 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0ysoEMriEeeFg9xynNwgMw" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_ClnlYMrjEeeFg9xynNwgMw" name="Environment">
+  <packagedElement xmi:type="uml:Class" xmi:id="_ClnlYMrjEeeFg9xynNwgMw" name="Environment" isAbstract="true">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_KdKJYMrjEeeFg9xynNwgMw" name="boundaries" visibility="private" type="_wxiZoMfKEeeqNOjemIFasw"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_78PywsrkEeeFg9xynNwgMw" name="environment" type="_z3-20MrjEeeFg9xynNwgMw" aggregation="composite" association="_78PLsMrkEeeFg9xynNwgMw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_78QZ0MrkEeeFg9xynNwgMw"/>
@@ -485,6 +485,10 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HKWC4MrlEeeFg9xynNwgMw"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HKaUUMrlEeeFg9xynNwgMw" value="*"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vBcMIeGAEeeVotEkJT4FOw" name="position" type="_2bRegMrZEeeFg9xynNwgMw" association="_vBa-AOGAEeeVotEkJT4FOw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vBcMIuGAEeeVotEkJT4FOw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBcMI-GAEeeVotEkJT4FOw" value="*"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_X4BzEMrjEeeFg9xynNwgMw" name="setBoundaries">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_X4BzEcrjEeeFg9xynNwgMw" name="boundaries" type="_wxiZoMfKEeeqNOjemIFasw"/>
     </ownedOperation>
@@ -492,7 +496,7 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_j2r9ccrjEeeFg9xynNwgMw" name="boundaries" type="_wxiZoMfKEeeqNOjemIFasw"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_z3-20MrjEeeFg9xynNwgMw" name="Area" isActive="true">
+  <packagedElement xmi:type="uml:Class" xmi:id="_z3-20MrjEeeFg9xynNwgMw" name="Area" isAbstract="true" isActive="true">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_77sOkMrjEeeFg9xynNwgMw" name="corners" visibility="private" type="_2bRegMrZEeeFg9xynNwgMw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vJajQNtoEeeOt5xfMKTxgA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vJliYNtoEeeOt5xfMKTxgA" value="1"/>
@@ -780,5 +784,41 @@
     <message xmi:type="uml:Message" xmi:id="_dooy8N2_Eee98JU8IRECTg" name="calculateNextPoint(unvisitedPoints, rover.inEnvironment, nextPositionIndex, nextPosition, rover)" receiveEvent="_doqBEd2_Eee98JU8IRECTg" sendEvent="_doqBEN2_Eee98JU8IRECTg"/>
     <message xmi:type="uml:Message" xmi:id="_pDWiwN2_Eee98JU8IRECTg" name="nextPoint" messageSort="reply" receiveEvent="_pDXw4d2_Eee98JU8IRECTg" sendEvent="_pDXw4N2_Eee98JU8IRECTg"/>
     <message xmi:type="uml:Message" xmi:id="_0F0xsN2_Eee98JU8IRECTg" name="moveToPoint(nextPoint)" messageSort="asynchCall" receiveEvent="_0F1_0d2_Eee98JU8IRECTg" sendEvent="_0F1_0N2_Eee98JU8IRECTg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_u-dGYOF8EeeVotEkJT4FOw" name="Hospital"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_NBp0QOF9EeeVotEkJT4FOw" client="_u-dGYOF8EeeVotEkJT4FOw" supplier="_ClnlYMrjEeeFg9xynNwgMw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gZOs8OF9EeeVotEkJT4FOw" name="PhysicalArea"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_jeYgAOF9EeeVotEkJT4FOw" client="_gZOs8OF9EeeVotEkJT4FOw" supplier="_z3-20MrjEeeFg9xynNwgMw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tPgb0OF9EeeVotEkJT4FOw" name="LogicalArea"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_uv9h8OF9EeeVotEkJT4FOw" client="_tPgb0OF9EeeVotEkJT4FOw" supplier="_z3-20MrjEeeFg9xynNwgMw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1LuEcOF9EeeVotEkJT4FOw" name="AbstractDivision" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_59aR0OF9EeeVotEkJT4FOw" client="_1LuEcOF9EeeVotEkJT4FOw" supplier="_gZOs8OF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98U-cOF9EeeVotEkJT4FOw" name="AbstractRoom" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="__WE_oOF9EeeVotEkJT4FOw" client="_98U-cOF9EeeVotEkJT4FOw" supplier="_gZOs8OF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LP5tUOF-EeeVotEkJT4FOw" name="SurgeryDivision"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_PdbdsOF-EeeVotEkJT4FOw" client="_LP5tUOF-EeeVotEkJT4FOw" supplier="_1LuEcOF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_P9mLgOF-EeeVotEkJT4FOw" name="EmergencyDivision"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_SFdP4OF-EeeVotEkJT4FOw" client="_P9mLgOF-EeeVotEkJT4FOw" supplier="_1LuEcOF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_icizEOF-EeeVotEkJT4FOw" name="DefaultRoom"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_l5AS4OF-EeeVotEkJT4FOw" client="_icizEOF-EeeVotEkJT4FOw" supplier="_98U-cOF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vhyyEOF-EeeVotEkJT4FOw" name="SurgeryRoom"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_zZqbgOF-EeeVotEkJT4FOw" client="_vhyyEOF-EeeVotEkJT4FOw" supplier="_98U-cOF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-5q7AOF-EeeVotEkJT4FOw" name="Cage"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_BSZs8OF_EeeVotEkJT4FOw" client="_-5q7AOF-EeeVotEkJT4FOw" supplier="_gZOs8OF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IfKOkOF_EeeVotEkJT4FOw" name="ConsultingRoom"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_KtXykOF_EeeVotEkJT4FOw" client="_IfKOkOF_EeeVotEkJT4FOw" supplier="_98U-cOF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rmLboOF_EeeVotEkJT4FOw" name="EatingArea"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_tP810OF_EeeVotEkJT4FOw" client="_rmLboOF_EeeVotEkJT4FOw" supplier="_tPgb0OF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zPvOAOF_EeeVotEkJT4FOw" name="Wifi"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_1Tjf4OF_EeeVotEkJT4FOw" client="_zPvOAOF_EeeVotEkJT4FOw" supplier="_tPgb0OF9EeeVotEkJT4FOw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Gse6kOGAEeeVotEkJT4FOw" name="University"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IOdqsOGAEeeVotEkJT4FOw" name="Zoo"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_LLbLEOGAEeeVotEkJT4FOw" client="_Gse6kOGAEeeVotEkJT4FOw" supplier="_ClnlYMrjEeeFg9xynNwgMw"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_LzzZsOGAEeeVotEkJT4FOw" client="_IOdqsOGAEeeVotEkJT4FOw" supplier="_ClnlYMrjEeeFg9xynNwgMw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vBa-AOGAEeeVotEkJT4FOw" memberEnd="_vBcMIeGAEeeVotEkJT4FOw _vBczMOGAEeeVotEkJT4FOw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vBblEOGAEeeVotEkJT4FOw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vBcMIOGAEeeVotEkJT4FOw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vBczMOGAEeeVotEkJT4FOw" name="environment" type="_ClnlYMrjEeeFg9xynNwgMw" association="_vBa-AOGAEeeVotEkJT4FOw"/>
   </packagedElement>
 </uml:Model>
