@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 import area.Environment;
+import area.EnvironmentAdapter;
 import project.Position;
 
 /************************************************************/

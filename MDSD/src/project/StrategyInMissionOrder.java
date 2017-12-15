@@ -1,6 +1,7 @@
 package project;
 
 import area.Environment;
+import area.EnvironmentAdapter;
 import project.Mission;
 import project.Point;
 
@@ -21,5 +22,6 @@ public class StrategyInMissionOrder extends AbstractStrategy {
 	public void calculateWholePath(Environment environment, Position currentPosition, Rover r) {
 		super.setExtraPositions(super.getAllUnvisitedPoints());
 	}
+
 
 };

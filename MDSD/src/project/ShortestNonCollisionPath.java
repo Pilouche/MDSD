@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import area.Environment;
+import area.EnvironmentAdapter;
 import simbad.sim.AbstractWall;
 import simbad.sim.Boundary;
 
@@ -13,7 +13,7 @@ public class ShortestNonCollisionPath extends AbstractCollisionStrategy {
 	private static Map<String, PathAndLength> alreadyCalculatedPaths;
 
 	@Override
-	public PathAndLength calculatePathBetweenPoints(Environment environment, Position one, Position two) {
+	public PathAndLength calculatePathBetweenPoints(EnvironmentAdapter environment, Position one, Position two) {
 		// TODO Auto-generated method stub
 		if (alreadyCalculatedPaths.containsKey(one.toString() + "<>" + two.toString())) {
 			return alreadyCalculatedPaths.get(one.toString() + "<>" + two.toString());

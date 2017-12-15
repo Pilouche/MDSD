@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import area.Area;
 import area.Environment;
+import area.EnvironmentAdapter;
 import area.Hospital;
 import area.PhysicalArea;
 import area.University;
@@ -28,7 +29,7 @@ public class Main {
 		Set<Rover> rovers = e.getRovers();
 		Mission[] missions = e.getMissions();
 	
-		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, e);
+		AbstractSimulatorMonitor controller = new SimulatorMonitor(rovers, (EnvironmentDescription) e);
 	
 		User u = new User(rovers, missions);
 		

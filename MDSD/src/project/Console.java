@@ -83,7 +83,7 @@ public class Console implements GUI {
 			Set<Mission> setMissions = user.getMissions(); //fetch set of missions from user that are started or not? user.getMission(started)
 			Mission[] missions = setMissions.toArray(new Mission[setMissions.size()]);
 			
-			for(int i=0;i<missions.length;i++) {
+			for(int i=0; i<missions.length; i++) {
 				System.out.println(i+". Mission "+i);
 			}
 			int choice = sc.nextInt();

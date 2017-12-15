@@ -4,7 +4,7 @@ import java.util.Set;
 
 import project.Position;
 import project.Rover;
-public class Zoo extends Environment {
+public class Zoo extends EnvironmentAdapter {
 
 	public Zoo() {
 		super();

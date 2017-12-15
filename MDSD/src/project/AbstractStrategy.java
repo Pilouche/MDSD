@@ -5,6 +5,7 @@
 package project;
 
 import area.Environment;
+import area.EnvironmentAdapter;
 import project.Mission;
 import project.Point;
 
@@ -26,23 +27,23 @@ public abstract class AbstractStrategy {
 	/**
 	 * 
 	 * @param mission
-	 * @param environment
+	 * @param inEnvironment
 	 * @return
 	 * @param type
 	 */
 
-	public Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex,
+	public Position calculateNextPoint(Position[] unvisitedPoints, Environment inEnvironment, int nextPositionIndex,
 			Position currentPosition, Rover r) {
 		if (missionInOrder == null) {
 			missionInOrder = unvisitedPoints;
 			currentPositionIndex = 0;
 		}
 		if (missionWithExtraPositions == null) {
-			calculateWholePath(environment, currentPosition, r);
+			calculateWholePath(inEnvironment, currentPosition, r);
 		} else if (currentPositionIndex == missionInOrder.length) {
 			return null;
 		} else if (newOrder) {
-			calculateWholePath(environment, currentPosition, r);
+			calculateWholePath(inEnvironment, currentPosition, r);
 		} else if (((missionWithExtraPositions[0].getX() + 0.1 >= currentPosition.getX()
 				&& missionWithExtraPositions[0].getX() - 0.1 <= currentPosition.getX())
 				&& (missionWithExtraPositions[0].getZ() + 0.1 >= currentPosition.getZ()

@@ -1,6 +1,7 @@
 package project;
 
 import area.Environment;
+import area.EnvironmentAdapter;
 import project.Mission;
 import project.Point;
 
@@ -17,7 +18,7 @@ public class StrategyNNPath extends AbstractStrategy {
 		super();
 	}
 
-	public Position calculateNextPoint(Position[] unvisitedPoints, Environment environment, int nextPositionIndex,
+	public Position calculateNextPoint(Position[] unvisitedPoints, EnvironmentAdapter environment, int nextPositionIndex,
 			Position currentPosition, Rover r) {
 		Position[] points = unvisitedPoints;
 		if (points.length == 0)
@@ -34,5 +35,11 @@ public class StrategyNNPath extends AbstractStrategy {
 			}
 		return points[closestPoint];// Do stuff Nearest Neighbor Path
 
+	}
+
+	@Override
+	public void calculateWholePath(Environment environment, Position currentPosition, Rover r) {
+		// TODO Auto-generated method stub
+		
 	}
 };

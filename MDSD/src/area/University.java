@@ -16,7 +16,7 @@ import simbad.sim.HorizontalWall;
 import simbad.sim.VerticalBoundary;
 import simbad.sim.VerticalWall;
 
-public class University extends Environment{
+public class University extends EnvironmentAdapter{
 
 	public University() {
 		super();

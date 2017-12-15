@@ -17,7 +17,7 @@ import simbad.sim.HorizontalWall;
 import simbad.sim.VerticalBoundary;
 import simbad.sim.VerticalWall;
 import project.LocationController;
-public class Hospital extends Environment{
+public class Hospital extends EnvironmentAdapter{
 
 	public Hospital() {
 		super();
