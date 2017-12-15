@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
 
-import project.Position;
 import simbad.sim.AbstractWall;
 import simbad.sim.Boundary;
 import simbad.sim.EnvironmentDescription;

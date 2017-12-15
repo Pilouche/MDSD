@@ -11,13 +11,6 @@ import java.util.Set;
 import project.Mission;
 import project.Position;
 import project.Rover;
-import simbad.sim.EnvironmentDescription;
-import simbad.sim.HorizontalBoundary;
-import simbad.sim.HorizontalWall;
-import simbad.sim.VerticalBoundary;
-import simbad.sim.VerticalWall;
-import simbad.sim.AbstractWall;
-import simbad.sim.Boundary;
 
 /************************************************************/
 /**
@@ -71,6 +64,13 @@ public abstract class EnvironmentAdapter extends EnvironmentAdaptee implements E
 		return missions;
 	}
 	
+	public void addBoundry(float p1, float p2, float length, EnvironmentAdaptee e, Color c, boolean horizontal) {
+		super.addBoundry(p1, p2, length, e, c, horizontal);
+	}
+	
+	public void addWall(float p1, float p2, float length, EnvironmentAdaptee e, Color c, boolean horizontal) {
+		super.addWall(p1, p2, length, e, c, horizontal);
+	}
 	
 	
 };
