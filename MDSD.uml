@@ -123,7 +123,7 @@
     <packagedElement xmi:type="uml:UseCase" xmi:id="_-KhC0MJtEeedeenu39lz6w" name="Change mission"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_Gb-isMJuEeedeenu39lz6w" name="Get GPS location"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_MLaKsMJuEeedeenu39lz6w" client="_5-mcAMJtEeedeenu39lz6w" supplier="_Gb-isMJuEeedeenu39lz6w"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_PYRvUMJuEeedeenu39lz6w" name="Check collision"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_PYRvUMJuEeedeenu39lz6w" name="Change strategy"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_Wdtg8MJuEeedeenu39lz6w" name="Move from one point to another"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_FYZ0IMVTEeeXoZ7UVqxPmA" name="Perform mission"/>
   </packagedElement>
