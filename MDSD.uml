@@ -414,6 +414,13 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_GKESoMraEeeFg9xynNwgMw" name="y" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_al6UAO1xEeebfM4D2Wm0_Q" name="lock" visibility="private" type="_kAsR0OpPEee-ps-cJgqAug" association="_al00cO1xEeebfM4D2Wm0_Q">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_al67EO1xEeebfM4D2Wm0_Q"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_al67Ee1xEeebfM4D2Wm0_Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_q0JdMO1xEeebfM4D2Wm0_Q" name="hasLock" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_V8_Y0MraEeeFg9xynNwgMw" name="updatePosition">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_V8_Y0craEeeFg9xynNwgMw" name="x">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -421,6 +428,20 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_V8_Y0sraEeeFg9xynNwgMw" name="y">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0E7FAO1xEeebfM4D2Wm0_Q" name="getDistance">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0E7FAe1xEeebfM4D2Wm0_Q" name="distance" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0E7FAu1xEeebfM4D2Wm0_Q" name="otherPosition" type="_uCpSsMbTEeeqNOjemIFasw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7AGHYO1xEeebfM4D2Wm0_Q" name="hasLock">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7AGHYe1xEeebfM4D2Wm0_Q" name="hasLock" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FbST4O1yEeebfM4D2Wm0_Q" name="getLock">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_FbST4e1yEeebfM4D2Wm0_Q" type="_kAsR0OpPEee-ps-cJgqAug" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_djblwMraEeeFg9xynNwgMw" name="Mission" visibility="public">
@@ -1168,5 +1189,11 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_3K5yAupREee-ps-cJgqAug" name="rover" type="_hkbLcMrZEeeFg9xynNwgMw" association="_3K4j4OpREee-ps-cJgqAug"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_3K7AIOpREee-ps-cJgqAug" name="locationcontroller" type="_kAsR0OpPEee-ps-cJgqAug" association="_3K4j4OpREee-ps-cJgqAug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_al00cO1xEeebfM4D2Wm0_Q" memberEnd="_al6UAO1xEeebfM4D2Wm0_Q _al67Eu1xEeebfM4D2Wm0_Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_al5F4O1xEeebfM4D2Wm0_Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_al5s8O1xEeebfM4D2Wm0_Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_al67Eu1xEeebfM4D2Wm0_Q" name="position" type="_2bRegMrZEeeFg9xynNwgMw" association="_al00cO1xEeebfM4D2Wm0_Q"/>
   </packagedElement>
 </uml:Model>
