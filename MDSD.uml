@@ -685,9 +685,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vJajQNtoEeeOt5xfMKTxgA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vJliYNtoEeeOt5xfMKTxgA" value="1"/>
     </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_CYPbQMrkEeeFg9xynNwgMw" name="getAreaType">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CYPbQcrkEeeFg9xynNwgMw" name="areaType" type="_-dpkUMfKEeeqNOjemIFasw"/>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_QMtagNtoEeeOt5xfMKTxgA" name="contains">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_gAI3ANtoEeeOt5xfMKTxgA" name="p" type="_uCpSsMbTEeeqNOjemIFasw"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_r_rLINtoEeeOt5xfMKTxgA" direction="return">
@@ -698,6 +695,12 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_OJ-4UNtpEeeOt5xfMKTxgA" type="_2bRegMrZEeeFg9xynNwgMw" direction="return">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QpbWQNtpEeeOt5xfMKTxgA" value="3"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QpkgMNtpEeeOt5xfMKTxgA" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_g6tIUO1wEeebfM4D2Wm0_Q" name="setCorners">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_g6tIUe1wEeebfM4D2Wm0_Q" name="corners" type="_uCpSsMbTEeeqNOjemIFasw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_krAKIO1wEeebfM4D2Wm0_Q" value="3"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_krKiMO1wEeebfM4D2Wm0_Q" value="*"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
