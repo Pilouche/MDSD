@@ -1196,4 +1196,12 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_al67Eu1xEeebfM4D2Wm0_Q" name="position" type="_2bRegMrZEeeFg9xynNwgMw" association="_al00cO1xEeebfM4D2Wm0_Q"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__eSJ4PCmEee75r5URlGhkQ" name="RobotAvatar">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TzePcPCpEee75r5URlGhkQ" name="toString">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TzePcfCpEee75r5URlGhkQ" name="s" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_FjLEgPCnEee75r5URlGhkQ" client="_hkbLcMrZEeeFg9xynNwgMw" supplier="__eSJ4PCmEee75r5URlGhkQ"/>
 </uml:Model>
