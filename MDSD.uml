@@ -356,6 +356,7 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_hkbLcMrZEeeFg9xynNwgMw" name="Rover">
+    <generalization xmi:type="uml:Generalization" xmi:id="_qgARwPCpEee75r5URlGhkQ" general="__eSJ4PCmEee75r5URlGhkQ"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_vWAE8MrZEeeFg9xynNwgMw" name="rewardPoints" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
@@ -454,17 +455,20 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PcTT4dYbEeeodIuDDvK1GQ" value="1"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_GPAWQOpFEee-ps-cJgqAug" name="nextPosition" visibility="private" type="_uCpSsMbTEeeqNOjemIFasw"/>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_LOHUkOpFEee-ps-cJgqAug" name="unvisitedPoints" visibility="private" type="_uCpSsMbTEeeqNOjemIFasw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RgTEUOpFEee-ps-cJgqAug"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RgWusOpFEee-ps-cJgqAug" value="*"/>
-    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_rpTNgOpFEee-ps-cJgqAug" name="nextPositionIndex" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_xJYK4OpFEee-ps-cJgqAug" name="missionStatus" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_029P4OpFEee-ps-cJgqAug" name="strategy" visibility="private" type="_nD0SsMrhEeeFg9xynNwgMw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TZPfovCrEee75r5URlGhkQ" name="strategy" visibility="private" type="_nD0SsMrhEeeFg9xynNwgMw" association="_TZO4kPCrEee75r5URlGhkQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TZPfo_CrEee75r5URlGhkQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TZQGsPCrEee75r5URlGhkQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fugMIfCrEee75r5URlGhkQ" name="unvisitedPoints" visibility="private" type="_2bRegMrZEeeFg9xynNwgMw" association="_fuflEPCrEee75r5URlGhkQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fugMIvCrEee75r5URlGhkQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fugMI_CrEee75r5URlGhkQ" value="*"/>
+    </ownedAttribute>
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="__nhzkNYaEeeodIuDDvK1GQ" client="_djblwMraEeeFg9xynNwgMw" supplier="_11lYYNYaEeeodIuDDvK1GQ" contract="_11lYYNYaEeeodIuDDvK1GQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_AgO4IMrhEeeFg9xynNwgMw" name="setMission">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgO4IcrhEeeFg9xynNwgMw" name="points" type="_uCpSsMbTEeeqNOjemIFasw">
@@ -630,19 +634,6 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_HADl0MriEeeFg9xynNwgMw" memberEnd="_HAEM4sriEeeFg9xynNwgMw _HAEz8MriEeeFg9xynNwgMw">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HAEM4MriEeeFg9xynNwgMw" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HAEM4criEeeFg9xynNwgMw" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_HAEM4sriEeeFg9xynNwgMw" name="strategy" type="_nD0SsMrhEeeFg9xynNwgMw" association="_HADl0MriEeeFg9xynNwgMw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Jb_cwMriEeeFg9xynNwgMw" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JcBR8MriEeeFg9xynNwgMw" value="1"/>
-    </ownedEnd>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_HAEz8MriEeeFg9xynNwgMw" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_HADl0MriEeeFg9xynNwgMw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LBzkAMriEeeFg9xynNwgMw"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LB2AQMriEeeFg9xynNwgMw" value="*"/>
-    </ownedEnd>
-  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_NRwNYMriEeeFg9xynNwgMw" name="Procedure">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_aKbCMOpNEee-ps-cJgqAug" name="type" visibility="private" type="_j9KhgNtNEeeQy4htDOg_Aw" association="_aKXX0OpNEee-ps-cJgqAug">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aKcQUOpNEee-ps-cJgqAug" value="1"/>
@@ -658,7 +649,8 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_dcIxUMriEeeFg9xynNwgMw" name="ProcedureType"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_ClnlYMrjEeeFg9xynNwgMw" name="EnvironmentAdapter" visibility="protected" isAbstract="true">
+  <packagedElement xmi:type="uml:Class" xmi:id="_ClnlYMrjEeeFg9xynNwgMw" name="EnvironmentAdapter" visibility="public" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_yurjYPCpEee75r5URlGhkQ" general="_Yg52wOo5Eee-ps-cJgqAug"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_vBcMIeGAEeeVotEkJT4FOw" name="positions" visibility="protected" type="_2bRegMrZEeeFg9xynNwgMw" association="_vBa-AOGAEeeVotEkJT4FOw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vBcMIuGAEeeVotEkJT4FOw"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBcMI-GAEeeVotEkJT4FOw" value="*"/>
@@ -730,19 +722,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_aOh68MrkEeeFg9xynNwgMw" name="LogicalArea">
     <generalization xmi:type="uml:Generalization" xmi:id="_kmXRcMrkEeeFg9xynNwgMw" general="_z3-20MrjEeeFg9xynNwgMw"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_nWQmMMrkEeeFg9xynNwgMw" memberEnd="_nWR0UsrkEeeFg9xynNwgMw _nWSbYMrkEeeFg9xynNwgMw">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nWR0UMrkEeeFg9xynNwgMw" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nWR0UcrkEeeFg9xynNwgMw" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_nWR0UsrkEeeFg9xynNwgMw" name="point" type="_2bRegMrZEeeFg9xynNwgMw" association="_nWQmMMrkEeeFg9xynNwgMw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rwNB8MrkEeeFg9xynNwgMw" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rwTIkMrkEeeFg9xynNwgMw" value="*"/>
-    </ownedEnd>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_nWSbYMrkEeeFg9xynNwgMw" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_nWQmMMrkEeeFg9xynNwgMw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tZxn0MrkEeeFg9xynNwgMw"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tZ15QMrkEeeFg9xynNwgMw" value="*"/>
-    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_4vEFEMrkEeeFg9xynNwgMw" memberEnd="_4vEsIsrkEeeFg9xynNwgMw _4vEsJcrkEeeFg9xynNwgMw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4vEsIMrkEeeFg9xynNwgMw" source="org.eclipse.papyrus">
@@ -908,9 +887,15 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jp_FwNwcEeeiXPxAensrSA" value="*"/>
     </ownedEnd>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_o4hxwNwdEeeiXPxAensrSA" name="StrategyNNPath"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_qr2wkNwdEeeiXPxAensrSA" name="StrategyInMissionOrder"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_uxDrYNwdEeeiXPxAensrSA" name="StrategyInMissionOrderWaitRoom"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_o4hxwNwdEeeiXPxAensrSA" name="StrategyNNPath">
+    <generalization xmi:type="uml:Generalization" xmi:id="_wHWUwPCpEee75r5URlGhkQ" general="_nD0SsMrhEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qr2wkNwdEeeiXPxAensrSA" name="StrategyInMissionOrder">
+    <generalization xmi:type="uml:Generalization" xmi:id="_vh8hoPCpEee75r5URlGhkQ" general="_nD0SsMrhEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_uxDrYNwdEeeiXPxAensrSA" name="StrategyInMissionOrderWaitRoom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_u-XTcPCpEee75r5URlGhkQ" general="_nD0SsMrhEeeFg9xynNwgMw"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_TROsYNzREeem6N4NvV1WZA" name="Interaction2">
     <lifeline xmi:type="uml:Lifeline" xmi:id="_iY2y0NzREeem6N4NvV1WZA" name="Procedure" coveredBy="_R2G8wNzSEeem6N4NvV1WZA _QRSpINzUEeem6N4NvV1WZA _ZZICQNzSEeem6N4NvV1WZA _AwBToNzUEeem6N4NvV1WZA _AwBTodzUEeem6N4NvV1WZA _AwvFUNzUEeem6N4NvV1WZA _Awt3MNzUEeem6N4NvV1WZA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_nlZwMNzREeem6N4NvV1WZA" name="ProcedureType" coveredBy="_R2G8wNzSEeem6N4NvV1WZA _QRSpINzUEeem6N4NvV1WZA _ZZIpUNzSEeem6N4NvV1WZA _0PscENzSEeem6N4NvV1WZA _-nHi4NzSEeem6N4NvV1WZA _ZZpmsNzSEeem6N4NvV1WZA _aE7i4NzTEeem6N4NvV1WZA _dTeigdzTEeem6N4NvV1WZA _geOnQNzTEeem6N4NvV1WZA _geNZINzTEeem6N4NvV1WZA _q-A_4NzTEeem6N4NvV1WZA"/>
@@ -986,36 +971,51 @@
     <message xmi:type="uml:Message" xmi:id="_pDWiwN2_Eee98JU8IRECTg" name="nextPoint" messageSort="reply" receiveEvent="_pDXw4d2_Eee98JU8IRECTg" sendEvent="_pDXw4N2_Eee98JU8IRECTg"/>
     <message xmi:type="uml:Message" xmi:id="_0F0xsN2_Eee98JU8IRECTg" name="moveToPoint(nextPoint)" messageSort="asynchCall" receiveEvent="_0F1_0d2_Eee98JU8IRECTg" sendEvent="_0F1_0N2_Eee98JU8IRECTg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_u-dGYOF8EeeVotEkJT4FOw" name="Hospital"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_NBp0QOF9EeeVotEkJT4FOw" client="_u-dGYOF8EeeVotEkJT4FOw" supplier="_ClnlYMrjEeeFg9xynNwgMw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_gZOs8OF9EeeVotEkJT4FOw" name="PhysicalArea"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_jeYgAOF9EeeVotEkJT4FOw" client="_gZOs8OF9EeeVotEkJT4FOw" supplier="_z3-20MrjEeeFg9xynNwgMw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_tPgb0OF9EeeVotEkJT4FOw" name="LogicalArea"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_uv9h8OF9EeeVotEkJT4FOw" client="_tPgb0OF9EeeVotEkJT4FOw" supplier="_z3-20MrjEeeFg9xynNwgMw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_1LuEcOF9EeeVotEkJT4FOw" name="AbstractDivision" isAbstract="true"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_59aR0OF9EeeVotEkJT4FOw" client="_1LuEcOF9EeeVotEkJT4FOw" supplier="_gZOs8OF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_98U-cOF9EeeVotEkJT4FOw" name="AbstractRoom" isAbstract="true"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="__WE_oOF9EeeVotEkJT4FOw" client="_98U-cOF9EeeVotEkJT4FOw" supplier="_gZOs8OF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_LP5tUOF-EeeVotEkJT4FOw" name="SurgeryDivision"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_PdbdsOF-EeeVotEkJT4FOw" client="_LP5tUOF-EeeVotEkJT4FOw" supplier="_1LuEcOF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_P9mLgOF-EeeVotEkJT4FOw" name="EmergencyDivision"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_SFdP4OF-EeeVotEkJT4FOw" client="_P9mLgOF-EeeVotEkJT4FOw" supplier="_1LuEcOF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_icizEOF-EeeVotEkJT4FOw" name="DefaultRoom"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_l5AS4OF-EeeVotEkJT4FOw" client="_icizEOF-EeeVotEkJT4FOw" supplier="_98U-cOF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_vhyyEOF-EeeVotEkJT4FOw" name="SurgeryRoom"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_zZqbgOF-EeeVotEkJT4FOw" client="_vhyyEOF-EeeVotEkJT4FOw" supplier="_98U-cOF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_-5q7AOF-EeeVotEkJT4FOw" name="Cage"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_BSZs8OF_EeeVotEkJT4FOw" client="_-5q7AOF-EeeVotEkJT4FOw" supplier="_gZOs8OF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_IfKOkOF_EeeVotEkJT4FOw" name="ConsultingRoom"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_KtXykOF_EeeVotEkJT4FOw" client="_IfKOkOF_EeeVotEkJT4FOw" supplier="_98U-cOF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_rmLboOF_EeeVotEkJT4FOw" name="EatingArea"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_tP810OF_EeeVotEkJT4FOw" client="_rmLboOF_EeeVotEkJT4FOw" supplier="_tPgb0OF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_zPvOAOF_EeeVotEkJT4FOw" name="Wifi"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_1Tjf4OF_EeeVotEkJT4FOw" client="_zPvOAOF_EeeVotEkJT4FOw" supplier="_tPgb0OF9EeeVotEkJT4FOw"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_Gse6kOGAEeeVotEkJT4FOw" name="University"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_IOdqsOGAEeeVotEkJT4FOw" name="Zoo"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_LLbLEOGAEeeVotEkJT4FOw" client="_Gse6kOGAEeeVotEkJT4FOw" supplier="_ClnlYMrjEeeFg9xynNwgMw"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_LzzZsOGAEeeVotEkJT4FOw" client="_IOdqsOGAEeeVotEkJT4FOw" supplier="_ClnlYMrjEeeFg9xynNwgMw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_u-dGYOF8EeeVotEkJT4FOw" name="Hospital">
+    <generalization xmi:type="uml:Generalization" xmi:id="_6fHZ0PCpEee75r5URlGhkQ" general="_ClnlYMrjEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gZOs8OF9EeeVotEkJT4FOw" name="PhysicalArea">
+    <generalization xmi:type="uml:Generalization" xmi:id="_BqsPsPCqEee75r5URlGhkQ" general="_z3-20MrjEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tPgb0OF9EeeVotEkJT4FOw" name="LogicalArea">
+    <generalization xmi:type="uml:Generalization" xmi:id="_BDlMYPCqEee75r5URlGhkQ" general="_z3-20MrjEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1LuEcOF9EeeVotEkJT4FOw" name="AbstractDivision" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_H9BwcPCqEee75r5URlGhkQ" general="_gZOs8OF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_98U-cOF9EeeVotEkJT4FOw" name="AbstractRoom" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_IprbEPCqEee75r5URlGhkQ" general="_gZOs8OF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LP5tUOF-EeeVotEkJT4FOw" name="SurgeryDivision">
+    <generalization xmi:type="uml:Generalization" xmi:id="_LrWcUPCqEee75r5URlGhkQ" general="_1LuEcOF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_P9mLgOF-EeeVotEkJT4FOw" name="EmergencyDivision">
+    <generalization xmi:type="uml:Generalization" xmi:id="_MUVu8PCqEee75r5URlGhkQ" general="_1LuEcOF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_icizEOF-EeeVotEkJT4FOw" name="DefaultRoom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_R79ewPCqEee75r5URlGhkQ" general="_98U-cOF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_vhyyEOF-EeeVotEkJT4FOw" name="SurgeryRoom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Q0OaoPCqEee75r5URlGhkQ" general="_98U-cOF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-5q7AOF-EeeVotEkJT4FOw" name="Cage">
+    <generalization xmi:type="uml:Generalization" xmi:id="_JbpqkPCqEee75r5URlGhkQ" general="_gZOs8OF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IfKOkOF_EeeVotEkJT4FOw" name="ConsultingRoom">
+    <generalization xmi:type="uml:Generalization" xmi:id="_RV91wPCqEee75r5URlGhkQ" general="_98U-cOF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rmLboOF_EeeVotEkJT4FOw" name="EatingArea">
+    <generalization xmi:type="uml:Generalization" xmi:id="_DpFPAPCqEee75r5URlGhkQ" general="_tPgb0OF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zPvOAOF_EeeVotEkJT4FOw" name="Wifi">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Ek0egPCqEee75r5URlGhkQ" general="_tPgb0OF9EeeVotEkJT4FOw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Gse6kOGAEeeVotEkJT4FOw" name="University">
+    <generalization xmi:type="uml:Generalization" xmi:id="_7GvagPCpEee75r5URlGhkQ" general="_ClnlYMrjEeeFg9xynNwgMw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IOdqsOGAEeeVotEkJT4FOw" name="Zoo">
+    <generalization xmi:type="uml:Generalization" xmi:id="_7rfGUPCpEee75r5URlGhkQ" general="_ClnlYMrjEeeFg9xynNwgMw"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_vBa-AOGAEeeVotEkJT4FOw" memberEnd="_vBcMIeGAEeeVotEkJT4FOw _vBczMOGAEeeVotEkJT4FOw">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vBblEOGAEeeVotEkJT4FOw" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vBcMIOGAEeeVotEkJT4FOw" key="nature" value="UML_Nature"/>
@@ -1119,14 +1119,10 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_iAdhcOo5Eee-ps-cJgqAug" client="_ClnlYMrjEeeFg9xynNwgMw" supplier="_Yg52wOo5Eee-ps-cJgqAug"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_3ufpQOo7Eee-ps-cJgqAug" name="Color"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_Xs6w4OpAEee-ps-cJgqAug" name="EnvironmentDescription"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_5u2lMOpAEee-ps-cJgqAug" name="AbstractWall"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_OuXFAOpBEee-ps-cJgqAug" name="Boundary"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_oT3DEOpCEee-ps-cJgqAug" client="_uxDrYNwdEeeiXPxAensrSA" supplier="_nD0SsMrhEeeFg9xynNwgMw"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_o8GHwOpCEee-ps-cJgqAug" client="_qr2wkNwdEeeiXPxAensrSA" supplier="_nD0SsMrhEeeFg9xynNwgMw"/>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_qGe3QOpCEee-ps-cJgqAug" client="_o4hxwNwdEeeiXPxAensrSA" supplier="_nD0SsMrhEeeFg9xynNwgMw"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_aKXX0OpNEee-ps-cJgqAug" memberEnd="_aKbCMOpNEee-ps-cJgqAug _aKf6sOpNEee-ps-cJgqAug">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aKZNAOpNEee-ps-cJgqAug" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aKZNAepNEee-ps-cJgqAug" key="nature" value="UML_Nature"/>
@@ -1203,5 +1199,16 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Abstraction" xmi:id="_FjLEgPCnEee75r5URlGhkQ" client="_hkbLcMrZEeeFg9xynNwgMw" supplier="__eSJ4PCmEee75r5URlGhkQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TZO4kPCrEee75r5URlGhkQ" memberEnd="_TZPfovCrEee75r5URlGhkQ _TZQGsfCrEee75r5URlGhkQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TZPfoPCrEee75r5URlGhkQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TZPfofCrEee75r5URlGhkQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TZQGsfCrEee75r5URlGhkQ" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_TZO4kPCrEee75r5URlGhkQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fuflEPCrEee75r5URlGhkQ" memberEnd="_fugMIfCrEee75r5URlGhkQ _fugMJPCrEee75r5URlGhkQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fuflEfCrEee75r5URlGhkQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fugMIPCrEee75r5URlGhkQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fugMJPCrEee75r5URlGhkQ" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_fuflEPCrEee75r5URlGhkQ"/>
+  </packagedElement>
 </uml:Model>
