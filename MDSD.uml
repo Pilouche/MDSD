@@ -337,7 +337,6 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_s7BloMfLEeeqNOjemIFasw" name="bounds" type="_wxiZoMfKEeeqNOjemIFasw" direction="return"/>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_8U6-MMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_B5We0MYNEeefPIx_7DiXqA"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_P6hEwMYTEeefPIx_7DiXqA" client="_0N6FsMYQEeefPIx_7DiXqA" supplier="_962B4MYMEeefPIx_7DiXqA"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_jNcqwMbTEeeqNOjemIFasw"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_uCpSsMbTEeeqNOjemIFasw" name="Position"/>
