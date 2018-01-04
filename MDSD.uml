@@ -156,17 +156,15 @@
   <packagedElement xmi:type="uml:Component" xmi:id="_v5oRQMYJEeefPIx_7DiXqA" name="Rover">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ia_nMMlREeeBxKD0nJv1lg" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_3aTvMMlQEeeBxKD0nJv1lg" contract="_3aTvMMlQEeeBxKD0nJv1lg"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_ube-oMYREeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_GQCOYMYREeefPIx_7DiXqA"/>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_HUA-cMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_kt0YwMYMEeefPIx_7DiXqA"/>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_Q6phgMYSEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_2kL9YMYMEeefPIx_7DiXqA"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_ABNlgMlPEeeBxKD0nJv1lg" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_D0w4EMYMEeefPIx_7DiXqA"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_gj14UMlREeeBxKD0nJv1lg" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_SLknsMlQEeeBxKD0nJv1lg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_ygZ0UMYLEeefPIx_7DiXqA" client="_v5oRQMYJEeefPIx_7DiXqA" supplier="_tzlEsMItEeenJY8sKbqJvg"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_D0w4EMYMEeefPIx_7DiXqA" name="Rover Manager">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_VoWAoMbLEeeoWLj19PTZwg" name="updatePosition">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Hy0sMMbUEeeqNOjemIFasw" type="_uCpSsMbTEeeqNOjemIFasw" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Hy0sMMbUEeeqNOjemIFasw" type="_uCpSsMbTEeeqNOjemIFasw"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Ww-coMbLEeeoWLj19PTZwg" name="updateRewardPoints">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Ww-coMbLEeeoWLj19PTZwg" name="addRewardPoints">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_a1KxMMbTEeeqNOjemIFasw" name="rewards" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </ownedParameter>
@@ -180,19 +178,11 @@
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yXQtIMYQEeefPIx_7DiXqA" client="_WsJNwMYMEeefPIx_7DiXqA" supplier="_2kL9YMYMEeefPIx_7DiXqA" contract="_2kL9YMYMEeefPIx_7DiXqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_kt0YwMYMEeefPIx_7DiXqA" name="Procedure Manager">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_et8TMMbLEeeoWLj19PTZwg" name="getProcedure">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_SXB1cMe-EeeqNOjemIFasw" type="_qsmAMMVPEeehTrEdjWwgmQ" direction="return"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_gDkCUMbLEeeoWLj19PTZwg" name="setProcedure">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kl_9kMfIEeeqNOjemIFasw" name="procedure" type="_qsmAMMVPEeehTrEdjWwgmQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gDkCUMbLEeeoWLj19PTZwg" name="changeProcedureType">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Kl_9kMfIEeeqNOjemIFasw" name="newType" type="_j9KhgNtNEeeQy4htDOg_Aw"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_2kL9YMYMEeefPIx_7DiXqA" name="Reward Point Manager" visibility="public">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_8QYdYMbLEeeoWLj19PTZwg" name="getRewardPoint">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4vBLQMbSEeeqNOjemIFasw" name="reward" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </ownedParameter>
-    </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_9WLAwMbLEeeoWLj19PTZwg" name="setRewardPoint">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="__r6r8MbSEeeqNOjemIFasw" name="reward">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -282,7 +272,9 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_wxiZoMfKEeeqNOjemIFasw" name="Boundaries"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_-dpkUMfKEeeqNOjemIFasw" name="AreaType"/>
   <packagedElement xmi:type="uml:Interface" xmi:id="_SLknsMlQEeeBxKD0nJv1lg" name="Mission Status Update">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_SLkntclQEeeBxKD0nJv1lg" name="updatePosition"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_SLkntclQEeeBxKD0nJv1lg" name="updatePosition">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_L-Px0PFoEeeg5bJtCZ2w4Q" name="newPos" type="_uCpSsMbTEeeqNOjemIFasw"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_3aTvMMlQEeeBxKD0nJv1lg" name="Rover Control Interface">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_3aTvMclQEeeBxKD0nJv1lg" name="moveToPoint">
@@ -1165,4 +1157,5 @@
     </ownedEnd>
     <ownedEnd xmi:type="uml:Property" xmi:id="_3LzIgPFlEeeDOfRw0ojxkg" name="userinterface" type="_m1-xcMLSEeedLb_g75mFtA" association="_3LxTUPFlEeeDOfRw0ojxkg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_OgW-sPFnEeeg5bJtCZ2w4Q" client="_2kL9YMYMEeefPIx_7DiXqA" supplier="_D0w4EMYMEeefPIx_7DiXqA"/>
 </uml:Model>
