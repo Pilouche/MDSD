@@ -211,19 +211,35 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_962B4MYMEeefPIx_7DiXqA" name="Mission Manager" visibility="public">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Rk4yQMbLEeeoWLj19PTZwg" name="setMission">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0FODsMbUEeeqNOjemIFasw" name="mission" type="_76et8MItEeenJY8sKbqJvg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0FODsMbUEeeqNOjemIFasw" name="points" type="_uCpSsMbTEeeqNOjemIFasw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zeJ-0PF1Eeeg5bJtCZ2w4Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zeOQQPF1Eeeg5bJtCZ2w4Q" value="*"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_URuL8MbLEeeoWLj19PTZwg" name="stopMission"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_d3kQ4PF1Eeeg5bJtCZ2w4Q" name="getStrategy">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_d3kQ4fF1Eeeg5bJtCZ2w4Q" name="strategy" type="_nD0SsMrhEeeFg9xynNwgMw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ip1GAPF1Eeeg5bJtCZ2w4Q" name="setStrategy">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ip1GAfF1Eeeg5bJtCZ2w4Q" name="strategy" type="_nD0SsMrhEeeFg9xynNwgMw"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_AYM1IMYNEeefPIx_7DiXqA" name="Strategy">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mbYxAMYQEeefPIx_7DiXqA" client="_AYM1IMYNEeefPIx_7DiXqA" supplier="_B5We0MYNEeefPIx_7DiXqA" contract="_B5We0MYNEeefPIx_7DiXqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_B5We0MYNEeefPIx_7DiXqA" name="Strategy Manager">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_gEoj4MbMEeeoWLj19PTZwg" name="getStrategy">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y3kmoMbUEeeqNOjemIFasw" name="strategy" type="_RyaakMVPEeehTrEdjWwgmQ" direction="return"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_hPrasMbMEeeoWLj19PTZwg" name="setStrategy">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CSMqcMe_EeeqNOjemIFasw" name="strategy" type="_RyaakMVPEeehTrEdjWwgmQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_D5Xe8PF0Eeeg5bJtCZ2w4Q" name="calculateNextPoint">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LJmyYPF0Eeeg5bJtCZ2w4Q" name="unvisitedPoints" type="_uCpSsMbTEeeqNOjemIFasw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iIkBcPF0Eeeg5bJtCZ2w4Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iIvAkPF0Eeeg5bJtCZ2w4Q" value="*"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_RhzqkPF0Eeeg5bJtCZ2w4Q" name="inEnvironment" type="_Vs8fEMIxEeenJY8sKbqJvg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_aOfG0PF0Eeeg5bJtCZ2w4Q" name="nextPositionIndex">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ea75IPF0Eeeg5bJtCZ2w4Q" name="currentPosition" type="_uCpSsMbTEeeqNOjemIFasw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gHBAcPF0Eeeg5bJtCZ2w4Q" name="r" type="_9CKHsMItEeenJY8sKbqJvg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_na9IIPF0Eeeg5bJtCZ2w4Q" name="nextPos" type="_uCpSsMbTEeeqNOjemIFasw" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_0N6FsMYQEeefPIx_7DiXqA" name="Operator View">
@@ -234,19 +250,26 @@
     <packagedElement xmi:type="uml:Dependency" xmi:id="_kFlh0MYREeefPIx_7DiXqA" client="__Ggm8MYQEeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_GQCOYMYREeefPIx_7DiXqA" name="Environment Manager">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_q--xkMbMEeeoWLj19PTZwg" name="getBoundaries">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_x41_8MfKEeeqNOjemIFasw" name="bounds" type="_wxiZoMfKEeeqNOjemIFasw" direction="return"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_q--xkMbMEeeoWLj19PTZwg" name="getPositions">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_x41_8MfKEeeqNOjemIFasw" name="positions" type="_uCpSsMbTEeeqNOjemIFasw" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_slZsYPF3Eeeg5bJtCZ2w4Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sld90PF3Eeeg5bJtCZ2w4Q" value="*"/>
+      </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_0FNWQMbMEeeoWLj19PTZwg" name="setBoundaries">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3PNnsMfKEeeqNOjemIFasw" name="bounds" type="_wxiZoMfKEeeqNOjemIFasw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0FNWQMbMEeeoWLj19PTZwg" name="setPositions">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3PNnsMfKEeeqNOjemIFasw" name="positions" type="_uCpSsMbTEeeqNOjemIFasw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ybMbEPF3Eeeg5bJtCZ2w4Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ybQsgPF3Eeeg5bJtCZ2w4Q" value="*"/>
+      </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_2pM9AMbMEeeoWLj19PTZwg" name="addArea">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-w_-IMfKEeeqNOjemIFasw" name="type" type="_-dpkUMfKEeeqNOjemIFasw"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_FQ1vYMfLEeeqNOjemIFasw" name="areaBounds" type="_wxiZoMfKEeeqNOjemIFasw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LT3aQPF3Eeeg5bJtCZ2w4Q" name="a" type="_cxOaIMIxEeenJY8sKbqJvg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VevS0PF3Eeeg5bJtCZ2w4Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ve0LUPF3Eeeg5bJtCZ2w4Q" value="*"/>
+      </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_-0Pr0MbMEeeoWLj19PTZwg" name="getAreaType">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_XpfhsMfLEeeqNOjemIFasw" name="position" type="_uCpSsMbTEeeqNOjemIFasw"/>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cvlRwMfLEeeqNOjemIFasw" name="type" type="_-dpkUMfKEeeqNOjemIFasw" direction="return"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TUY7IPF3Eeeg5bJtCZ2w4Q" name="getAreas">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TUY7IfF3Eeeg5bJtCZ2w4Q" name="area" type="_cxOaIMIxEeenJY8sKbqJvg" direction="return"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_ORHI4MYREeefPIx_7DiXqA" name="Physical Area">
@@ -256,11 +279,11 @@
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_V63vkMYREeefPIx_7DiXqA" client="_Ppl-wMYREeefPIx_7DiXqA" supplier="_SIxW8MYREeefPIx_7DiXqA" contract="_SIxW8MYREeefPIx_7DiXqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_SIxW8MYREeefPIx_7DiXqA" name="Area Manager">
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Bu3C0MbNEeeoWLj19PTZwg" name="getAreaType">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_1PxqEMfLEeeqNOjemIFasw" name="type" type="_-dpkUMfKEeeqNOjemIFasw" direction="return"/>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Cq1i4MbNEeeoWLj19PTZwg" name="getAreaBoundaries">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_s7BloMfLEeeqNOjemIFasw" name="bounds" type="_wxiZoMfKEeeqNOjemIFasw" direction="return"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_lwF24PF2Eeeg5bJtCZ2w4Q" name="contains">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lwF24fF2Eeeg5bJtCZ2w4Q" name="contains" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_sRqtgPF2Eeeg5bJtCZ2w4Q" name="p" type="_uCpSsMbTEeeqNOjemIFasw"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_P6hEwMYTEeefPIx_7DiXqA" client="_0N6FsMYQEeefPIx_7DiXqA" supplier="_962B4MYMEeefPIx_7DiXqA"/>
