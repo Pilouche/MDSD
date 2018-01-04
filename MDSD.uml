@@ -302,7 +302,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_0N6FsMYQEeefPIx_7DiXqA" name="Operator View">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_kvYrsMlREeeBxKD0nJv1lg" client="_0N6FsMYQEeefPIx_7DiXqA" supplier="_D0w4EMYMEeefPIx_7DiXqA" contract="_D0w4EMYMEeefPIx_7DiXqA"/>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_nlZQkMYREeefPIx_7DiXqA" client="_0N6FsMYQEeefPIx_7DiXqA" supplier="_GQCOYMYREeefPIx_7DiXqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="__Ggm8MYQEeefPIx_7DiXqA" name="Environment">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_KjqmwMYREeefPIx_7DiXqA" client="__Ggm8MYQEeefPIx_7DiXqA" supplier="_GQCOYMYREeefPIx_7DiXqA" contract="_GQCOYMYREeefPIx_7DiXqA"/>
