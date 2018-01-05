@@ -681,10 +681,6 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qD9xgdwaEeeiXPxAensrSA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qD-YkNwaEeeiXPxAensrSA" value="1"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_VhgkotwbEeeiXPxAensrSA" name="rovers" visibility="private" type="_hkbLcMrZEeeFg9xynNwgMw" association="_VhfWgNwbEeeiXPxAensrSA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vhgko9wbEeeiXPxAensrSA"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VhhLsNwbEeeiXPxAensrSA" value="*"/>
-    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_wOzGoNwbEeeiXPxAensrSA" name="currentMissions" visibility="private" type="_76et8MItEeenJY8sKbqJvg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DwilMOpEEee-ps-cJgqAug"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DwmPkOpEEee-ps-cJgqAug" value="*"/>
@@ -692,6 +688,10 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_8CkPoNwbEeeiXPxAensrSA" name="positions" visibility="private" type="_2bRegMrZEeeFg9xynNwgMw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UGancOpEEee-ps-cJgqAug"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UGeR0OpEEee-ps-cJgqAug" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ymW9oPJFEeeCh4iTJBtPOQ" name="mission" type="_djblwMraEeeFg9xynNwgMw" association="_ymQP8PJFEeeCh4iTJBtPOQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ymXksPJFEeeCh4iTJBtPOQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ymXksfJFEeeCh4iTJBtPOQ" value="*"/>
     </ownedAttribute>
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_YbH2ENwbEeeiXPxAensrSA" client="_Wie8IM63EeeSLqr7E5O4ew" supplier="_11lYYNYaEeeodIuDDvK1GQ" contract="_11lYYNYaEeeodIuDDvK1GQ"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_CR6t0NwcEeeiXPxAensrSA" name="addMission">
@@ -819,15 +819,6 @@
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QFUBsdwbEeeiXPxAensrSA" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_QFUowtwbEeeiXPxAensrSA" name="console" type="_nc3zcNwaEeeiXPxAensrSA" association="_QFTaoNwbEeeiXPxAensrSA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_VhfWgNwbEeeiXPxAensrSA" memberEnd="_VhgkotwbEeeiXPxAensrSA _VhhLsdwbEeeiXPxAensrSA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VhgkoNwbEeeiXPxAensrSA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VhgkodwbEeeiXPxAensrSA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_VhhLsdwbEeeiXPxAensrSA" name="user" type="_Wie8IM63EeeSLqr7E5O4ew" association="_VhfWgNwbEeeiXPxAensrSA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jp3xANwcEeeiXPxAensrSA"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jp_FwNwcEeeiXPxAensrSA" value="*"/>
-    </ownedEnd>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_o4hxwNwdEeeiXPxAensrSA" name="StrategyNNPath">
     <generalization xmi:type="uml:Generalization" xmi:id="_wHWUwPCpEee75r5URlGhkQ" general="_nD0SsMrhEeeFg9xynNwgMw"/>
@@ -1249,5 +1240,11 @@
     <message xmi:type="uml:Message" xmi:id="_mM1IEPI4EeeCh4iTJBtPOQ" name="type" messageSort="reply" receiveEvent="_mM1vIfI4EeeCh4iTJBtPOQ" sendEvent="_mM1vIPI4EeeCh4iTJBtPOQ"/>
     <message xmi:type="uml:Message" xmi:id="_nscgsPI4EeeCh4iTJBtPOQ" name="addRewardPoints(points)" messageSort="asynchCall" receiveEvent="_nseV4PI4EeeCh4iTJBtPOQ" sendEvent="_nsdu0PI4EeeCh4iTJBtPOQ"/>
     <message xmi:type="uml:Message" xmi:id="_sC3HUPI4EeeCh4iTJBtPOQ" name="sleep(20000)" receiveEvent="_sC48gPI4EeeCh4iTJBtPOQ" sendEvent="_sC4VcPI4EeeCh4iTJBtPOQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ymQP8PJFEeeCh4iTJBtPOQ" memberEnd="_ymW9oPJFEeeCh4iTJBtPOQ _ymXksvJFEeeCh4iTJBtPOQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ymTTQPJFEeeCh4iTJBtPOQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ymTTQfJFEeeCh4iTJBtPOQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ymXksvJFEeeCh4iTJBtPOQ" name="user" type="_Wie8IM63EeeSLqr7E5O4ew" association="_ymQP8PJFEeeCh4iTJBtPOQ"/>
   </packagedElement>
 </uml:Model>
