@@ -120,7 +120,7 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_ZMHA4sJuEeedeenu39lz6w" name="move from one point to another" type="_Wdtg8MJuEeedeenu39lz6w" association="_ZMFywMJuEeedeenu39lz6w"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_ZMHA48JuEeedeenu39lz6w" type="_RzLrgMJuEeedeenu39lz6w" association="_ZMFywMJuEeedeenu39lz6w"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interface" xmi:id="_m1-xcMLSEeedLb_g75mFtA" name="UserInterface" visibility="package"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_m1-xcMLSEeedLb_g75mFtA" name="User" visibility="package"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_RyaakMVPEeehTrEdjWwgmQ" name="Strategy"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_hAg8cMVPEeehTrEdjWwgmQ" memberEnd="_hAnqIMVPEeehTrEdjWwgmQ _hAqGYMVPEeehTrEdjWwgmQ">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hAlN4MVPEeehTrEdjWwgmQ" source="org.eclipse.papyrus">
@@ -128,13 +128,6 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_hAnqIMVPEeehTrEdjWwgmQ" name="strategy" type="_RyaakMVPEeehTrEdjWwgmQ" association="_hAg8cMVPEeehTrEdjWwgmQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_hAqGYMVPEeehTrEdjWwgmQ" name="mission" type="_76et8MItEeenJY8sKbqJvg" association="_hAg8cMVPEeehTrEdjWwgmQ"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_iByzQMVPEeehTrEdjWwgmQ" memberEnd="_iB0ocMVPEeehTrEdjWwgmQ _iB1PgMVPEeehTrEdjWwgmQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iB0BYMVPEeehTrEdjWwgmQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iB0BYcVPEeehTrEdjWwgmQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_iB0ocMVPEeehTrEdjWwgmQ" name="rover" type="_9CKHsMItEeenJY8sKbqJvg" association="_iByzQMVPEeehTrEdjWwgmQ"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_iB1PgMVPEeehTrEdjWwgmQ" name="strategy" type="_RyaakMVPEeehTrEdjWwgmQ" association="_iByzQMVPEeehTrEdjWwgmQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_qsmAMMVPEeehTrEdjWwgmQ" name="Procedure"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_sGAqMMVPEeehTrEdjWwgmQ" name="RewardPoints"/>

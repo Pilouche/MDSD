@@ -58,19 +58,22 @@ public class Mission implements RoverObserver {
 	}
 
 	public void addPosition(Position addedPos) {
-		missionPoints = addPointToArray(missionPoints, addedPos);
-		unvisitedPoints = addPointToArray(unvisitedPoints, addedPos);
+		/*missionPoints = addPointToArray(missionPoints, addedPos);
+		unvisitedPoints = addPointToArray(unvisitedPoints, addedPos);*/
+		strategy.addMissionPosition(addedPos);
 	}
 
 	public void removePosition(Position removedPos) {
-		unvisitedPoints = removePointFromArray(unvisitedPoints, removedPos);
-		missionPoints = removePointFromArray(missionPoints, removedPos);
+		/*unvisitedPoints = removePointFromArray(unvisitedPoints, removedPos);
+		missionPoints = removePointFromArray(missionPoints, removedPos);*/
+		strategy.removeMissionPosition(removedPos);
 	}
 
 	public void removePosition(int removedPos) {
-		if (removedPos < unvisitedPoints.length) {
+		/*if (removedPos < unvisitedPoints.length) {
 			removePosition(unvisitedPoints[removedPos]);
-		}
+		}*/
+		strategy.removeMissionPosition(removedPos);
 	}
 
 	public void updateRoverPosition(Position newPos, String name) {
