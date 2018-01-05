@@ -104,7 +104,7 @@ public class Console implements GUI {
 		System.out.println("z coordinate : ");
 		float z = sc.nextFloat();
 		Position pos = new Position(x,z);
-		m.addPosition(pos); // to implement
+		m.addPosition(pos); 
 		
 	}
 	
@@ -114,7 +114,7 @@ public class Console implements GUI {
 			System.out.println(i+". Position "+i+" : ("+ positions[i].getX()+","+positions[i].getZ()+")");
 		}
 		int choice = sc.nextInt();
-		m.removePosition(choice); // to implement
+		m.removePosition(choice); 
 	}
 	
 	public void chooseStrategy(Mission m) {

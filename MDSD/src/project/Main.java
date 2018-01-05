@@ -33,11 +33,6 @@ public class Main {
 	
 		User u = new User(rovers, missions);
 		
-		u.setRovers(rovers);
-		
-		Procedure p = new Procedure(rovers, new NormalProcedure());
-		p.start();
-		
 		/*
 		while(truh) {
 			for(Area a : areas) {

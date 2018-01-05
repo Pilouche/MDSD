@@ -33,18 +33,21 @@ public class Procedure extends Thread {
 	 */
 	@Override
 	public void run() {
+		System.out.println("Procedure started");
 		
 		while(true) {
 		
 			try {
-				this.sleep(20000);
+				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		
+			int i = 0;
 			for(Rover rover : rovers) {
 				type.calculateRewards(rover);
+				System.out.println("Rover " + i + " : " + rover.getRewardPoints() + " points");
+				i++;
 			}
 		}
 

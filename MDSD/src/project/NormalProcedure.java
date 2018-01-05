@@ -25,18 +25,20 @@ public class NormalProcedure implements ProcedureType {
 			if(rovEnvironment.getAreas() == null) return;
 			for(Area a: rovEnvironment.getAreas()) {
 				if(a == null) return;
-				if(currentProcedure == PROCEDURE_A) {
-					if(a.getClass().equals(PhysicalArea.class)) {
-						rover.addRewardPoints(1);
-					} else if(a.getClass().equals(LogicalArea.class)) {
-						changeProcedure = true;
+				if(a.contains(rover.getPosition())) {
+					if(currentProcedure == PROCEDURE_A) {
+						if(a.getClass().equals(PhysicalArea.class)) {
+							rover.addRewardPoints(1);
+						} else if(a.getClass().equals(LogicalArea.class)) {
+							changeProcedure = true;
+						}
 					}
-				}
-				else if(currentProcedure == PROCEDURE_B) {
-					if(a.getClass().equals(PhysicalArea.class)) {
-						changeProcedure = true;
-					} else if(a.getClass().equals(LogicalArea.class)) {
-						rover.addRewardPoints(1);
+					else if(currentProcedure == PROCEDURE_B) {
+						if(a.getClass().equals(PhysicalArea.class)) {
+							changeProcedure = true;
+						} else if(a.getClass().equals(LogicalArea.class)) {
+							rover.addRewardPoints(1);
+						}
 					}
 				}
 			}

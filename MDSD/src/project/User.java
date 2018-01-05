@@ -23,6 +23,11 @@ public class User implements RoverObserver{
 		for(Rover r : this.rovers) {
 			r.observe(this);
 		}
+		
+		System.out.println("Starting procedure...");
+		Procedure p = new Procedure(rovers, new HospitalProcedure());
+		p.start();
+		
 		gui = new Console(this);
 	}
 
