@@ -784,7 +784,7 @@
     <message xmi:type="uml:Message" xmi:id="_7DxEINtiEeeOt5xfMKTxgA" name="getStrategy()" receiveEvent="_7DxrMdtiEeeOt5xfMKTxgA" sendEvent="_7DxrMNtiEeeOt5xfMKTxgA"/>
     <message xmi:type="uml:Message" xmi:id="_9XBgMNtiEeeOt5xfMKTxgA" name="strategy" messageSort="reply" receiveEvent="_9XCuUNtiEeeOt5xfMKTxgA" sendEvent="_9XCHQNtiEeeOt5xfMKTxgA"/>
     <message xmi:type="uml:Message" xmi:id="_TxuLoNtjEeeOt5xfMKTxgA" name="chooseStrategy()" receiveEvent="_Txwn4NtjEeeOt5xfMKTxgA" sendEvent="_TxvZwNtjEeeOt5xfMKTxgA"/>
-    <message xmi:type="uml:Message" xmi:id="_ZcsKYNtjEeeOt5xfMKTxgA" name="setStrategy(strategy)" receiveEvent="_Zct_kNtjEeeOt5xfMKTxgA" sendEvent="_ZctYgNtjEeeOt5xfMKTxgA"/>
+    <message xmi:type="uml:Message" xmi:id="_ZcsKYNtjEeeOt5xfMKTxgA" name="setStrategy(strategy)" messageSort="asynchCall" receiveEvent="_Zct_kNtjEeeOt5xfMKTxgA" sendEvent="_ZctYgNtjEeeOt5xfMKTxgA"/>
     <message xmi:type="uml:Message" xmi:id="_unq6YNtjEeeOt5xfMKTxgA" name="chooseMission()" receiveEvent="_unsvkNtjEeeOt5xfMKTxgA" sendEvent="_unsIgNtjEeeOt5xfMKTxgA"/>
     <message xmi:type="uml:Message" xmi:id="_yOWGINtjEeeOt5xfMKTxgA" name="getMissions()" receiveEvent="_yOXUQNtjEeeOt5xfMKTxgA" sendEvent="_yOWtMNtjEeeOt5xfMKTxgA"/>
     <message xmi:type="uml:Message" xmi:id="_4WuZoNtjEeeOt5xfMKTxgA" name="missions" messageSort="reply" receiveEvent="_4WvAsdtjEeeOt5xfMKTxgA" sendEvent="_4WvAsNtjEeeOt5xfMKTxgA"/>

@@ -3770,6 +3770,9 @@
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_7ETPoNtiEeeOt5xfMKTxgA" id="(0.5,0.20856201975850713)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_9gaFsNtiEeeOt5xfMKTxgA" type="Message_ReplyEdge" source="_sMo30NtiEeeOt5xfMKTxgA" target="_l8w1MNtiEeeOt5xfMKTxgA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PxpZoPImEeeAXfR443hQ-A" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PxqAsPImEeeAXfR443hQ-A" key="routing" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_9gaswNtiEeeOt5xfMKTxgA" type="Message_ReplyNameLabel">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_9gaswdtiEeeOt5xfMKTxgA" x="1" y="-13"/>
       </children>
@@ -3798,6 +3801,9 @@
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TydLcdtjEeeOt5xfMKTxgA" id="(0.5,0.29637760702524696)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_ZdATcNtjEeeOt5xfMKTxgA" type="Message_SynchEdge" source="_l8w1MNtiEeeOt5xfMKTxgA" target="_sMo30NtiEeeOt5xfMKTxgA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MBC10PImEeeAXfR443hQ-A" source="PapyrusCSSForceValue">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MBDc4PImEeeAXfR443hQ-A" key="routing" value="true"/>
+      </eAnnotations>
       <children xmi:type="notation:DecorationNode" xmi:id="_ZdATc9tjEeeOt5xfMKTxgA" type="Message_SynchNameLabel">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ZdATdNtjEeeOt5xfMKTxgA" x="1" y="-13"/>
       </children>
